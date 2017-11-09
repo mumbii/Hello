@@ -47,9 +47,9 @@
 
 	.bubble-holder {
 		position: absolute;
-		right: 20%;
-		@include calc(width, "33.3% - 20px");
-		top: 35vh;
+		right: 19%;
+		@include calc(width, "33.3% - 50px");
+		top: 14vh;
 	}
 
 	.text-bubble {
@@ -57,43 +57,351 @@
 		float: right;
 		width: auto;
 		box-sizing: border-box;
-		padding: 10px 20px;
-		background: $colorTwo;
-		@include border-radius(4px);
+		padding: 8px 20px;
+		background: $colorThree;
+		@include border-radius(7px);
 		margin-bottom: 25px;
 		max-width: calc(100% - 40px);
+		opacity: 0;
 
 		&:after {
 			content: "";
 			display: block;
-			width: 20px;
-			height: 20px;
-			background: red;
+			width: 30px;
+			height: 30px;
 			position: absolute;
-			top: 0;
-			right: -20px;
+			bottom: -2px;
+			right: -25px;
+			@include transform(rotate(180deg));
+			background-image: url('/images/blue-triangle.svg');
+	    background-size: 100% 100%;
+	    background-position: 0 2px;
+	    background-repeat: no-repeat;
 		}
 
 		p {
-			font-family: "Gotham-Medium", sans-serif;
+			font-size: 0.9em;
+			font-family: "Gotham-Bold", sans-serif;
 			color: #fff;
+			opacity: 0.9;
 			line-height: 1.3em;
 		}
+
+		@for $i from 1 through 3 {
+
+      &:nth-child(#{$i}) {
+        @include animation--fadedown($i);
+      }
+    }
+
+		&:first-child {
+			@include animation-delay(0s);
+		}
+
+		&:last-child {
+			@include animation-delay(5s);
+		}
+
 	}
 
 	.text-bubble.object {
-		background: $colorThree;
-		color: $colorTwo;
+		background: $colorOne;
+
+		p {
+			color: $colorTwo;
+		}
+
+		&:after {
+			top: -23px;
+			bottom: auto;
+			right: auto;
+			left: -0px;
+			@include transform(rotate(-180deg));
+			background-image: url('/images/yellow-triangle.svg');
+		}
 	}
 }
 
-.how-to-play {
+.process {
+	background: $colorThree;
+	height: auto;
+	overflow: auto;
+	width: 100%;
+	padding: 70px 0;
+
+	.col-4:last-child .process-item:last-child:after {
+		display: none;
+	}
+
+	.right-img{
+      top: 55px;
+	}
+
+	.top-img {
+    margin-right: 15px;
+    top: -22px;
+    right: -1px;
+	}
+
+	.process-item {
+		width: 270px;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+
+		h4 {
+			font-family: "Gotham-Bold", sans-serif;
+			color: #fff;
+			margin-bottom: 10px;
+		}
+
+		p, span {
+			color: #fff;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			width: 100px;
+			top: 80px;
+			right: -115px;
+			position: absolute;
+			height: 15px;
+			background-image: url('/images/large-arrow.svg');
+			background-size: 100% 100%;
+			background-position: 0 0;
+		}
+	}
+
+	p a {
+		color: #fff;
+	}
+
+	.top-img {
+		position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: 10;
+    width: 210px;
+    margin-left: auto;
+    margin-right: 25px; /* auto */
+    left: 0;
+    right: 0;
+	}
+
+	.right-img {
+		position: absolute;
+		top: 40px;
+		z-index: 20;
+		width: 100px;
+		right: -10px;
+	}
+
+	.right-img-large {
+    width: 125px;
+    right: -20px;
+  }
+
+	.image-circle {
+		width: 170px;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		border: 3px solid #fff;
+		margin-bottom: 30px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	@include mq("medium", "max-width") {
+		.process-item:after {
+			right: -80px;
+		}
+	}
+
+	@include mq("small", "max-width") {
+		padding: 50px 0 0 0;
+
+		.col-4 {
+			width: 100%;
+		}
+
+		h4 {
+			font-size: 1.3em;
+		}
+
+		.process-item {
+			width: 250px;
+			display: block;
+			margin: 0 auto;
+			float: none;
+			padding-bottom: 50px;
+		}
+
+		.image-circle {
+			width: 180px;
+		}
+
+		.process-item:after {
+			display: none;
+		}
+
+		.right-img {
+			top: 55px;
+		}
+
+		.top-img {
+			margin-right: 15px;
+			top: -22px;
+			right: -1px;
+		}
+	}
+}
+
+.call-to-action {
+	width: 100%;
+	height: auto;
+	padding: 100px 0;
+	background: darken($colorTwo, 5%);
+	height: auto;
+	overflow: visible;
+
+	a {
+		margin: 0 auto;
+		display: block;
+	}
+
+	@include mq("small", "max-width") {
+		padding: 50px 0;
+
+		.link-messenger {
+			font-size: 1.3em;
+		}
+	}
+
+	@include mq("nano", "max-width") {
+		.link-messenger {
+			font-size: 1.2em;
+			padding: 22px 35px;
+		}
+
+		.link-messenger:after {
+			width: 25px;
+			height: 25px;
+		}
+	}
+}
+
+.information {
 	width: 100%;
 	clear: both;
 	display: block;
 	overflow: hidden;
 	position: relative;
 	background: $colorOne;
+
+	img {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: auto;
+	}
+
+	.col-6 {
+		background: $colorOne;
+		float: right;
+		box-sizing: border-box;
+		@include calc(padding-left, "8.33% + 2px");
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h5 {
+		margin-bottom: 50px;
+		color: $colorTwo;
+		border: 1px solid $colorTwo;
+	}
+
+	h1 {
+		color: $colorTwo;
+		line-height: 1.2;
+		margin-bottom: 30px;
+	}
+
+	p {
+		color: $colorTwo;
+		opacity: 0.8;
+	}
+
+	.link-btn-one {
+		margin-top: 40px;
+		background: $colorTwo;
+		color: #fff;
+
+		&:after {
+			background-image: url("/images/arrow-yellow.svg");
+		}
+	}
+
+	.link-btn-one:after {
+		@include transform(rotate(90deg));
+		@include transition(all, 0.3s, ease-in-out);
+	}
+
+	.link-btn-one.active:after {
+		@include transform(rotate(-90deg));
+	}
+
+	.right-block {
+		position: absolute;
+		right: 0;
+		background: $colorOne;
+		width: 40%;
+		float: right;
+		height: 100%;
+	}
+
+	@include mq("medium", "max-width") {
+		.right-block {
+			display: none;
+		}
+
+		img {
+			top: 0;
+			bottom: auto;
+			position: relative;
+		}
+
+		h5 {
+			margin-bottom: 40px;
+		}
+
+		.col-6 {
+			background: none;
+			padding: 50px 0;
+			width: 100%;
+		}
+	}
+
+	@include mq("extra-large", "min-width") {
+		.col-6 {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.how-to-play {
+	width: 100%;
+	clear: both;
+	display: none;
+	overflow: hidden;
+	position: relative;
+	background: $colorTwo;
 
 	.col-6 {
 		padding: 80px 20px 80px 20px;
@@ -105,20 +413,20 @@
 
 	h5 {
 		margin-bottom: 50px;
-		color: $colorTwo;
-		border: 1px solid $colorTwo;
+		color: $colorOne;
+		border: 1px solid $colorOne;
 		width: intrinsic;
 		max-width: 140px;
 	}
 
 	h1 {
-		color: $colorTwo;
+		color: $colorOne;
 		line-height: 1.2;
 		margin-bottom: 30px;
 	}
 
 	p {
-		color: $colorTwo;
+		color: #fff;
 		opacity: 0.8;
 	}
 
@@ -141,6 +449,58 @@
 			padding-bottom: 50px;
 		}
 	}
+}
+
+.locations {
+	width: 100%;
+	height: 80vh;
+	background: $colorTwo;
+	position: relative;
+	overflow: hidden;
+
+	#map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 90vh;
+	}
+	.col-4 {
+		float: left;
+		box-sizing: border-box;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h5 {
+		margin-bottom: 50px;
+	}
+
+	h1 {
+		color: $colorOne;
+		line-height: 1.2;
+		margin-bottom: 30px;
+	}
+
+	p {
+		color: #fff;
+		font-family: "Gotham-Medium", sans-serif;
+	}
+
+	.link-btn-one {
+		margin-top: 40px;
+		background: $colorOne;
+	}
+
+	.link-btn-one:after {
+		@include transform(rotate(90deg));
+		@include transition(all, 0.3s, ease-in-out);
+	}
+
+	.link-btn-one.active:after {
+		@include transform(rotate(-90deg));
+	}
+
 }
 
 .object-icon {
@@ -467,31 +827,6 @@
 		height: 100vh;
 	}
 
-	.col-4 {
-		float: right;
-		padding-top: 15px;
-		text-align: center;
-		position: relative;
-
-		h3, p {
-			color: $colorTwo;
-			text-align: center;
-
-		}
-
-		.image-circle {
-			box-sizing: border-box;
-			width: 75%;
-			display: block;
-			margin: 35px auto;
-			float: none;
-		}
-
-		span {
-			color: #fff;
-		}
-	}
-
 	@include mq("small", "max-width") {
 
 		h5 {
@@ -521,7 +856,7 @@
 	padding: 10px 0 0 0;
 	height: auto;
 	overflow: auto;
-	background: #fff;
+	background: $colorTwo;
 
 	h4 {
 		color: #fff;

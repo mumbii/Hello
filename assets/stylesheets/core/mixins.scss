@@ -14,7 +14,7 @@ $breakpoints: (
   "extra-extra-large" 1800px
 );
 
-@mixin mq($size, $type: "min-width") { 
+@mixin mq($size, $type: "min-width") {
   @each $breakpoint in $breakpoints {
     @if ($size == nth($breakpoint, 1)) {
       @media ($type: nth($breakpoint, 2)) {
@@ -50,7 +50,7 @@ $breakpoints: (
 }
 
 @mixin animation--fadedown($delay) {
-  @include animation(fade-in 0.5s ease-in-out);
+  @include animation(fadeIn 0.8s cubic-bezier(0.730, -0.600, 0.320, 1.650));
   @include animation-iteration-count(1);
   @include animation-fill-mode(forwards);
   @include animation-delay(#{$delay}s);

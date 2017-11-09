@@ -27,7 +27,7 @@ $(document).on('click', '.menu a', function(event){
     event.preventDefault();
 
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top -60
+        scrollTop: $( $.attr(this, 'href') ).offset().top -55
     }, 500);
 });
 
@@ -46,7 +46,7 @@ $( ".js-to-top" ).on( "click", function() {
 
 $( ".js-scroll-down-button" ).on( "click", function() {
 	$('html, body').animate({
-    	scrollTop: $(".process").offset().top
+    	scrollTop: $("#about").offset().top - 57
 	}, 600);
 	return false;
 });
