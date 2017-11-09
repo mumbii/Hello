@@ -7,7 +7,7 @@
 	width: 100%;
 	position: fixed;
 	z-index: 100;
-	top: 43px; // Take care of Malmo Masthead
+	top: 0;
 	padding: 10px 0;
 	background: #fff;
 	height: 50px;
@@ -18,8 +18,7 @@
 	}
 
 	.logo img {
-		margin-top: -25px;
-		width: 170px;
+		width: 200px;
 	}
 
 	nav {

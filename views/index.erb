@@ -123,50 +123,36 @@ ConversationDemo.prototype.updateAnswer = function(answer) {
 <article class="homepage">
   <section class="hero">
     <div class="grid-container">
-        <div class="row text-row">
-          <div class="col-8">
-            <h2><%= I18n.t(:description) %></h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="shift-2 col-8">
-            <div class="image">
-              <iframe src="https://player.vimeo.com/video/<%= I18n.t(:video) %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="col-4">
+        <h2>The playful, city-wise system that lets you talk to street furniture.</h2>
+        <a class="link-btn-one">Bring It To Your City</a>
+      </div>
+    </div>
+    <div class="header-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide austin-lampost">
+          <img src="/images/header-image-1.jpg"/>
+          <div class="bubble-holder">
+            <div class="text-bubble">
+              <p>Hello Lamp Post #321</p>
+            </div>
+            <div class="text-bubble object">
+              <p>Good Afternoon! Can you answer a question? What would be your super power and why?</p>
+            </div>
+            <div class="text-bubble">
+              <p>Photosynthesis so eating would be pure pleasure!</p>
             </div>
           </div>
         </div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
       </div>
-      <a class="js-scroll-down-button scroll-down-button"><%= I18n.t(:how_it_works) %></a>
-  </section>
-  <section class="hero message">
-    <div class="grid-container">
-        <div class="row text-row">
-          <div class="col-6">
-            <h1><%= I18n.t(:ticker_title) %></h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="conversation-demo">
-              <div class="bubble question" id="question-bubble">
-                <div class="bubble-inner">
-                  <h4><%= I18n.t(:question) %></h4>
-                  <div class="text">Om du fick dyka var som helst, vad skulle du vilja se?</div>
-                </div>
-              </div>
-              <div class="bubble answer" id="answer-bubble">
-                <div class="bubble-inner">
-                  <h4><%= I18n.t(:answer) %></h4>
-                  <div class="text">Jag skulle vilka se stingrocker och vithajar eller valhajar</div>
-                </div>
-                <div class="object-ref">Marine Education Centre #001</div>
-              </div>
-              <div class="buttons">
-                <button class="new-question hidden" id="new-question-button"><%= I18n.t(:next) %> <%= I18n.t(:question) %></button>
-                <button class="next-answer hidden" id="next-answer-button"><%= I18n.t(:next) %> <%= I18n.t(:answer) %></button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    </div>
+    <a class="js-scroll-down-button link-scroll">Find Out More</a>
   </section>
   <section id="how-it-works" class="process">
     <div class="grid-container">

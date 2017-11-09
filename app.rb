@@ -47,7 +47,7 @@ class HelloLamppostWebsite < Sinatra::Base
       I18n.locale       = matches[1]
       request.path_info = matches[2]
     else
-      redirect to('/sv' + request.path_info)
+      redirect to('/en' + request.path_info)
     end
   end
 
