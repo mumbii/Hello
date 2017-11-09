@@ -1,0 +1,361 @@
+<script src="/assets/classList.js"></script>
+<script>var ConversationDemo = function() {
+
+  if ('classList' in document.createElement('div')) {
+
+    this.api_url = ''
+    this.question_element = document.getElementById('question-bubble')
+    this.answer_element = document.getElementById('answer-bubble')
+    this.new_question_button = document.getElementById('new-question-button')
+    this.next_answer_button = document.getElementById('next-answer-button')
+
+
+    this.random_question = {}
+    this.current_answer_position = null
+
+    this.new_question_button.classList.remove('hidden')
+    this.next_answer_button.classList.remove('hidden')
+
+    this.new_question_button.addEventListener('click', this.requestNewRandomQuestion.bind(this))
+    this.next_answer_button.addEventListener('click', this.displayNextAnswer.bind(this))
+
+    this.requestNewRandomQuestion()
+
+  }
+
+}
+
+
+ConversationDemo.prototype.requestNewRandomQuestion = function() {
+
+  this.request = new XMLHttpRequest();
+  this.request.addEventListener('load', this.receiveNewRandomQuestion.bind(this), false)
+
+  this.new_question_button.setAttribute('disabled', 'disabled')
+  this.next_answer_button.setAttribute('disabled', 'disabled')
+
+  this.request.open('get', this.api_url + '/questions/random?time' + Date.now())
+  this.request.send()
+
+}
+
+ConversationDemo.prototype.receiveNewRandomQuestion = function(event) {
+
+  this.random_question = JSON.parse(this.request.responseText)
+  this.current_answer_position = null;
+  this.displayNewQuestion()
+}
+
+ConversationDemo.prototype.displayNewQuestion = function() {
+  this.question_element.classList.add('off')
+
+  var question_element = this.question_element;
+  var question_text = this.question_element.getElementsByClassName('text')[0]
+
+  question_text.textContent = this.random_question.question.text.sv
+
+  this.new_question_button.removeAttribute('disabled')
+  this.displayNextAnswer()
+
+  if ('transition' in question_element.style) {
+    setTimeout(function() {
+      question_element.classList.remove('off')
+    }, 600)
+  } else {
+    this.question_element.classList.remove('off')
+  }
+
+};
+
+ConversationDemo.prototype.displayNextAnswer = function() {
+
+  if (this.current_answer_position == null || this.current_answer_position == (this.random_question.responses.length -1)) {
+    this.current_answer_position = 0
+  } else {
+    this.current_answer_position += 1
+  }
+
+  this.next_answer_button.setAttribute('disabled', 'disabled')
+
+  var next_answer_button = this.next_answer_button
+  var answer_element = this.answer_element;
+  var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
+  var object_link = this.answer_element.getElementsByClassName('object-ref')[0]
+  var new_answer = this.random_question.responses[this.current_answer_position]
+
+  next_answer_button.removeAttribute('disabled')
+
+  var _this = this;
+
+  if ('transition' in answer_element.style) {
+
+    this.answer_element.classList.add('off')
+    setTimeout(function() {
+      _this.updateAnswer(new_answer)
+      answer_element.classList.remove('off')
+    }, 600)
+  } else {
+
+    answer_element.classList.remove('off')
+    _this.updateAnswer(new_answer)
+  }
+};
+
+ConversationDemo.prototype.updateAnswer = function(answer) {
+
+  var object_link = this.answer_element.getElementsByClassName('object-ref')[0]
+  var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
+
+  answer_element_text.textContent = answer.text;
+  if (answer.street_object.name) {
+    object_link.textContent = answer.street_object.name.en + ' #' + answer.street_object.code
+  } else {
+    object_link.textcontent = answer.street_object.type + ' #' + answer.street_object.code;
+  }
+
+}
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var conversation_demo = new ConversationDemo();
+  })
+</script>
+<article class="homepage">
+  <section class="hero">
+    <div class="grid-container">
+        <div class="row text-row">
+          <div class="col-8">
+            <h2><%= I18n.t(:description) %></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="shift-2 col-8">
+            <div class="image">
+              <iframe src="https://player.vimeo.com/video/<%= I18n.t(:video) %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="js-scroll-down-button scroll-down-button"><%= I18n.t(:how_it_works) %></a>
+  </section>
+  <section class="hero message">
+    <div class="grid-container">
+        <div class="row text-row">
+          <div class="col-6">
+            <h1><%= I18n.t(:ticker_title) %></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="conversation-demo">
+              <div class="bubble question" id="question-bubble">
+                <div class="bubble-inner">
+                  <h4><%= I18n.t(:question) %></h4>
+                  <div class="text">Om du fick dyka var som helst, vad skulle du vilja se?</div>
+                </div>
+              </div>
+              <div class="bubble answer" id="answer-bubble">
+                <div class="bubble-inner">
+                  <h4><%= I18n.t(:answer) %></h4>
+                  <div class="text">Jag skulle vilka se stingrocker och vithajar eller valhajar</div>
+                </div>
+                <div class="object-ref">Marine Education Centre #001</div>
+              </div>
+              <div class="buttons">
+                <button class="new-question hidden" id="new-question-button"><%= I18n.t(:next) %> <%= I18n.t(:question) %></button>
+                <button class="next-answer hidden" id="next-answer-button"><%= I18n.t(:next) %> <%= I18n.t(:answer) %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="how-it-works" class="process">
+    <div class="grid-container">
+      <div class="col-4">
+        <div class="process-item">
+          <div class="image-circle">
+            <img src="/images/process-1.svg">
+          </div>
+          <h4><%= I18n.t(:pick_an_object) %></h4>
+          <p><%= I18n.t(:pick_an_object_text) %></p>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="process-item">
+          <div class="image-circle">
+            <img src="/images/process-2.svg">
+          </div>
+          <h4><%= I18n.t(:say_hello) %></h4>
+          <p><%= I18n.t(:say_hello_text) %></p>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="process-item">
+          <div class="image-circle">
+            <img src="/images/process-3.svg">
+          </div>
+          <h4><%= I18n.t(:keep_talking) %></h4>
+          <p><%= I18n.t(:keep_talking_text) %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="information" class="information">
+      <img src="/images/bg-how-it-works.jpg">
+      <div class="right-block"></div>
+      <div class="grid-container">
+        <div class="col-6 right">
+          <h5><%= I18n.t(:information) %></h5>
+          <h1><%= I18n.t(:information_title) %></h1>
+          <p><%= I18n.t(:information_text) %></p>
+          <p><%= I18n.t(:information_text_2) %></p>
+          <a class="link-btn-one js-learn-more"><%= I18n.t(:information_cta_1) %></a>
+        </div>
+      </div>
+    </section>
+    <section class="how-to-play">
+      <div class="grid-container">
+        <div class="col-6">
+          <h1><%= I18n.t(:more_information) %></h1>
+          <p><%= I18n.t(:more_information_text_1) %></p>
+          <p><%= I18n.t(:more_information_text_2) %></p>
+        </div>
+        <div class="col-6 pushed-column">
+          <p><%= I18n.t(:more_information_text_3) %></p>
+          <p><%= I18n.t(:more_information_text_4) %></p>
+        </div>
+      </div>
+    </section>
+    <section class="object-icon">
+      <div class="grid-container">
+        <div class="row">
+          <div class="object-swiper">
+            <h2><%= I18n.t(:text_title_1) %></h2>
+            <div class="bubble">
+              <h2 class="active-object"><%= I18n.t(:hello_pier) %></h2>
+            </div>
+            <h2 class="text-number"><%= I18n.t(:text_title_2) %></h2>
+            <div>
+            <div class="button-next"></div>
+            <div class="button-prev"></div>
+            </div>
+             <div class="swiper-wrapper">
+               <div object-code="<%= I18n.t(:hello_pier) %>" class="swiper-slide pier"><img class="image-object pier" src="/images/pier.svg"></div>
+                 <div object-code="<%= I18n.t(:hello_utility_box) %>" class="swiper-slide box-one"><img class="image-object" src="/images/box-one.svg"></div>
+                 <div object-code="<%= I18n.t(:hello_bin) %>" class="swiper-slide bin"><img class="image-object" src="/images/bin.svg"></div>
+                 <div object-code="<%= I18n.t(:hello_public_toilet) %>" class="swiper-slide box-three"><img class="image-object" src="/images/box-three.svg"></div>
+                 <div object-code="<%= I18n.t(:hello_public_bike) %>" class="swiper-slide bike"><img class="image-object" src="/images/bike.svg"></div>
+                 <div object-code="<%= I18n.t(:hello_bike_pump) %>" class="swiper-slide pump"><img class="image-object" src="/images/pump.svg"></div>
+                 <div object-code="<%= I18n.t(:hello_bike_station) %>" class="swiper-slide box-two"><img class="image-object" src="/images/box-two.svg"></div>
+             </div>
+             <div class="swiper-pagination"></div>
+         </div>
+        </div>
+      </div>
+    </section>
+    <section id="global-goals" class="information-longform">
+      <div class="grid-container">
+        <div class="col-6">
+          <h5><%= I18n.t(:global_goals_meta) %></h5>
+          <h1><%= I18n.t(:global_goals_title) %></h1>
+          <p><%= I18n.t(:global_goals_text_1) %></p>
+          <p><%= I18n.t(:global_goals_text_2) %></p>
+          <p><%= I18n.t(:global_goals_text_3) %></p>
+        </div>
+        <div class="col-6">
+          <div class="accordian">
+            <div class="accordian-item active">
+              <h4><%= I18n.t(:goal_1_title) %></h4>
+              <p><%= I18n.t(:goal_1_text) %></p>
+            </div>
+            <div class="accordian-item">
+              <h4><%= I18n.t(:goal_2_title) %></h4>
+              <p><%= I18n.t(:goal_2_text) %></p>
+            </div>
+            <div class="accordian-item">
+              <h4><%= I18n.t(:goal_3_title) %></h4>
+              <p><%= I18n.t(:goal_3_text) %></p>
+            </div>
+            <div class="accordian-item">
+              <h4><%= I18n.t(:goal_4_title) %></h4>
+              <p><%= I18n.t(:goal_4_text) %></p>
+            </div>
+            <div class="accordian-item">
+              <h4><%= I18n.t(:goal_5_title) %></h4>
+              <p><%= I18n.t(:goal_5_text) %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="grid-container">
+        <div class="col-6">
+          <h5><%= I18n.t(:contact_us) %></h5>
+          <h1><%= I18n.t(:contact_us_title) %></h1>
+          <p><%= I18n.t(:contact_us_text_1) %></p>
+          <p><%= I18n.t(:contact_us_text_2) %></p>
+          <p><%= I18n.t(:contact_us_text_3) %></p>
+          <p><%= I18n.t(:contact_us_text_4) %></p>
+          <a class="link-btn-one" href="mailto:contact@panstudio.co.uk?Subject=Hello%20Lamppost%20Malmö%20Enquiry"><%= I18n.t(:contact_us_cta) %></a>
+        </div>
+        <div class="col-4">
+          <div class="swiper-controls">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <h3>Hello Lamp Post Brighton, <span>2016</span></h3>
+                        <div class="image-circle"><img src="/images/hlp-brighton.jpg"></div>
+                        <p><%= I18n.t(:hello_lampost_brighton) %></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <h3>Hello Lamp Post Austin, <span>2015</span></h3>
+                        <div class="image-circle"><img src="/images/hlp-austin.jpg"></div>
+                        <p><%= I18n.t(:hello_lampost_austin) %></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <h3>Hello Lamp Post Singapore, <span>2015</span></h3>
+                        <div class="image-circle"><img src="/images/hlp-singapore.jpg"></div>
+                        <p><%= I18n.t(:hello_lampost_singapore) %></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <h3>Hello Lamp Post Bristol, <span>2013</span></h3>
+                        <div class="image-circle"><img src="/images/hlp-bristol.jpg"></div>
+                        <p><%= I18n.t(:hello_lampost_bristol) %></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="supporters">
+      <div class="grid-container">
+        <div class="row">
+          <div class="col-3">
+            <img src="/images/logo-m.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/logo-pan.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/logo-gg.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/logo-mh.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="shift-3 col-3">
+            <img src="/images/logo-sida.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/logo-su.png">
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </article>

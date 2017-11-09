@@ -1,0 +1,87 @@
+sv:
+  logo: <img src="/images/logo-sv.svg"/>
+  country_code: "sv"
+
+  name: "Hallå hållbara Malmö"
+
+  video: "237541466"
+
+  how_it_works_link: "Hur funkar det?"
+  information_link: "Information"
+  global_goals_link: "Globala målen"
+  contact_link: "Kontakt"
+
+  description: "Föremål över hela Malmö vaknar till liv och vill prata med dig! Hallå hållbara Malmö går av stapeln mellan den 11 oktober och den 15 november."
+  how_it_works: "Hur funkar det?"
+
+  ticker_title: "Vad pratar Malmö om?"
+  question: "Fråga"
+  answer: "Svar"
+  next: "Nästa"
+  previous: "previous"
+
+  pick_an_object: "Välj ett föremål"
+  pick_an_object_text: "Håll utkik efter föremål med en kod på."
+
+  say_hello: "Säg hallå"
+  say_hello_text: "Skicka ett sms till nummer 076 519 44 41 i det här formatet: “Hallå” + typ av föremål + #kod, t.ex. “Hallå papperskorg #B6291”"
+
+  keep_talking: "Prata på"
+  keep_talking_text: "Du får snabbt svar. Sedan kan du svara på föremålets frågor och få veta vad andra har att säga."
+
+  information: "Information"
+  information_title: "Har du någonsin undrat hur det skulle vara att prata med staden du bor i?"
+  information_text: "Städer över hela världen har vaknat och börjat prata med sina invånare (i Japan, Singapore, Storbritannien, Kazakstan, Frankrike och USA)."
+  information_text_2: "Nu har turen kommit till Malmö. En bit av Malmös kust kommer att vakna till liv och vilja lära sig allt som finns att veta. Vart är det alla skyndar på morgonen? Vilka är de bästa platserna för att träffa vänner? Vad fanns här förut? Vad har Malmöborna för framtidsdrömmar?"
+  information_cta_1: "Visa Mer"
+  information_cta_2: "Visa Mindre"
+
+  more_information: "Mer information"
+  more_information_text_1: "Om man tittar noga ser man att de flesta föremål runt om i staden är märkta med en referenskod. De här koderna används för skötsel och underhåll och gör det möjligt att skilja ett föremål från ett annat. Hello Lamp Post ger koderna ett nytt användningsområde genom att släppa in lokala samtal i det offentliga rummet."
+  more_information_text_2: "Du kan prata med vilket föremål du vill – allt från brunnslock, papperskorgar och offentliga toaletter till elskåp, träd och cykelstationer."
+  more_information_text_3: "Interaktionen tar formen av ett samtal. Föremålen är nyfikna på världen runt omkring och vill veta mer om den. Svaren på deras frågor delas med andra spelare, och föremålen börjar förstå stadsdelens personlighet och människorna som bor där."
+  more_information_text_4: "Samtal kan påbörjas från alla mobiltelefoner med sms-funktion. Det är gratis att spela (vanliga sms- och datakostnader gäller) och det passar alla åldrar."
+
+  text_title_1: "sms:a"
+  text_title_2: "till 076 519 44 41"
+
+  hello_utility_box: "Hej Elskåp #GK421"
+  hello_bin: "Hej Papperskorg #19"
+  hello_pier: "Hej Brygga 6 #P4472"
+  hello_public_bike: "Hej Cykel #20138"
+  hello_bike_pump: "Hej Cykelpump #13"
+  hello_bike_station: "Hello Elskåp #GK412"
+  hello_public_toilet: "Hello Elskåp #GK176"
+  hello_parking_meter: "Hello Parking Mete #P8291"
+  hello_vehicle: "Hello Vehicle #V8291"
+
+  global_goals_meta: "FN"
+  global_goals_title: "Globala mål"
+  global_goals_text_1: "I september 2015 enades 193 av världens ledare om 17 globala mål för hållbar utveckling. Om målen uppfylls skulle det innebära slutet på extrem fattigdom, ojämlikhet och klimatförändringar till 2030."
+  global_goals_text_2: "Lokala initiativ är av stor betydelse för FN:s mål. Malmö står i förgrunden och visar att arbetet mot hållbarhet leder till lokal utveckling och gynnar samhället."
+  global_goals_text_3: "Hallå hållbara Malmö använder föremål i staden för att öppna upp för diskussioner om några av de lokala projekt som bidrar till att FN:s globala mål uppnås."
+  goal_1_title: "Mål 4: God utbildning för alla"
+  goal_1_text: "Ett av FN:s globala mål är att säkerställa en inkluderande och jämlik utbildning av god kvalitet och främja livslångt lärande för alla. Malmö stad engagerar sig i institutioner som skolor och förskolor, men även på platser för lärande runt om i staden, inte minst Malmö Museer, som är södra Sveriges största museum, och det nya marinpedagogiska centret. Marinpedagogiskt center erbjuder utbildningsprogram för skolbarn i alla åldrar och är en av de byggnader du kan prata med."
+  goal_2_title: "Mål 7: Hållbar energi för alla"
+  goal_2_text: "Ett annat av FN:s globala mål är att säkerställa att alla har tillgång till tillförlitlig, hållbar och modern energi till en överkomlig kostnad. Malmö strävar efter att bli en världsledande klimatstad. Enligt stadens ambitiösa miljömål ska hela Malmö år 2030 försörjas till 100 % av förnybar energi. Lillgrunds vindkraftpark ligger i närheten av Öresundsbron, tio kilometer från Malmös sydkust, och producerar tillräckligt mycket el för att räcka till 60 000 hushåll."
+  goal_3_title: "Mål 12: Hållbar konsumtion och produktion"
+  goal_3_text: "Mål 12 handlar om att främja resurseffektivitet och hållbar konsumtion, och Malmö stad arbetar för att säkerställa hållbara konsumtions- och produktionsmönster. År 2006 utsågs Malmö till Sveriges första Fairtrade city, vilket har förändrat hur kommunfullmäktige köper varor och tjänster. Till 2020 kommer de 35 000 portioner skolmat som serveras varje dag att vara ekologiska och klimatsmarta. Malmö är dessutom den första storstaden i Sverige där hushåll måste källsortera sitt matavfall, som sedan omvandlas till biogas för att driva stadsbussarna."
+  goal_4_title: "Mål 13: Bekämpa klimatförändringen"
+  goal_4_text: "Till mål 13 om klimatåtgärder hör uppgiften att integrera klimatsatsningar i policyer, strategier och planering på nationell nivå. Malmö vidtar omedelbara åtgärder för att bekämpa klimatförändringarna och dess konsekvenser på lokal nivå. EU-kommissionens utmärkelse för hållbar trafikplanering (SUMP award) gick 2016 till Malmös Trafik- och mobilitetsplan. Idag består trafiken i Malmö av ungefär 25 % cyklister, som färdas längs 500 kilometer vackra cykelvägar över hela staden. År 2016 invigdes hyrcykelsystemet Malmö by bike, som direkt blev en stor succé med 4 000 cykellån bara den första veckan. Västra hamnen och Augustenborg är internationella förebilder för klimatsmart stadsutveckling."
+  goal_5_title: "Mål 14: Hav och marina resurser"
+  goal_5_text: "Mål 14 är att bevara och nyttja haven och de marina resurserna på ett hållbart sätt. Havet har spelat en betydande roll i Malmös historia, som källa till både industri och fritid. Faktum är att halva Malmös yta är hav! Malmö arbetar därför aktivt för att hjälpa människor att njuta av havet på ett hållbart sätt. Nyligen öppnade en ny båttvätt som gör det möjligt att ha rena båtar utan giftig bottenfärg. Det har också gjorts satsningar för att minska mikroplaster och andra förorenande utsläpp, som att minska trafik och icke-hållbara material på idrottsplatser. Malmö stad strävar också efter att Öresund ska utses till ett biosfärområde av Unesco."
+
+  contact_us: "kontakt"
+  contact_us_title: "Om Hallå hållbara Malmö"
+  contact_us_text_1: "Hallå hållbara Malmö utförs på uppdrag av Malmö Stad."
+  contact_us_text_2: "Projektet kommer att äga rum längs strandpromenaden mellan Marinpedagogiskt center och Kommendantuset."
+  contact_us_text_3: "Hello Lamp Post har utformats och skapats av PAN Studio. Hello Lamp Post gjordes först på uppdrag av Watershed's Playable City Award 2013 i Bristol och pågick i åtta veckor. Projektet utvecklades i samarbete med Tom Armitage och Gyorgyi Galik."
+  contact_us_text_4: "Om du har några frågor om projektet får du gärna kontakta oss."
+  contact_us_cta: "kontakta oss"
+
+  hello_lampost_brighton: "Vi väckte gatuföremål till liv i september 2016 som en del av Brighton Digital Festival."
+  hello_lampost_austin: "Hello Lamp Post i Austin under mars 2015 i samband med SXSW Festival."
+  hello_lampost_singapore: "Hello Lamp Post i Singapore var en del av SG15 i oktober 2015."
+  hello_lampost_bristol: "Hello Lamp Post hade sin premiär 2013 i Bristol, där 25 000 sms skickades in på bara åtta veckor."
+
+  to_top: "Tillbaka till början av sidan"

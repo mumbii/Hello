@@ -1,0 +1,87 @@
+en:
+  logo: <img src="/images/logo-en.svg"/>
+  country_code: "en"
+
+  name: "Hello Sustainable Malmö"
+
+  video: "237609246"
+
+  how_it_works_link: "How It Works"
+  information_link: "Information"
+  global_goals_link: "Global Goals"
+  contact_link: "Contact"
+
+  description: "Objects across Malmö are waking up and they want to talk to you! Hello Sustainable Malmö will run from 11th October to 15th November."
+  how_it_works: "How it works"
+
+  ticker_title: "What is Malmö talking about?"
+  question: "Question"
+  answer: "Answer"
+  next: "Next"
+  previous: "previous"
+
+  pick_an_object: "Pick an Object"
+  pick_an_object_text: "Look out for a street object with a code on it."
+
+  say_hello: "Say Hello"
+  say_hello_text: "Send a text to +46 76 519 44 41 in this format: “Hello” + object type + #code e.g. “Hello Bin #B6291”."
+
+  keep_talking: "Keep Talking"
+  keep_talking_text: "You’ll soon get a reply. Answer the object’s questions and learn what other people have to say."
+
+  information: "Information"
+  information_title: "Have you ever wondered what it would be like to talk to the city that you live in?"
+  information_text: "Around the world, cities have been waking up and talking to their residents (Japan, Singapore, UK, Kazakhstan, France and the USA)."
+  information_text_2: "Now Malmö’s coast is coming to life and it wants to learn everything there is to know. Where is everyone rushing off to in the mornings? Where are the best places to meet friends and hang out? What was here before? What are everyone’s dreams for the future?"
+  information_cta_1: "Show More"
+  information_cta_2: "Show Less"
+
+  more_information: "More Information"
+  more_information_text_1: "If you look closely, most street objects have a manufacturer or maintenance reference code on them. These codes are used by operators to distinguish one object from another. Hello Lamp Post gives a new use to these existing codes by allowing localised conversations in public spaces."
+  more_information_text_2: "You can have a chat with any object - drain covers, bins, public toilets, utility boxes, trees and bike stations."
+  more_information_text_3: "The interaction takes the form of a conversation. The objects are curious about the world they find themselves in and want to ask you questions about it. The response they receive are then shared with other players meaning an object understands the personality and people of the local area."
+  more_information_text_4: "Conversations can be started from any mobile phone that sends text (SMS) messages. It’s free to play (standard SMS and data rates apply) and it’s suitable for all ages."
+
+  text_title_1: "Text:"
+  text_title_2: "to +46 76 519 44 41"
+
+  hello_utility_box: "Hello Utility box #GK421"
+  hello_bin: "Hello Bin #19"
+  hello_pier: "Hello Pier 6 #P4472"
+  hello_public_bike: "Hello Public Bike #20138"
+  hello_bike_pump: "Hello Bike Pump #13"
+  hello_bike_station: "Hello Utility Box #GK412"
+  hello_public_toilet: "Hello Utility Box #GK176"
+  hello_parking_meter: "Hello Parking Mete #P8291"
+  hello_vehicle: "Hello Vehicle #V8291"
+
+  global_goals_meta: "United Nations"
+  global_goals_title: "Global Goals"
+  global_goals_text_1: "In September 2015, 193 world leaders agreed to 17 Global Goals for Sustainable Development. If these Goals are completed, it would mean an end to extreme poverty, inequality and climate change by 2030."
+  global_goals_text_2: "Local initiatives are critical to the fulfilment of the UN goal and Malmö is one of the cities at the forefront, demonstrating how working towards sustainability generates local development and benefits society."
+  global_goals_text_3: "Hello Malmö will use street objects to facilitate discussions about some of the local projects helping to fulfil the UN’s global goals."
+  goal_1_title: "Quality Education - Global Goal 4"
+  goal_1_text: "One of the UN’s Global Goals is to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. The City of Malmö is committed to this goal through institutions like preschools and schools, but also places for learning around the city, like Malmö Museums, which is Southern Sweden's largest museum, and the new Marine Educational Center. The new Marine Educational Center offers educational programmes for school children of all ages and is one of the buildings you can talk to."
+  goal_2_title: "Affordable and Clean Energy - Global Goal 7"
+  goal_2_text: "Another of the UN’s Global Goals is to ensure access to affordable, reliable, sustainable and modern energy for all. Malmö aims to be a world-leading climate city. The city’s steep environmental goals state that by 2030 the entire city shall be supplied by 100% renewable energy.  Lillgrund Wind Park is located near the Öresund bridge, 10 kilometers off Malmö’s south coast, producing enough electricity to power 60,000 homes."
+  goal_3_title: "Sustainable Consumption and <br> Production - Global Goal 12"
+  goal_3_text: "Global Goal number 12 is about promoting resource efficiency and sustainable consumption. The City of Malmö is working to ensure sustainable consumption and production patterns. In 2006 Malmö became Sweden’s first Fairtrade City, which has transformed the way the council buys goods and services. By 2020 the 35,000 portions of school dinners served a day will be organic and climate-smart. Malmö is also the first large city in Sweden to require households to collect organic waste which is then converted into biogas to run the city busses."
+  goal_4_title: "Climate Action - Global Goal 13"
+  goal_4_text: "The Global Goal on Climate Action includes the task to integrate climate change measures into policies, strategies and planning on a national level. Malmö is taking urgent action to combat climate change and its impacts on the local level. The European Commission awarded Malmö for the best Sustainable Urban Mobility Planning Award in 2016. Today, around 25 percent of the overall traffic in Malmö is by bike along the beautiful 500 km of cycle tracks spread across the city. In 2016 the bike rental system Malmö by bike opened and already in the first week it was a huge success with 4 000 bike loans. The areas Western Harbour and Augustenborg in Malmö are internationally cited examples of how to work in urban development in a climate smart way."
+  goal_5_title: "Life Below Water - Global Goal 14"
+  goal_5_text: "Global Goal number 14 aims to achieve careful management of the essential global resource of the oceans and seas. The sea has played a central role in Malmö’s history as a source of industry and leisure. Indeed, over half of the City of Malmö area is sea! Malmö is therefore working in various ways to help people enjoy the sea sustainably. A new boat-washing facility has just opened, making it possible to have clean boats without toxic paint. Measures have also been taken to reduce microplastic and other polluting emissions, such as reducing traffic and unsustainable sports-field materials. The City is also seeking to have Öresund declared as a UNESCO biosphere area."
+
+  contact_us: "Contact"
+  contact_us_title: "About Hello Sustainable Malmö"
+  contact_us_text_1: "Hello Sustainable Malmö has been commissioned by The City of Malmö."
+  contact_us_text_2: "The project will run across the coastal walk between Marine Education Centre and Kommendant Huset."
+  contact_us_text_3: "Hello Lamp Post was conceived and built by PAN Studio. Hello Lamp Post was first commissioned for Watershed’s Playable City Award 2013 and ran for 8 weeks in Bristol. The project was developed with Tom Armitage and Gyorgyi Galik."
+  contact_us_text_4: "If you have any questions about the project you can get in touch with us here."
+  contact_us_cta: "Get In Touch"
+
+  hello_lampost_brighton: "We woke up street furniture in September 2016 as part of Brighton Digital Festival."
+  hello_lampost_austin: "Hello Lamp Post in Austin in March 2015 as part of SXSW Festival."
+  hello_lampost_singapore: "Hello Lamp Post in Singapore in October 2015 as part of SG15."
+  hello_lampost_bristol: "Hello Lamp Post premiered in Bristol 2013 where 25,000 text messages were sent in just eight weeks."
+
+  to_top: "To Top"
