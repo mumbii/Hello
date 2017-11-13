@@ -130,30 +130,41 @@
 		img {
 			width: 120%;
 		}
-
-		.bubble-holder {
-			right: 13%;
-		}
 	}
 
 	@include mq("small", "max-width") {
-		height: 1000px;
+		height: 700px;
 
 		img {
-			width: 500%;
+			width: 1500px;
+			margin-left: -1300px;
 		}
 
 		.col-4 {
 			width: 100%;
-			margin-top: 100px;
+			margin-top: 70px;
+
+			h2 {
+				font-size: 1.7em;
+			}
 		}
 
-		.bubble-holder {
+		.link-scroll {
+			display: none;
+		}
+
+		.header-swiper .swiper-wrapper .swiper-slide .bubble-holder {
 			position: relative;
-			background: red;
 		  display: block;
-		  margin: 0 auto;
-		  @include calc(width, "100% - 60px");
+		  margin: 220px auto 0 auto;
+		  width: 100%;
+			right: auto;
+			box-sizing: border-box;
+			padding: 30px 60px 30px 30px;
+		}
+
+		.header-swiper .swiper-wrapper .swiper-slide .bubble-holder .text-bubble.object {
+			float: left;
 		}
 	}
 }
