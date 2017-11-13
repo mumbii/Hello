@@ -51,6 +51,12 @@ $( ".js-scroll-down-button" ).on( "click", function() {
 	return false;
 });
 
+$(document).on('click', '.hamburger', function(event){
+  event.preventDefault();
+  $(this).toggleClass("active");
+  $(".menu").toggleClass("active");
+});
+
 $( ".js-learn-more" ).on( "click", function() {
 	$(this).toggleClass("active");
 	$(this).toggleText('Show More', 'Show Less');

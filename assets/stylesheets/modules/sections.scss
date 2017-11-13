@@ -101,7 +101,6 @@
 		&:last-child {
 			@include animation-delay(5s);
 		}
-
 	}
 
 	.text-bubble.object {
@@ -120,6 +119,43 @@
 			background-image: url('/images/yellow-triangle.svg');
 		}
 	}
+
+	@include mq("medium", "max-width") {
+		height: 80vh;
+
+		.link-scroll {
+			top: 70vh;
+		}
+
+		img {
+			width: 120%;
+		}
+
+		.bubble-holder {
+			right: 13%;
+		}
+	}
+
+	@include mq("small", "max-width") {
+		height: 1000px;
+
+		img {
+			width: 500%;
+		}
+
+		.col-4 {
+			width: 100%;
+			margin-top: 100px;
+		}
+
+		.bubble-holder {
+			position: relative;
+			background: red;
+		  display: block;
+		  margin: 0 auto;
+		  @include calc(width, "100% - 60px");
+		}
+	}
 }
 
 .process {
@@ -133,7 +169,7 @@
 		display: none;
 	}
 
-	.right-img{
+	.right-img {
       top: 55px;
 	}
 
@@ -371,6 +407,7 @@
 		}
 
 		img {
+			display: none;
 			top: 0;
 			bottom: auto;
 			position: relative;
@@ -914,14 +951,17 @@
 	background: $colorTwo;
 
 	h1 {
-		color: $colorType;
+		color: $colorOne;
 		text-align: center;
-		font-size: 1.5em;
+		font-size: 1.4em;
+		margin-bottom: 50px;
 	}
 
 	h4 {
 		color: #fff;
 		margin-top: 40px;
+		font-size: 1.3em;
+		margin-bottom:40px;
 	}
 
 	.col-3 img {
@@ -930,6 +970,11 @@
 		margin: 0 auto;
 		float: none;
 		padding: 0 20px;
+		margin-top: -30px;
+	}
+
+	.row {
+		padding: 0;
 	}
 
 	.row:nth-child(2) {
