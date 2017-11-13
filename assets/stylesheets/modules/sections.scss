@@ -511,7 +511,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 90vh;
+		height: 80vh;
 
 		.marker {
 		  @include border-radius(100px);
@@ -602,6 +602,19 @@
 
 	.link-btn-one.active:after {
 		@include transform(rotate(-90deg));
+	}
+
+	@include mq("small", "max-width") {
+			height: 600px;
+
+			#map {
+				height: 1000px;
+			}
+
+			.col-4 {
+				padding-top:40px;
+				width: 100%;
+			}
 	}
 }
 
