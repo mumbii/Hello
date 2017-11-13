@@ -18,6 +18,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGR3Y2tzIiwiYSI6IlhwMGlGR28ifQ.irq5Rbn1WvGb_V
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/dark-v9',
+center: [-1.772,53.652],
 zoom: 2 // starting zoom
 });
 
@@ -145,7 +146,7 @@ geojson.features.forEach(function(marker) {
 
 });
 
-
+options.tap.false();
 map.scrollZoom.disable();
 </script>
 <script>
