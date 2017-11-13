@@ -1301,28 +1301,45 @@ a {
     width: 100%;
     height: 90vh; }
     .locations #map .marker {
-      background-image: url("/images/hello-astana.png");
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-      width: 170px;
-      height: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+      border-radius: 100px;
+      background: #00B5E2;
+      box-shadow: 0px 0px 10px #252525;
+      width: 20px;
+      height: 20px;
       cursor: pointer; }
-    .locations #map #austin {
-      background-image: url("/images/hello-austin.png"); }
-    .locations #map #bordeaux {
-      background-image: url("/images/hello-bordeaux.png"); }
-    .locations #map #brighton {
-      background-image: url("/images/hello-brighton.png"); }
-    .locations #map #singapore {
-      background-image: url("/images/hello-bristol-singapore.png"); }
-    .locations #map #bristol {
-      background-image: url("/images/hello-bristol.png"); }
-    .locations #map #malmo {
-      background-image: url("/images/hello-malmo.png"); }
-    .locations #map #qeop {
-      background-image: url("/images/hello-qeop.png"); }
-    .locations #map #tokyo {
-      background-image: url("/images/hello-tokyo.png"); }
+    .locations #map .mapboxgl-popup .mapboxgl-popup-tip {
+      border-bottom-color: #FFD100;
+      border-top-color: #FFD100; }
+    .locations #map .mapboxgl-popup .mapboxgl-popup-content {
+      text-align: center;
+      background: #FFD100;
+      font-family: "Gotham", sans-serif;
+      padding: 15px; }
+      .locations #map .mapboxgl-popup .mapboxgl-popup-content .image-circle {
+        float: left;
+        width: 50px;
+        backgorund: #2A2A2A; }
+      .locations #map .mapboxgl-popup .mapboxgl-popup-content .mapboxgl-popup-close-button {
+        display: none; }
+      .locations #map .mapboxgl-popup .mapboxgl-popup-content .info {
+        float: left;
+        margin-left: 15px; }
+      .locations #map .mapboxgl-popup .mapboxgl-popup-content h3 {
+        font-size: 1.3em;
+        color: #2A2A2A;
+        font-family: "Gotham-bold", sans-serif; }
+      .locations #map .mapboxgl-popup .mapboxgl-popup-content a {
+        float: left;
+        clear: both;
+        padding: 0 !important;
+        font-size: 1.1em;
+        font-family: "Gotham-Medium", sans-serif;
+        color: #2A2A2A;
+        border-bottom: 2px solid #2A2A2A; }
   .locations .col-4 {
     float: left;
     box-sizing: border-box;

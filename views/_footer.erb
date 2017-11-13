@@ -15,13 +15,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoidGR3Y2tzIiwiYSI6IlhwMGlGR28ifQ.irq5Rbn1WvGb_VIwn1auNA';
-var start = [-0.1477, 51.5797];
-var end = [-0.1337, 51.5797];
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/dark-v9',
-zoom: 2 // starting zoom
+zoom: 1 // starting zoom
 });
+
 var geojson = {
   type: 'FeatureCollection',
   features: [{
@@ -31,8 +30,9 @@ var geojson = {
       coordinates: [-2.7, 51.4545]
     },
     properties: {
-      title: 'bristol',
+      title: 'Hello Lampost Bristol',
       link: 'http://www.hellolamppost.co.uk/',
+      photo: '/images/forbes.png'
     }
   },
   {
@@ -42,8 +42,9 @@ var geojson = {
       coordinates: [-0.1278, 51.5074]
     },
     properties: {
-      title: 'qeop',
-      link: 'http://hellolamppostlondon.com'
+      title: 'Hello Lampost Queen Elizabeth Olympic Park',
+      link: 'http://www.hellolamppostlondon.com/',
+      photo: '/images/hlp-london.jpg'
     }
   },
   {
@@ -53,92 +54,98 @@ var geojson = {
       coordinates: [103.8198, 1.3521]
     },
     properties: {
-      title: 'singapore',
-      link: 'http://hellolamppostsingapore.com'
+      title: 'Hello Lampost Singapore',
+      link: 'http://hellolamppostsingapore.com',
+      photo: '/images/hlp-singapore.jpg'
     }
   },
   {
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-122.414, 37.776]
+      coordinates: [139.746, 35.6]
     },
     properties: {
-      title: 'tokyo',
-      link: 'http://www.hellolamppost.tokyo/en/'
+      title: 'Hello Lampost Tokyo',
+      link: 'http://www.hellolamppost.tokyo/en/',
+      photo: '/images/hlp-tokyo.jpg'
     }
   },
   {
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-122.414, 37.776]
+      coordinates: [-97.7431, 30.2672]
     },
     properties: {
-      title: 'austin',
-      link: 'http://hellolamppostaustin.com'
+      title: 'Hello Lampost Austin',
+      link: 'http://hellolamppostaustin.com',
+      photo: '/images/hlp-austin.jpg'
     }
-  },
-  {
+  },{
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-122.414, 37.776]
+      coordinates: [-0.103,50.845]
     },
     properties: {
-      title: 'brighton',
-      link: 'http://hellolamppostbrighton.com'
+      title: 'Hello Lampost Brighton',
+      link: 'http://hellolamppostbrighton.com',
+      photo: '/images/hlp-brighton.jpg'
     }
-  },
-  {
+  },{
     type: 'Feature',
     geometry: {
       type: 'Point',
       coordinates: [0.5792, 44.8378]
     },
     properties: {
-      title: 'bordeaux',
-      link: 'http://www.hellolamppostbordeaux.com/en/'
+      title: 'Hello Lampost Bordeaux',
+      link: 'http://www.hellolamppostbordeaux.com/en/',
+      photo: '/images/hlp-bourdeaux.jpg'
     }
-  },
-  {
+  },{
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-122.414, 37.776]
+      coordinates: [13.159,55.586]
     },
     properties: {
-      title: 'malmo',
-      link: 'http://www.hellosustainablemalmo.se'
+      title: 'Hello Sustainable Malmö',
+      link: 'http://www.hallåhållbaramalmö.se/en/',
+      photo: '/images/hlp-malmo.jpg'
     }
-  },
-  {
+  },{
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [-122.414, 37.776]
+      coordinates: [71.426,51.140]
     },
     properties: {
-      title: 'malmo',
-      link: 'http://www.salemastana2017.kz/en/'
+      title: 'Hello Astana',
+      link: 'http://www.salemastana2017.kz/en/',
+      photo: '/images/hlp-astana.jpg'
     }
-  }]
+  }
+]
 };
 
+// add markers to map
 geojson.features.forEach(function(marker) {
+
   // create a HTML element for each feature
-  var el = document.createElement('a');
-
+  var el = document.createElement('div');
   el.className = 'marker';
-  el.id = marker.properties.title;
-  el.href = marker.properties.link;
-  el.target = '_blank';
 
-  // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
-  .setLngLat(marker.geometry.coordinates)
-  .addTo(map);
+    .setLngLat(marker.geometry.coordinates)
+    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML('<div class="image-circle"><img src="'+ marker.properties.photo +'"></img></div><div class="info"><h3>' + marker.properties.title + '</h3><a target="_blank" href="'+ marker.properties.link +'">View Website</a></div>'))
+    .addTo(map);
+
 });
+
+
 map.scrollZoom.disable();
 </script>
 <script>
