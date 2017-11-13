@@ -643,20 +643,21 @@ small, .font_small {
       text-align: right;
       float: right; }
   @media (max-width: 960px) {
-    .footer p, .footer a {
-      margin: 10px 0;
-      display: block;
-      width: intrinsic; }
-    .footer .right {
-      float: left; }
-      .footer .right .js-to-top {
-        text-align: left;
-        float: left; } }
-
-#malmo-footer span {
-  color: #000; }
-#malmo-footer a {
-  text-decoration: underline; }
+    .footer {
+      padding: 15px 0 13px 0; }
+      .footer p, .footer a {
+        margin: 10px 0;
+        display: block;
+        width: intrinsic; }
+      .footer .right {
+        float: left; }
+        .footer .right .js-to-top {
+          text-align: right;
+          float: right; } }
+  @media (max-width: 960px) and (max-width: 760px) {
+    .footer .js-to-top {
+      text-align: left;
+      float: left; } }
 
 form {
   padding-top: 10px; }
@@ -1722,18 +1723,20 @@ a {
     float: right;
     height: 100vh; }
   @media (max-width: 960px) {
-    .contact {
-      padding: 20px 0; }
-      .contact h5 {
-        margin-bottom: 40px; }
-      .contact .col-6 {
-        background: none;
-        width: 100%; }
-      .contact p {
-        font-size: 1em; }
-      .contact .col-4 {
-        width: 100%;
-        padding-top: 30px; } }
+    .contact h5 {
+      margin-bottom: 40px; }
+    .contact p {
+      font-size: 1em; }
+    .contact h5 {
+      margin-bottom: 25px; }
+    .contact .col-6 {
+      width: 100%;
+      margin-top: 50px; }
+    .contact h1 {
+      margin-bottom: 10px; }
+    .contact .link-btn-one {
+      margin-top: 20px;
+      margin-bottom: 20px; } }
   @media (max-width: 760px) {
     .contact h5 {
       margin-bottom: 25px; }

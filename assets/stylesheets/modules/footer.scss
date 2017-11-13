@@ -39,6 +39,8 @@
 	}
 
 	@include mq("small", "max-width") {
+		padding: 15px 0 13px 0;
+
 		p, a {
 			margin: 10px 0;
 			display: block;
@@ -49,19 +51,16 @@
 			float: left;
 
 		.js-to-top {
+			text-align: right;
+			float: right;
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
+		.js-to-top {
 			text-align: left;
 			float: left;
 		}
 	}
-	}
-}
-
-#malmo-footer {
-	span {
-		color: #000;
-	}
-
-	a {
-		text-decoration: underline;
 	}
 }

@@ -1001,25 +1001,33 @@
 	}
 
 	@include mq("small", "max-width") {
-		padding: 20px 0;
 
 		h5 {
 			margin-bottom: 40px;
-		}
-
-		.col-6 {
-			background: none;
-			width: 100%;
 		}
 
 		p {
 			font-size: 1em;
 		}
 
-		.col-4 {
-			width: 100%;
-			padding-top: 30px;
+		h5 {
+			margin-bottom: 25px;
 		}
+
+		.col-6 {
+			width: 100%;
+			margin-top: 50px;
+		}
+
+		h1 {
+			margin-bottom: 10px;
+		}
+
+		.link-btn-one {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
 	}
 
 	@include mq("extra-small", "max-width") {
