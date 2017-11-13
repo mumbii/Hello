@@ -944,6 +944,7 @@
 	}
 
 	@include mq("small", "max-width") {
+		padding: 20px 0;
 
 		h5 {
 			margin-bottom: 40px;
@@ -961,6 +962,27 @@
 		.col-4 {
 			width: 100%;
 			padding-top: 30px;
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
+
+		h5 {
+			margin-bottom: 25px;
+		}
+
+		h1 {
+			margin-bottom: 10px;
+		}
+
+		.link-btn-one {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		fieldset {
+			width: 100%;
+			margin-right: 0;
 		}
 	}
 }

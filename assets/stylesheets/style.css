@@ -1688,16 +1688,29 @@ a {
     float: right;
     height: 100vh; }
   @media (max-width: 960px) {
+    .contact {
+      padding: 20px 0; }
+      .contact h5 {
+        margin-bottom: 40px; }
+      .contact .col-6 {
+        background: none;
+        width: 100%; }
+      .contact p {
+        font-size: 1em; }
+      .contact .col-4 {
+        width: 100%;
+        padding-top: 30px; } }
+  @media (max-width: 760px) {
     .contact h5 {
-      margin-bottom: 40px; }
-    .contact .col-6 {
-      background: none;
-      width: 100%; }
-    .contact p {
-      font-size: 1em; }
-    .contact .col-4 {
+      margin-bottom: 25px; }
+    .contact h1 {
+      margin-bottom: 1px; }
+    .contact .link-btn-one {
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .contact fieldset {
       width: 100%;
-      padding-top: 30px; } }
+      margin-right: 0; } }
 
 .press {
   height: auto;
