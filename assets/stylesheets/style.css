@@ -1104,24 +1104,41 @@ a {
       height: 700px; }
       .hero img {
         width: 1300px;
-        margin-left: -700px; }
+        margin-left: -400px; }
       .hero .col-4 {
-        width: 100%;
-        margin-top: 50px; }
+        margin-top: 130px; }
         .hero .col-4 h2 {
           font-size: 1.7em; }
       .hero .link-scroll {
         display: none; }
       .hero .header-swiper .swiper-wrapper .swiper-slide .bubble-holder {
-        position: relative;
-        display: block;
-        margin: 200px auto 0 auto;
-        width: 100%;
-        right: auto;
-        box-sizing: border-box;
-        padding: 0px 60px 30px 30px; }
+        width: -moz-calc(40%);
+        width: -webkit-calc(40%);
+        width: calc(40%);
+        right: 20%;
+        top: 30vh; }
       .hero .header-swiper .swiper-wrapper .swiper-slide .bubble-holder .text-bubble.object {
         float: left; } }
+  @media (max-width: 760px) {
+    .hero img {
+      margin-left: -700px; }
+    .hero .col-4 {
+      width: 100%;
+      margin-top: 50px; }
+      .hero .col-4 h2 {
+        font-size: 1.7em; }
+    .hero .link-scroll {
+      display: none; }
+    .hero .header-swiper .swiper-wrapper .swiper-slide .bubble-holder {
+      position: relative;
+      display: block;
+      margin: 200px auto 0 auto;
+      width: 100%;
+      right: auto;
+      box-sizing: border-box;
+      padding: 0px 60px 30px 30px; }
+    .hero .header-swiper .swiper-wrapper .swiper-slide .bubble-holder .text-bubble.object {
+      float: left; } }
 
 .process {
   background: #00B5E2;
@@ -1195,6 +1212,17 @@ a {
     .process .process-item:after {
       right: -80px; } }
   @media (max-width: 960px) {
+    .process .col-4 {
+      width: -moz-calc(33.3% - 20px);
+      width: -webkit-calc(33.3% - 20px);
+      width: calc(33.3% - 20px); }
+    .process .process-item {
+      width: 100%; }
+      .process .process-item:after {
+        display: none; }
+    .process .image-circle {
+      width: 70%; } }
+  @media (max-width: 760px) {
     .process {
       padding: 50px 0 0 0; }
       .process .col-4 {
@@ -1446,6 +1474,12 @@ a {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg); }
   @media (max-width: 960px) {
+    .locations {
+      height: 500px; }
+      .locations .marker {
+        width: 50px;
+        height: 50px; } }
+  @media (max-width: 760px) {
     .locations {
       height: 600px; }
       .locations #map {
@@ -1704,7 +1738,7 @@ a {
     .contact h5 {
       margin-bottom: 25px; }
     .contact h1 {
-      margin-bottom: 1px; }
+      margin-bottom: 10px; }
     .contact .link-btn-one {
       margin-top: 20px;
       margin-bottom: 20px; }
@@ -1742,18 +1776,24 @@ a {
   .press .row:nth-child(2) .col-3 img {
     padding-bottom: 0; }
   @media (max-width: 960px) {
+    .press .col-3 {
+      width: -moz-calc(25% - 18px);
+      width: -webkit-calc(25% - 18px);
+      width: calc(25% - 18px); } }
+  @media (max-width: 760px) {
     .press {
       padding: 20px 0; }
       .press h4 {
         text-align: center;
         margin-bottom: 40px;
         margin-top: 0px; }
-      .press .marker {
-        width: 50px;
-        height: 50px; }
+      .press .row {
+        padding: 0;
+        margin: 0; }
+      .press h1 {
+        margin-top: 40px; }
       .press .col-3 {
         width: 50%;
-        margin-left: 0;
         padding: 0;
         margin: 0; }
       .press .col-3 img {

@@ -137,6 +137,35 @@
 
 		img {
 			width: 1300px;
+			margin-left: -400px;
+		}
+
+		.col-4 {
+			margin-top: 130px;
+
+			h2 {
+				font-size: 1.7em;
+			}
+		}
+
+		.link-scroll {
+			display: none;
+		}
+
+		.header-swiper .swiper-wrapper .swiper-slide .bubble-holder {
+			@include calc(width, "40%");
+			right: 20%;
+			top: 30vh;
+		}
+
+		.header-swiper .swiper-wrapper .swiper-slide .bubble-holder .text-bubble.object {
+			float: left;
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
+
+		img {
 			margin-left: -700px;
 		}
 
@@ -270,6 +299,25 @@
 	}
 
 	@include mq("small", "max-width") {
+
+			.col-4 {
+				@include calc(width, "33.3% - 20px");
+			}
+
+			.process-item {
+				width: 100%;
+
+				&:after {
+					display: none;
+				}
+			}
+
+			.image-circle {
+				width: 70%;
+			}
+	}
+
+	@include mq("extra-small", "max-width") {
 		padding: 50px 0 0 0;
 
 		.col-4 {
@@ -605,6 +653,15 @@
 	}
 
 	@include mq("small", "max-width") {
+		height: 500px;
+
+		.marker {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
 			height: 600px;
 
 			#map {
@@ -1030,6 +1087,12 @@
 	}
 
 	@include mq("small", "max-width") {
+		.col-3 {
+			@include calc(width, "25% - 18px");
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
 		padding: 20px 0;
 
 		h4 {
@@ -1038,14 +1101,17 @@
 			margin-top: 0px;
 		}
 
-		.marker {
-			width: 50px;
-			height: 50px;
+		.row {
+			padding: 0;
+			margin: 0;
+		}
+
+		h1 {
+			margin-top: 40px;
 		}
 
 		.col-3 {
 			width: 50%;
-			margin-left: 0;
 			padding: 0;
 			margin: 0;
 		}

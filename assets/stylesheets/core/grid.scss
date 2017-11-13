@@ -153,7 +153,7 @@ $grid-spacing:2%;
 
   @include mq("small", "max-width") {
     @include calc(width, "50% - 18px");
-    
+
     &:nth-child(2) {
       margin-right: 0px;
     }
