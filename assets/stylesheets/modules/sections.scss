@@ -464,6 +464,47 @@
 		left: 0;
 		width: 100%;
 		height: 90vh;
+
+		.marker {
+		  background-image: url('/images/hello-astana.png');
+		  background-size: 100% auto;
+			background-repeat: no-repeat;
+		  width: 170px;
+		  height: 100px;
+		  cursor: pointer;
+		}
+
+		#austin {
+			background-image: url('/images/hello-austin.png');
+		}
+
+		#bordeaux {
+			background-image: url('/images/hello-bordeaux.png');
+		}
+
+		#brighton {
+			background-image: url('/images/hello-brighton.png');
+		}
+
+		#singapore {
+			background-image: url('/images/hello-bristol-singapore.png');
+		}
+
+		#bristol {
+			background-image: url('/images/hello-bristol.png');
+		}
+
+		#malmo {
+			background-image: url('/images/hello-malmo.png');
+		}
+
+		#qeop {
+			background-image: url('/images/hello-qeop.png');
+		}
+
+		#tokyo {
+			background-image: url('/images/hello-tokyo.png');
+		}
 	}
 	.col-4 {
 		float: left;
@@ -500,7 +541,6 @@
 	.link-btn-one.active:after {
 		@include transform(rotate(-90deg));
 	}
-
 }
 
 .object-icon {
@@ -780,6 +820,7 @@
 
 	.col-6 {
 		box-sizing: border-box;
+		float: right;
 	}
 
 	h5 {
@@ -845,6 +886,64 @@
 		.col-4 {
 			width: 100%;
 			padding-top: 30px;
+		}
+	}
+}
+
+.press {
+	height: auto;
+	width: 100%;
+	display: block;
+	padding: 30px 0 30px 0;
+	height: auto;
+	overflow: auto;
+	background: $colorTwo;
+
+	h1 {
+		color: $colorType;
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	h4 {
+		color: #fff;
+		margin-top: 40px;
+	}
+
+	.col-3 img {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+		float: none;
+		padding: 0 20px;
+	}
+
+	.row:nth-child(2) {
+		.col-3 img {
+			padding-bottom: 0;
+		}
+	}
+
+	@include mq("small", "max-width") {
+		padding: 20px 0;
+
+		h4 {
+			text-align: center;
+			margin-bottom: 40px;
+			margin-top: 0px;
+		}
+
+		.col-3 {
+			width: 50%;
+			margin-left: 0;
+			padding: 0;
+			margin: 0;
+		}
+
+		.col-3 img {
+			width: 90%;
+			padding: 0 0;
+
 		}
 	}
 }

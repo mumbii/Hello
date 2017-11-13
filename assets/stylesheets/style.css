@@ -658,6 +658,90 @@ small, .font_small {
 #malmo-footer a {
   text-decoration: underline; }
 
+form {
+  padding-top: 10px; }
+  form .form-half {
+    width: calc(50% - 15px);
+    float: left;
+    margin-right: 30px; }
+    form .form-half:nth-child(even) {
+      margin-right: 0; }
+  form input[type="text"], form input[type="email"], form input[type="submit"], form select, form textarea, form button {
+    width: 100%;
+    padding: 15px 15px;
+    margin: 20px 0;
+    font-family: "Gotham-Medium", sans-serif;
+    background: #2A2A2A;
+    border: 2px solid #2A2A2A;
+    color: #fff;
+    border: 0;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    form input[type="text"]:focus, form input[type="email"]:focus, form input[type="submit"]:focus, form select:focus, form textarea:focus, form button:focus {
+      outline: 0;
+      border: 0; }
+  form select {
+    background-image: url("/images/dropdown-arrows.svg");
+    margin-top: 15px;
+    background-size: 40px 40px;
+    background-position: right 5px;
+    background-repeat: no-repeat;
+    text-transform: none; }
+  form label {
+    color: #fff;
+    font-family: "Gotham-Bold", sans-serif;
+    text-transform: uppercase; }
+  form textarea {
+    resize: none;
+    text-transform: none; }
+  form button {
+    width: intrinsic;
+    padding: 15px 30px;
+    max-width: 150px;
+    background: #3B3B3B;
+    cursor: pointer;
+    color: #fff;
+    float: right;
+    padding: 16px 20px 16px 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    background: #2A2A2A;
+    color: #fff;
+    display: block;
+    width: intrinsic;
+    max-width: 200px;
+    font-family: "Gotham-Bold", sans-serif;
+    font-size: 1em;
+    border: 0; }
+    form button:after {
+      content: "";
+      display: block;
+      width: 17px;
+      height: 17px;
+      background-image: url("/images/arrow-yellow.svg");
+      margin-top: 2px;
+      background-size: 100% 100%;
+      background-position: 0 0;
+      float: right;
+      margin-left: 10px; }
+    form button:hover {
+      background: #222222; }
+
+.contact-form fieldset {
+  float: left;
+  width: -moz-calc(50% - 15px);
+  width: -webkit-calc(50% - 15px);
+  width: calc(50% - 15px); }
+  .contact-form fieldset:first-child {
+    margin-right: 25px; }
+
 .header {
   width: 100%;
   position: fixed;
@@ -1216,6 +1300,29 @@ a {
     left: 0;
     width: 100%;
     height: 90vh; }
+    .locations #map .marker {
+      background-image: url("/images/hello-astana.png");
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      width: 170px;
+      height: 100px;
+      cursor: pointer; }
+    .locations #map #austin {
+      background-image: url("/images/hello-austin.png"); }
+    .locations #map #bordeaux {
+      background-image: url("/images/hello-bordeaux.png"); }
+    .locations #map #brighton {
+      background-image: url("/images/hello-brighton.png"); }
+    .locations #map #singapore {
+      background-image: url("/images/hello-bristol-singapore.png"); }
+    .locations #map #bristol {
+      background-image: url("/images/hello-bristol.png"); }
+    .locations #map #malmo {
+      background-image: url("/images/hello-malmo.png"); }
+    .locations #map #qeop {
+      background-image: url("/images/hello-qeop.png"); }
+    .locations #map #tokyo {
+      background-image: url("/images/hello-tokyo.png"); }
   .locations .col-4 {
     float: left;
     box-sizing: border-box;
@@ -1451,7 +1558,8 @@ a {
   background: #00B5E2;
   padding: 60px 0 60px 0; }
   .contact .col-6 {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    float: right; }
   .contact h5 {
     margin-bottom: 50px;
     color: #2A2A2A;
@@ -1494,6 +1602,45 @@ a {
     .contact .col-4 {
       width: 100%;
       padding-top: 30px; } }
+
+.press {
+  height: auto;
+  width: 100%;
+  display: block;
+  padding: 30px 0 30px 0;
+  height: auto;
+  overflow: auto;
+  background: #2A2A2A; }
+  .press h1 {
+    color: #3B3B3B;
+    text-align: center;
+    font-size: 1.5em; }
+  .press h4 {
+    color: #fff;
+    margin-top: 40px; }
+  .press .col-3 img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    padding: 0 20px; }
+  .press .row:nth-child(2) .col-3 img {
+    padding-bottom: 0; }
+  @media (max-width: 960px) {
+    .press {
+      padding: 20px 0; }
+      .press h4 {
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 0px; }
+      .press .col-3 {
+        width: 50%;
+        margin-left: 0;
+        padding: 0;
+        margin: 0; }
+      .press .col-3 img {
+        width: 90%;
+        padding: 0 0; } }
 
 .supporters {
   height: auto;

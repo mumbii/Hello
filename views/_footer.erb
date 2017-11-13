@@ -22,20 +22,123 @@ container: 'map',
 style: 'mapbox://styles/mapbox/dark-v9',
 zoom: 2 // starting zoom
 });
-var isAtStart = true;
-function fly() {
-    var target = isAtStart ? end : start;
-    isAtStart = !isAtStart;
-    map.flyTo({
-        center: target,
-        zoom: 2,
-        bearing: 0,
-        speed: 0.01,
-        easing: function (t) {
-            return t;
-        }
-    });
-}
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-2.7, 51.4545]
+    },
+    properties: {
+      title: 'bristol',
+      link: 'http://www.hellolamppost.co.uk/',
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-0.1278, 51.5074]
+    },
+    properties: {
+      title: 'qeop',
+      link: 'http://hellolamppostlondon.com'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [103.8198, 1.3521]
+    },
+    properties: {
+      title: 'singapore',
+      link: 'http://hellolamppostsingapore.com'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'tokyo',
+      link: 'http://www.hellolamppost.tokyo/en/'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'austin',
+      link: 'http://hellolamppostaustin.com'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'brighton',
+      link: 'http://hellolamppostbrighton.com'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [0.5792, 44.8378]
+    },
+    properties: {
+      title: 'bordeaux',
+      link: 'http://www.hellolamppostbordeaux.com/en/'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'malmo',
+      link: 'http://www.hellosustainablemalmo.se'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'malmo',
+      link: 'http://www.salemastana2017.kz/en/'
+    }
+  }]
+};
+
+geojson.features.forEach(function(marker) {
+  // create a HTML element for each feature
+  var el = document.createElement('a');
+
+  el.className = 'marker';
+  el.id = marker.properties.title;
+  el.href = marker.properties.link;
+  el.target = '_blank';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(marker.geometry.coordinates)
+  .addTo(map);
+});
 map.scrollZoom.disable();
 </script>
 <script>

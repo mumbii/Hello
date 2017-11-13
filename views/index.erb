@@ -39,7 +39,7 @@
         <div class="col-6 right">
           <h5>About</h5>
           <h1>What is Hello Lamp Post?</h1>
-          <p>Hello Lamp Post is a playful platform, inviting people to strike up conversations with familiar street furniture using text message functions or facebook messenger, bringing to life the hidden stories of their cities. </p>
+          <p>Hello Lamp Post is a playful platform, inviting people to strike up conversations with familiar street furniture using text message functions or Facebook Messenger, bringing to life the hidden stories of their cities. </p>
           <p>By using the thousands of pre-existing identifier codes that label items of street furniture across a whole city, people can have unique conversations with particular objects, including (but not limited to) lamp posts, post boxes, bollards, manholes, bins, or telegraph poles.</p>
           <a class="link-btn-one js-learn-more">Show More</a>
         </div>
@@ -95,7 +95,56 @@
         <div class="col-4">
           <h1>Locations</h1>
           <p>Since its creation in 2013, Hello Lamp Post has traveled around the world and visited several cities, as part of festivals and events, or as a stand alone project.</p>
-          <a class="link-btn-one js-learn-more">Get In Touch</a>
+          <a class="link-btn-one">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+    <section class="press">
+      <div class="grid-container">
+        <div class="row">
+          <h1>As Featured On:</h1>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <img src="/images/bbc-logo.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/daily-logo.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/fox-logo.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/guardian-logo.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <img src="/images/huffington-logo.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/metro-logo.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/time-out.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/wired-logo.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <img src="/images/forbes.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/the-drum.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/creative-review.png">
+          </div>
+          <div class="col-3">
+            <img src="/images/5.png">
+          </div>
         </div>
       </div>
     </section>
@@ -108,19 +157,26 @@
           <a class="link-btn-one" href="mailto:contact@panstudio.co.uk?Subject=Hello%20Lamppost%20Malmö%20Enquiry">Email Us</a>
         </div>
         <div class="col-6">
-          <div id='contact-box' class="group">
-              <div class="span6 clear">
-                <form action="/" method="post" class="well">
-                  <label for="name">Your Name:</label>
-                  <input type="text" name="name" class="span4" placeholder="John Smith...">
-                  <label for="email">Your email address:</label>
-                  <input type="text" name="email" class="span4" placeholder="email@example.com">
-                  <label for="to">Your message:</label>
-                  <textarea name="message" cols='30' rows="10"></textarea><br>
-                  <button type="submit" class="btn" value="Send">Submit</button>
-                </form>
-              </div>
-            </div>
+            <form class="contact-form" action="/" method="post">
+              <fieldset>
+                <label for="name">Name:</label>
+                <input type="text" name="name" placeholder="Tom Wicks">
+              </fieldset>
+              <fieldset>
+                <label for="email">Your email address:</label>
+                <input type="email" name="email" placeholder="hello@lamppost.com">
+              </fieldset>
+              <label for="subject">Subject:</label>
+              <select name="subject" form="subject-form">
+                <option value="I am interested in Hello Lamp Post for my city">I am interested in Hello Lamp Post for my city</option>
+                <option value="I have a question about Hello Lamp Post">I have a question about Hello Lamp Post</option>
+                <option value="I am interested in collaborating with Hello Lamp Post">I am interested in collaborating with Hello Lamp Post</option>
+                <option value="Other">Other</option>
+              </select>
+              <label for="to">Your message:</label>
+              <textarea name="message" cols='30' placeholder="Hi Hello Lamp Post..." rows="10"></textarea><br>
+              <button type="submit" class="btn" value="Send">Submit</button>
+            </form>
         </div>
       </div>
     </section>
