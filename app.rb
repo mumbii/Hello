@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'i18n'
 require 'sinatra'
-require 'mail'
+require 'mailgun-ruby'
 require 'rack-flash'
 
 class HelloLamppostWebsite < Sinatra::Base
@@ -66,23 +66,24 @@ class HelloLamppostWebsite < Sinatra::Base
 
   post '/contact' do
 
-    Mail.defaults do
-      delivery_method :smtp, address: "localhost", port: 25
-    end
+    # First, instantiate the Mailgun Client with your API key
+mg_client = Mailgun::Client.new 'key-dee4e566f732ad64442a493985063a2e'
 
-    print params
-    print params['email']
+# Define your message parameters
+
+
 
     email = params['email']
     message = params['message']
     subject = params['subject']
 
-    Mail.deliver do
-      from      email
-      to       'tom@miln.co'
-      subject   subject
-      body      message
-    end
+    message_params =  { from: email,
+                        to:   'tom@miln.co',
+                        subject: subject,
+                        text:    message
+                      }
+    # Send your message through the client
+    mg_client.send_message 'hello-lamp-post.herokuapp.com', message_params
 
     flash[:ok] = "Your Message Has Been Sent!"
     erb :index

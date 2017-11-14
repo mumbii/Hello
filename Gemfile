@@ -10,6 +10,6 @@ gem 'sinatra'
 gem 'puma', '~> 3.1'
 gem 'rack-flash3'
 gem 'rake'
-gem 'mail'
+gem 'mailgun-ruby', '~>1.1.6'
 gem 'test-unit', group: :test
 gem 'rack-test', group: :test
