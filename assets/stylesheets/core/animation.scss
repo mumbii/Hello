@@ -13,3 +13,14 @@
     opacity: 1;
   }
 }
+
+@include keyframes(fadeInNotification) {
+  from {
+    @include transform(translateY(15px));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}

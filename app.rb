@@ -2,8 +2,11 @@ require 'open-uri'
 require 'i18n'
 require 'sinatra'
 require 'mail'
+require 'rack-flash'
 
 class HelloLamppostWebsite < Sinatra::Base
+  enable :sessions
+  use Rack::Flash
 
   configure do
     I18n.load_path = Dir[File.join(settings.root, 'config', 'locales', '*.yml')]
@@ -67,14 +70,26 @@ class HelloLamppostWebsite < Sinatra::Base
     #           :subject =>  params[:subject],
     #           :body =>  params[:email] +" wrote:\n" + params[:message],
     #           :via => :smtp )
-
-    Mail.deliver do
-      from     'me@test.lindsaar.net'
-      to       'tom@miln.co'
-      subject  'Here is the image you wanted'
-      body    'yo'
+    Mail.defaults do
+      delivery_method :sendmail
     end
 
+    print params
+    print params['email']
+
+    email = params['email']
+    message = params['message']
+    subject = params['subject']
+
+    Mail.deliver do
+      from      email
+      to       'tom@miln.co'
+      subject   subject
+      body      message
+    end
+
+    flash[:ok] = "Your Message Has Been Sent!"
+    erb :index
 
   end
 

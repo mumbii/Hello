@@ -31,6 +31,12 @@ $(document).on('click', '.menu a', function(event){
     }, 500);
 });
 
+$(document).on('click', '.link-exit', function(event){
+    event.preventDefault();
+    alert('d');
+    $("#notification").addClass("inactive");
+});
+
 // Lazy Load The Image
 $("img.lazy").lazyload({
 	threshold : 500,

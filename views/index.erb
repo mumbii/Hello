@@ -1,4 +1,12 @@
 <article class="homepage">
+  <% if flash.has?(:ok) %>
+  <section id="notification" class="notification">
+    <div class="grid-container">
+      <h3><%= flash[:ok] %></h3>
+      <div class="link-exit"></div>
+    </div>
+  </section>
+  <% end %>
   <section class="hero">
     <div class="grid-container">
       <div class="col-4">

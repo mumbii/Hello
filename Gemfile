@@ -8,6 +8,7 @@ gem 'sass', '~> 4.0.0.alpha.1'
 gem 'uglifier'
 gem 'sinatra'
 gem 'puma', '~> 3.1'
+gem 'rack-flash3'
 gem 'rake'
 gem 'mail'
 gem 'test-unit', group: :test
