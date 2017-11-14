@@ -1842,7 +1842,7 @@ a {
       width: calc(25% - 18px); } }
   @media (max-width: 760px) {
     .press {
-      padding: 20px 0; }
+      padding: 20px 0 60px 0; }
       .press h4 {
         text-align: center;
         margin-bottom: 40px;
