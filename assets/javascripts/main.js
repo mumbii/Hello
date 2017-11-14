@@ -44,8 +44,15 @@ $("img.lazy").lazyload({
 
 $( ".js-to-top" ).on( "click", function() {
 	$('html, body').animate({
-    	scrollTop: $(".hero").offset().top
+    	scrollTop: $(".hero").offset().top -55
 	}, 600);
+	return false;
+});
+
+$(document).on('click', '.js-contact', function(event){
+  $('html, body').animate({
+      scrollTop: $(".contact").offset().top -55
+  }, 600);
 	return false;
 });
 

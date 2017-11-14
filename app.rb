@@ -78,7 +78,7 @@ mg_client = Mailgun::Client.new 'key-dee4e566f732ad64442a493985063a2e'
     subject = params['subject']
 
     message_params =  { from: email,
-                        to:   'tom@miln.co',
+                        to:   'tiernan.mines@panstudio.co.uk',
                         subject: subject,
                         text:    message
                       }
