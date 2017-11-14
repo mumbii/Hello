@@ -9,5 +9,6 @@ gem 'uglifier'
 gem 'sinatra'
 gem 'puma', '~> 3.1'
 gem 'rake'
+gem 'mail'
 gem 'test-unit', group: :test
 gem 'rack-test', group: :test

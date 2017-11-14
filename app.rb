@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'i18n'
 require 'sinatra'
+require 'mail'
 
 class HelloLamppostWebsite < Sinatra::Base
 
@@ -39,17 +40,17 @@ class HelloLamppostWebsite < Sinatra::Base
 
   end
 
-  before /.*/ do
-
-    matches = request.path_info.match(/\A\/(sv|ru|en)(.*)/)
-
-    if matches
-      I18n.locale       = matches[1]
-      request.path_info = matches[2]
-    else
-      redirect to('/en' + request.path_info)
-    end
-  end
+  # before /.*/ do
+  #
+  #   matches = request.path_info.match(/\A\/(sv|ru|en)(.*)/)
+  #
+  #   if matches
+  #     I18n.locale       = matches[1]
+  #     request.path_info = matches[2]
+  #   else
+  #     redirect to('/en' + request.path_info)
+  #   end
+  # end
 
   get '/survey' do
     redirect "https://docs.google.com/forms/d/e/1FAIpQLSdm5phYBgjy6y6VkQTrpc_8OWV4CDIeP5zIU4laBS5cPblRqA/viewform"
@@ -58,6 +59,23 @@ class HelloLamppostWebsite < Sinatra::Base
   get '/' do
     @page_title = I18n.t(:home_title)
     erb :index
+  end
+
+  post '/contact' do
+    # Pony.mail( :to => 'tom.wicks@panstudio.co.uk',
+    #           :from => params[:email],
+    #           :subject =>  params[:subject],
+    #           :body =>  params[:email] +" wrote:\n" + params[:message],
+    #           :via => :smtp )
+
+    Mail.deliver do
+      from     'me@test.lindsaar.net'
+      to       'tom@miln.co'
+      subject  'Here is the image you wanted'
+      body    'yo'
+    end
+
+
   end
 
   get '/questions/random' do
