@@ -1186,11 +1186,14 @@ a {
     .hero .header-swiper .swiper-wrapper .swiper-slide .bubble-holder {
       position: relative;
       display: block;
-      margin: 200px auto 0 auto;
+      top: 0;
+      margin: 300px auto 0 auto;
       width: 100%;
       right: auto;
       box-sizing: border-box;
       padding: 0px 60px 30px 30px; }
+    .hero .text-bubble.object {
+      width: calc(100% - 60px); }
     .hero .header-swiper .swiper-wrapper .swiper-slide .bubble-holder .text-bubble.object {
       float: left; } }
 
