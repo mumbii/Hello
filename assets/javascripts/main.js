@@ -56,6 +56,13 @@ $(document).on('click', '.js-contact', function(event){
 	return false;
 });
 
+$(document).on('click', '.js-contact', function(event){
+  $('html, body').animate({
+      scrollTop: $(".contact").offset().top -55
+  }, 600);
+	return false;
+});
+
 $( ".js-scroll-down-button" ).on( "click", function() {
 	$('html, body').animate({
     	scrollTop: $("#about").offset().top - 57
