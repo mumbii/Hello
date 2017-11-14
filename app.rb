@@ -65,13 +65,9 @@ class HelloLamppostWebsite < Sinatra::Base
   end
 
   post '/contact' do
-    # Pony.mail( :to => 'tom.wicks@panstudio.co.uk',
-    #           :from => params[:email],
-    #           :subject =>  params[:subject],
-    #           :body =>  params[:email] +" wrote:\n" + params[:message],
-    #           :via => :smtp )
+
     Mail.defaults do
-      delivery_method :sendmail
+      delivery_method :smtp, address: "localhost", port: 25
     end
 
     print params
