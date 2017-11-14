@@ -720,7 +720,8 @@ form {
     background-size: 40px 40px;
     background-position: right 5px;
     background-repeat: no-repeat;
-    text-transform: none; }
+    text-transform: none;
+    height: auto; }
   form label {
     color: #fff;
     font-family: "Gotham-Bold", sans-serif;
@@ -1790,6 +1791,8 @@ a {
       margin-top: 20px;
       margin-bottom: 20px; } }
   @media (max-width: 760px) {
+    .contact .col-4 {
+      width: 100%; }
     .contact h5 {
       margin-bottom: 25px; }
     .contact h1 {

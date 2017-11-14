@@ -1060,6 +1060,10 @@
 
 	@include mq("extra-small", "max-width") {
 
+		.col-4 {
+			width: 100%;
+		}
+
 		h5 {
 			margin-bottom: 25px;
 		}
