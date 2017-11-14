@@ -47,20 +47,20 @@
 			width: intrinsic;
 		}
 
-		.right {
-			float: left;
+			.right {
+				float: left;
 
-		.js-to-top {
-			text-align: right;
-			float: right;
+			.js-to-top {
+				text-align: right;
+				float: right;
+			}
 		}
 	}
 
 	@include mq("extra-small", "max-width") {
 		.js-to-top {
-			text-align: left;
-			float: left;
+			text-align: left !important;
+			float: left !important;;
 		}
-	}
 	}
 }

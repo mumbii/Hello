@@ -683,10 +683,10 @@ small, .font_small {
         .footer .right .js-to-top {
           text-align: right;
           float: right; } }
-  @media (max-width: 960px) and (max-width: 760px) {
+  @media (max-width: 760px) {
     .footer .js-to-top {
-      text-align: left;
-      float: left; } }
+      text-align: left !important;
+      float: left !important; } }
 
 form {
   padding-top: 10px; }
