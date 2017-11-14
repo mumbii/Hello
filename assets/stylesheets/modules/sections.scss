@@ -641,6 +641,10 @@
 					color: $colorTwo;
 					border-bottom: 2px solid $colorTwo;
 				}
+
+				a.true {
+					display: none;
+				}
 			}
 		}
 	}
