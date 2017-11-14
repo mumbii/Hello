@@ -83,7 +83,7 @@ mg_client = Mailgun::Client.new 'key-dee4e566f732ad64442a493985063a2e'
                         text:    message
                       }
     # Send your message through the client
-    mg_client.send_message 'hello-lamp-post.herokuapp.com', message_params
+    mg_client.send_message 'sandbox1078ce278f404e358edd42b8db68c285.mailgun.org', message_params
 
     flash[:ok] = "Your Message Has Been Sent!"
     erb :index
