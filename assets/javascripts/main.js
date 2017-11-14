@@ -33,7 +33,6 @@ $(document).on('click', '.menu a', function(event){
 
 $(document).on('click', '.link-exit', function(event){
     event.preventDefault();
-    alert('d');
     $("#notification").addClass("inactive");
 });
 
