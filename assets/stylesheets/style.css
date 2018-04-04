@@ -346,6 +346,11 @@ p {
   line-height: 1.5em;
   padding: 0.4em 0 0.4em 0; }
 
+.news-date {
+  font-style: oblique;
+  text-align: left;
+  font-size: 0.8em; }
+
 ul li {
   color: #3B3B3B; }
 
@@ -676,7 +681,7 @@ small, .font_small {
       padding: 15px 0 13px 0; }
       .footer p, .footer a {
         margin: 10px 0;
-        display: block;
+        display: inline;
         width: intrinsic; }
       .footer .right {
         float: left; }
@@ -707,7 +712,7 @@ form {
     border: 0;
     font-size: 0.9em;
     box-sizing: border-box;
-    border-radius: 0;
+    border-radius: 4px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
@@ -762,8 +767,6 @@ form {
       background-position: 0 0;
       float: right;
       margin-left: 10px; }
-    form input[type="submit"]:hover {
-      background: #222222; }
 
 .contact-form fieldset {
   float: left;
@@ -980,10 +983,10 @@ a {
     padding-top: -10px;
     margin-left: 10px;
     vertical-align: -3px;
-    width: 20px;
-    height: 30px;
+    width: 41px;
+    height: 20px;
     background-image: url("/images/arrow-down.svg");
-    background-size: 100% 100%;
+    background-size: 100% 90%;
     background-position: 0 2px;
     background-repeat: no-repeat; }
 

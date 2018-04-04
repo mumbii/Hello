@@ -66,12 +66,10 @@ class HelloLamppostWebsite < Sinatra::Base
 
   post '/contact' do
 
-    # First, instantiate the Mailgun Client with your API key
-mg_client = Mailgun::Client.new 'key-dee4e566f732ad64442a493985063a2e'
+  # First, instantiate the Mailgun Client with your API key
+  mg_client = Mailgun::Client.new 'key-dee4e566f732ad64442a493985063a2e'
 
-# Define your message parameters
-
-
+  # Define your message parameters
 
     email = params['email']
     message = params['message']

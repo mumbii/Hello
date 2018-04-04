@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 457.1 354.9" style="enable-background:new 0 0 457.1 354.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#44BFEF;}
+	.st1{fill:#FFD100;}
+</style>
+<title>Artboard 1</title>
+<g>
+	<path class="st0" d="M457.1,165.1l-70,50.1H144c-13.8,0-25,11.2-25,25v89.7c0,13.8,11.2,25,25,25h288.1c13.8,0,25-11.2,25-25V165.1
+		z"/>
+	<g id="hello">
+		<path class="st1" d="M0,140.1v50l70-50h242.1c13.8,0,25-11.2,25-25l0,0V25c0-13.8-11.2-25-25-25H25C11.2,0,0,11.2,0,25l0,0V140.1z
+			"/>
+	</g>
+</g>
+</svg>

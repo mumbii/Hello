@@ -20,17 +20,17 @@ form {
 		width: 100%;
 		padding: 15px 15px;
 		margin: 20px 0;
-    font-family: "Gotham-Medium", sans-serif;
+    	font-family: "Gotham-Medium", sans-serif;
 		background: $colorTwo;
 		border: 2px solid $colorTwo;
-    color: #fff;
+    	color: #fff;
 		border: 0;
 		font-size: 0.9em;
 		box-sizing: border-box;
-		border-radius: 0;
+		border-radius: 4px;
 		-webkit-appearance: none;
-   	-moz-appearance: none;
-   	appearance: none;
+   		-moz-appearance: none;
+   		appearance: none;
 
 		&:focus {
 			outline: 0;
@@ -91,8 +91,8 @@ form {
 			margin-left: 10px;
 		}
 
-		&:hover {
-			background: darken($colorType, 10%);
+
+		@include mq("small", "max-width") {
 		}
 	}
 }
