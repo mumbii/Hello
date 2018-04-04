@@ -1022,6 +1022,9 @@ a {
   overflow: hidden; }
   #news .right-block {
     width: 50%; }
+  #news a {
+    color: #2a2a2a;
+    border-bottom: 2px solid #2a2a2a; }
 
 .hero {
   margin-top: 70px;
