@@ -872,6 +872,12 @@ form {
   @media (max-width: 960px) {
     .header {
       width: 100%; }
+      .header .menu {
+        margin-top: -35px; }
+        .header .menu ul {
+          text-align: left; }
+        .header .menu li {
+          width: 100%; }
       .header .grid-container {
         width: 100%; }
       .header .menu.active {
@@ -889,9 +895,6 @@ form {
         display: block;
         margin: 25px auto;
         float: none; } }
-  @media (max-width: 350px) {
-    .header .logo img {
-      width: 110px; } }
 
 .en header .menu a {
   letter-spacing: -1px; }

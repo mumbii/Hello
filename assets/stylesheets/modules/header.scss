@@ -142,6 +142,18 @@
 	}
 
 	@include mq("small", "max-width") {
+		.menu{
+			margin-top: -35px;
+
+			ul{
+				text-align: left;
+			}
+
+			li{
+				width: 100%;
+			}
+		}
+
 		width: 100%;
 
 		.grid-container {
@@ -176,7 +188,6 @@
 
 	@include mq("nano", "max-width") {
 		.logo img {
-			width: 110px;
 		}
 	}
 }
