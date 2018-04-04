@@ -1016,6 +1016,13 @@ a {
   .notification.inactive {
     display: none; }
 
+#news {
+  background: #FFD100;
+  padding: 70px 0;
+  overflow: hidden; }
+  #news .right-block {
+    width: 50%; }
+
 .hero {
   margin-top: 70px;
   overflow: hidden;
