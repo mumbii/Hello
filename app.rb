@@ -64,6 +64,11 @@ class HelloLamppostWebsite < Sinatra::Base
     erb :index
   end
 
+  get '/news' do
+    @page_title = I18n.t(:home_title)
+    erb :news
+  end
+
   post '/contact' do
 
   # First, instantiate the Mailgun Client with your API key
