@@ -1,4 +1,4 @@
-# Hello Lamp Post Malmö
+# Hello Lamp Post
 
 Requirements:
 
