@@ -1486,6 +1486,10 @@ a {
     .locations #map .mapboxgl-popup .mapboxgl-popup-tip {
       border-bottom-color: #FFD100;
       border-top-color: #FFD100; }
+    .locations #map .mapboxgl-popup .mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #FFD100; }
     .locations #map .mapboxgl-popup .mapboxgl-popup-content {
       text-align: center;
       background: #FFD100;

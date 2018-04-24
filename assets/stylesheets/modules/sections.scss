@@ -625,6 +625,14 @@
 				border-top-color: $colorOne;
 			}
 
+			//My attempt at solving it :(
+
+			.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+					border-bottom-color: transparent;
+					border-top-color: transparent;
+					border-right-color: #FFD100;
+			}
+
 			.mapboxgl-popup-content {
 			  text-align: center;
 				background: $colorOne;
