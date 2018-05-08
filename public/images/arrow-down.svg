@@ -3,8 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 13.5 17.2" style="enable-background:new 0 0 13.5 17.2;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:square;}
-	.st1{fill:none;stroke:#FFFFFF;stroke-width:3;}
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
 </style>
 <title>arrow-down</title>
 <desc>Created with Sketch.</desc>
@@ -16,7 +15,7 @@
 			<g id="Button-One-Copy" transform="translate(152.000000, 2837.000000)">
 				<g id="Group_1_" transform="translate(164.000000, 22.000000)">
 					<path id="Line_2_" class="st0" d="M6.8,12.1V0.2"/>
-					<polyline id="Path-809_1_" class="st1" points="13.8,7.4 6.8,14.1 -0.2,7.4 					"/>
+					<polyline id="Path-809_1_" class="st0" points="13.8,7.4 6.8,14.1 -0.2,7.4 					"/>
 				</g>
 			</g>
 		</g>
