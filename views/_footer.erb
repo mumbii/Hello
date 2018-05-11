@@ -1,204 +1,229 @@
 <footer class="footer">
-  <div class="grid-container">
-    <div class="col-3">
-      <p><a href="http://panstudio.co.uk">&#xa9; PAN Studio</a> | <a href="http://hellolamppostbristol.co.uk/terms">Legal</a></p>
-    </div>
-    <div class="col-3 right">
-      <p><a class="js-to-top"><%= I18n.t(:to_top) %></a></p>
-    </div>
-  </div>
+	<div class="grid-container">
+		<div class="col-3">
+			<p><a href="http://panstudio.co.uk">&#xa9; PAN Studio</a> | <a href="http://hellolamppostbristol.co.uk/terms">Legal</a></p>
+		</div>
+		<div class="col-3 right">
+			<p><a class="js-to-top"><%= I18n.t(:to_top) %></a></p>
+		</div>
+	</div>
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
 <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
 <script src="/assets/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoidGR3Y2tzIiwiYSI6IlhwMGlGR28ifQ.irq5Rbn1WvGb_VIwn1auNA';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/dark-v9',
-center: [-1.772,53.652],
-dragging: false,
-zoom: 2 // starting zoom
-});
+	mapboxgl.accessToken = 'pk.eyJ1IjoidGR3Y2tzIiwiYSI6IlhwMGlGR28ifQ.irq5Rbn1WvGb_VIwn1auNA';
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/dark-v9',
+		center: [-1.772,53.652],
+		dragging: false,
+		zoom: 2 // starting zoom
+	});
 
-var geojson = {
-  type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-2.7, 51.4545]
-    },
-    properties: {
-      title: 'Hello Lampost Bristol',
-      link: 'http://www.hellolamppostbristol.co.uk/',
-      photo: '/images/hlp-bristol.jpg'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-0.1278, 51.5074]
-    },
-    properties: {
-      title: 'Hello Lampost Queen Elizabeth Olympic Park',
-      link: 'http://www.hellolamppostlondon.com/',
-      photo: '/images/hlp-london.jpg'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [103.8198, 1.3521]
-    },
-    properties: {
-      title: 'Hello Lampost Singapore',
-      link: 'http://hellolamppostsingapore.com',
-      photo: '/images/hlp-singapore.jpg'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [139.746, 35.6]
-    },
-    properties: {
-      title: 'Hello Lampost Tokyo',
-      link: 'http://www.hellolamppost.tokyo/en/',
-      photo: '/images/hlp-tokyo.jpg'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-97.7431, 30.2672]
-    },
-    properties: {
-      title: 'Hello Lampost Austin',
-      link: 'http://hellolamppostaustin.com',
-      photo: '/images/hlp-austin.jpg'
-    }
-  },{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-0.103,50.845]
-    },
-    properties: {
-      title: 'Hello Lampost Brighton',
-      link: 'http://hellolamppostbrighton.com',
-      photo: '/images/hlp-brighton.jpg'
-    }
-  },{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [0.5792, 44.8378]
-    },
-    properties: {
-      title: 'Hello Lampost Bordeaux',
-      link: 'http://www.hellolamppostbordeaux.com/en/',
-      photo: '/images/hlp-bourdeaux.jpg'
-    }
-  },{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [13.159,55.586]
-    },
-    properties: {
-      title: 'Hello Sustainable Malmö',
-      link: 'http://www.hallåhållbaramalmö.se/en/',
-      photo: '/images/hlp-malmo.jpg'
-    }
-  },{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [71.426,51.140]
-    },
-    properties: {
-      title: 'Hello Astana',
-      link: 'http://www.salemastana2017.kz/en/',
-      photo: '/images/hlp-astana.jpg'
-    }
-  },{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-2.224,53.462]
-    },
-    properties: {
-      title: 'Hello Lamp Post Manchester',
-      missingLink: 'true',
-      photo: '/images/hlp-manchester.jpg'
-    }
-  }
-]
-};
+	var geojson = {
+		type: 'FeatureCollection',
+		features: [{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-111.8304, 33.4139]
+			},
+			properties: {
+				title: 'Hello Mesa',
+				link: 'http://mesa.hlp.city/en/',
+				photo: '/images/hlp-mesa.png'
+			}
+		},{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [5.2968, 51.6953]
+			},
+			properties: {
+				title: 'Hello Hengelo',
+				missingLink: 'true',
+				photo: '/images/hlp-singapore.jpg'
+			}
+		},
+		{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-2.7, 51.4545]
+			},
+			properties: {
+				title: 'Hello Lampost Bristol',
+				link: 'http://www.hellolamppostbristol.co.uk/',
+				photo: '/images/hlp-bristol.jpg'
+			}
+		},
+		{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-0.1278, 51.5074]
+			},
+			properties: {
+				title: 'Hello Lampost Queen Elizabeth Olympic Park',
+				link: 'http://www.hellolamppostlondon.com/',
+				photo: '/images/hlp-london.jpg'
+			}
+		},
+		{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [103.8198, 1.3521]
+			},
+			properties: {
+				title: 'Hello Lampost Singapore',
+				link: 'http://hellolamppostsingapore.com',
+				photo: '/images/hlp-singapore.jpg'
+			}
+		},
+		{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [139.746, 35.6]
+			},
+			properties: {
+				title: 'Hello Lampost Tokyo',
+				link: 'http://www.hellolamppost.tokyo/en/',
+				photo: '/images/hlp-tokyo.jpg'
+			}
+		},
+		{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-97.7431, 30.2672]
+			},
+			properties: {
+				title: 'Hello Lampost Austin',
+				link: 'http://hellolamppostaustin.com',
+				photo: '/images/hlp-austin.jpg'
+			}
+		},{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-0.103,50.845]
+			},
+			properties: {
+				title: 'Hello Lampost Brighton',
+				link: 'http://hellolamppostbrighton.com',
+				photo: '/images/hlp-brighton.jpg'
+			}
+		},{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [0.5792, 44.8378]
+			},
+			properties: {
+				title: 'Hello Lampost Bordeaux',
+				link: 'http://www.hellolamppostbordeaux.com/en/',
+				photo: '/images/hlp-bourdeaux.jpg'
+			}
+		},{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [13.159,55.586]
+			},
+			properties: {
+				title: 'Hello Sustainable Malmö',
+				link: 'http://www.hallåhållbaramalmö.se/en/',
+				photo: '/images/hlp-malmo.jpg'
+			}
+		},{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [71.426,51.140]
+			},
+			properties: {
+				title: 'Hello Astana',
+				link: 'http://www.salemastana2017.kz/en/',
+				photo: '/images/hlp-astana.jpg'
+			}
+		},{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-2.224,53.462]
+			},
+			properties: {
+				title: 'Hello Lamp Post Manchester',
+				missingLink: 'true',
+				photo: '/images/hlp-manchester.jpg'
+			}
+		},
+		]
+	};
 
-// add markers to map
-geojson.features.forEach(function(marker) {
+	// add markers to map
+	geojson.features.forEach(function(marker) {
 
-  // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'marker';
+		// create a HTML element for each feature
+		var el = document.createElement('div');
+		el.className = 'marker';
 
-  var popUpHtml = '<div class="image-circle"><img src="'+ marker.properties.photo +'"></img></div><div class="info"><h3>' + marker.properties.title + '</h3><a class="' + marker.properties.missingLink + '" target="_blank" href="'+ marker.properties.link +'">View Website</a></div>'
+		var popUpHtml = '<div class="image-circle"><img src="'+ marker.properties.photo +'"></img></div><div class="info"><h3>' + marker.properties.title + '</h3><a class="' + marker.properties.missingLink + '" target="_blank" href="'+ marker.properties.link +'">View Website</a></div>'
 
-  new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML(popUpHtml))
-    .addTo(map);
+		new mapboxgl.Marker(el)
+		.setLngLat(marker.geometry.coordinates)
+			.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+				.setHTML(popUpHtml))
+			.addTo(map);
 
-});
+		});
 
-map.addControl(new mapboxgl.NavigationControl());
-map.scrollZoom.disable();
+	map.addControl(new mapboxgl.NavigationControl());
+	map.scrollZoom.disable();
 </script>
+
 <script>
-    var swiper = new Swiper('.swiper-container', {
-        paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        loop: true,
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 30,
-        autoplay: 10000
-    });
+	var swiper = new Swiper('.swiper-container', {
+		paginationClickable: true,
+		nextButton: '.swiper-button-next',
+		loop: true,
+		prevButton: '.swiper-button-prev',
+		spaceBetween: 30,
+		autoplay: 10000
+	});
 
-    // var anotherSwiper = new Swiper('.object-swiper', {
-    //     nextButton: '.button-next',
-    //     prevButton: '.button-prev',
-    //     slidesPerView: 'auto',
-    //     autoplay: 3500,
-    //     loop: true,
-    //     paginationClickable: true,
-    //     spaceBetween: 20,
-    //     breakpoint: {
-    //       760: {
-    //         spaceBetween: 40
-    //       }
-    //     }
-    // });
+		// var anotherSwiper = new Swiper('.object-swiper', {
+		//     nextButton: '.button-next',
+		//     prevButton: '.button-prev',
+		//     slidesPerView: 'auto',
+		//     autoplay: 3500,
+		//     loop: true,
+		//     paginationClickable: true,
+		//     spaceBetween: 20,
+		//     breakpoint: {
+		//       760: {
+		//         spaceBetween: 40
+		//       }
+		//     }
+		// });
 
-      var headerSwiper = new Swiper('.header-swiper', {
-        pagination: {
-          el: '.swiper-pagination',
-        },
-        draggable: false,
-        simulateTouch:false
-      });
+		var headerSwiper = new Swiper('.header-swiper', {
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			draggable: false,
+			simulateTouch:false
+		});
 
-    // anotherSwiper.on('slideChangeStart', function () {
-    //   var objectCode = $('.swiper-slide-active').attr( "object-code" );
-    //   $('.active-object').text(objectCode);
-  // });
+		// anotherSwiper.on('slideChangeStart', function () {
+		//   var objectCode = $('.swiper-slide-active').attr( "object-code" );
+		//   $('.active-object').text(objectCode);
+	// });
 
 </script>

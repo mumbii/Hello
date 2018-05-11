@@ -7,41 +7,41 @@
  * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
  */
 
-/*global self, document, DOMException */
+ /*global self, document, DOMException */
 
-/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
+ /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
 
-if ("document" in self) {
+ if ("document" in self) {
 
 // Full polyfill for browsers with no classList support
 if (!("classList" in document.createElement("_"))) {
 
-(function (view) {
+  (function (view) {
 
-"use strict";
+    "use strict";
 
-if (!('Element' in view)) return;
+    if (!('Element' in view)) return;
 
-var
-    classListProp = "classList"
-  , protoProp = "prototype"
-  , elemCtrProto = view.Element[protoProp]
-  , objCtr = Object
-  , strTrim = String[protoProp].trim || function () {
-    return this.replace(/^\s+|\s+$/g, "");
-  }
-  , arrIndexOf = Array[protoProp].indexOf || function (item) {
     var
-        i = 0
-      , len = this.length
-    ;
-    for (; i < len; i++) {
-      if (i in this && this[i] === item) {
-        return i;
-      }
+    classListProp = "classList"
+    , protoProp = "prototype"
+    , elemCtrProto = view.Element[protoProp]
+    , objCtr = Object
+    , strTrim = String[protoProp].trim || function () {
+      return this.replace(/^\s+|\s+$/g, "");
     }
-    return -1;
-  }
+    , arrIndexOf = Array[protoProp].indexOf || function (item) {
+      var
+      i = 0
+      , len = this.length
+      ;
+      for (; i < len; i++) {
+        if (i in this && this[i] === item) {
+          return i;
+        }
+      }
+      return -1;
+    }
   // Vendors: please allow content code to instantiate DOMExceptions
   , DOMEx = function (type, message) {
     this.name = type;
@@ -51,24 +51,24 @@ var
   , checkTokenAndGetIndex = function (classList, token) {
     if (token === "") {
       throw new DOMEx(
-          "SYNTAX_ERR"
+        "SYNTAX_ERR"
         , "An invalid or illegal string was specified"
-      );
+        );
     }
     if (/\s/.test(token)) {
       throw new DOMEx(
-          "INVALID_CHARACTER_ERR"
+        "INVALID_CHARACTER_ERR"
         , "String contains an invalid character"
-      );
+        );
     }
     return arrIndexOf.call(classList, token);
   }
   , ClassList = function (elem) {
     var
-        trimmedClasses = strTrim.call(elem.getAttribute("class") || "")
-      , classes = trimmedClasses ? trimmedClasses.split(/\s+/) : []
-      , i = 0
-      , len = classes.length
+    trimmedClasses = strTrim.call(elem.getAttribute("class") || "")
+    , classes = trimmedClasses ? trimmedClasses.split(/\s+/) : []
+    , i = 0
+    , len = classes.length
     ;
     for (; i < len; i++) {
       this.push(classes[i]);
@@ -81,7 +81,7 @@ var
   , classListGetter = function () {
     return new ClassList(this);
   }
-;
+  ;
 // Most DOMException implementations don't allow calling DOMException's toString()
 // on non-DOMExceptions. Error's toString() is sufficient here.
 DOMEx[protoProp] = Error[protoProp];
@@ -94,11 +94,11 @@ classListProto.contains = function (token) {
 };
 classListProto.add = function () {
   var
-      tokens = arguments
-    , i = 0
-    , l = tokens.length
-    , token
-    , updated = false
+  tokens = arguments
+  , i = 0
+  , l = tokens.length
+  , token
+  , updated = false
   ;
   do {
     token = tokens[i] + "";
@@ -115,12 +115,12 @@ classListProto.add = function () {
 };
 classListProto.remove = function () {
   var
-      tokens = arguments
-    , i = 0
-    , l = tokens.length
-    , token
-    , updated = false
-    , index
+  tokens = arguments
+  , i = 0
+  , l = tokens.length
+  , token
+  , updated = false
+  , index
   ;
   do {
     token = tokens[i] + "";
@@ -141,11 +141,11 @@ classListProto.toggle = function (token, force) {
   token += "";
 
   var
-      result = this.contains(token)
-    , method = result ?
-      force !== true && "remove"
-    :
-      force !== false && "add"
+  result = this.contains(token)
+  , method = result ?
+  force !== true && "remove"
+  :
+  force !== false && "add"
   ;
 
   if (method) {
@@ -164,18 +164,18 @@ classListProto.toString = function () {
 
 if (objCtr.defineProperty) {
   var classListPropDesc = {
-      get: classListGetter
+    get: classListGetter
     , enumerable: true
     , configurable: true
   };
   try {
     objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
   } catch (ex) { // IE 8 doesn't support enumerable:true
-    if (ex.number === -0x7FF5EC54) {
-      classListPropDesc.enumerable = false;
-      objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-    }
+  if (ex.number === -0x7FF5EC54) {
+    classListPropDesc.enumerable = false;
+    objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
   }
+}
 } else if (objCtr[protoProp].__defineGetter__) {
   elemCtrProto.__defineGetter__(classListProp, classListGetter);
 }
