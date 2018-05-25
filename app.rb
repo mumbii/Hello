@@ -74,9 +74,9 @@ class HelloLamppostWebsite < Sinatra::Base
 		erb :privacy
 	end
 
-	get '/terms' do
+	get '/privacystatement' do
 		@page_title = I18n.t(:home_title)
-		erb :terms
+		erb :privacystatement
 	end
 
 	post '/contact' do

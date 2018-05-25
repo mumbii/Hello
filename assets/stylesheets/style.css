@@ -1391,6 +1391,10 @@ a {
   .information p {
     color: #2A2A2A;
     opacity: 0.8; }
+    .information p a {
+      color: #2A2A2A;
+      border-bottom: 1px solid #2A2A2A;
+      padding-bottom: 2px; }
   .information .link-btn-one {
     margin-top: 40px;
     background: #2A2A2A;

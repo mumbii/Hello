@@ -478,6 +478,11 @@
 	p {
 		color: $colorTwo;
 		opacity: 0.8;
+		a {
+			color: $colorTwo;
+			border-bottom: 1px solid $colorTwo;
+			padding-bottom: 2px;
+		}
 	}
 
 	.link-btn-one {
