@@ -1,0 +1,21 @@
+<article class="homepage">
+	<% if flash.has?(:ok) %>
+	<section id="notification" class="notification">
+		<div class="grid-container">
+			<h3><%= flash[:ok] %></h3>
+			<div class="link-exit"></div>
+		</div>
+	</section>
+	<% end %>
+	<section id="careers" class="information">
+		<img src="/images/bg-careers.jpg">
+		<div class="right-block"></div>
+		<div class="grid-container">
+			<div class="col-6 right">
+				<h5>Careers</h5>
+				<h1>Title</h1>
+				<p>Body text.</p>
+			</div>
+		</div>
+	</section>
+</article>

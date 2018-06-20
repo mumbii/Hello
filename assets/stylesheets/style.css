@@ -336,6 +336,7 @@ h5 {
   width: intrinsic;
   max-width: 140px;
   opacity: 1;
+  line-height: 1.4;
   border-radius: 2px; }
 
 h5.underline {
@@ -1267,7 +1268,8 @@ a {
       background-size: 100% 100%;
       background-position: 0 0; }
   .process p a {
-    color: #fff; }
+    color: #fff;
+    font-family: gotham-medium, sans-serif; }
   .process .top-img {
     position: absolute;
     top: -25px;
@@ -1392,6 +1394,7 @@ a {
     color: #2A2A2A;
     opacity: 0.8; }
     .information p a {
+      font-family: gotham-medium, sans-serif;
       color: #2A2A2A;
       border-bottom: 1px solid #2A2A2A;
       padding-bottom: 2px; }
@@ -1468,6 +1471,8 @@ a {
   .how-to-play p {
     color: #fff;
     opacity: 0.8; }
+    .how-to-play p a {
+      font-family: gotham-medium, sans-serif; }
   .how-to-play p.small {
     margin-top: 5px; }
   .how-to-play.active {
@@ -1806,7 +1811,8 @@ a {
     opacity: 0.8; }
   .contact p a {
     color: #2A2A2A;
-    border-bottom: 2px solid #2A2A2A; }
+    border-bottom: 2px solid #2A2A2A;
+    font-family: gotham-medium, sans-serif; }
   .contact .link-btn-one {
     margin-top: 40px;
     background: #2A2A2A;
@@ -1939,7 +1945,11 @@ a {
         width: 90%;
         padding: 0 0; } }
 
+#careers a {
+  font-family: gotham-medium, sans-serif; }
+
 #legal {
+  font-size: 16px;
   padding: 115px 0 25px 0; }
   #legal .links {
     margin-bottom: 20px; }

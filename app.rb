@@ -69,6 +69,11 @@ class HelloLamppostWebsite < Sinatra::Base
 		erb :news
 	end
 
+	get '/terms' do
+		@page_title = I18n.t(:home_title)
+		erb :terms
+	end
+
 	get '/privacy' do
 		@page_title = I18n.t(:home_title)
 		erb :privacy
@@ -77,6 +82,11 @@ class HelloLamppostWebsite < Sinatra::Base
 	get '/privacystatement' do
 		@page_title = I18n.t(:home_title)
 		erb :privacystatement
+	end
+
+	get '/careers' do
+		@page_title = I18n.t(:home_title)
+		erb :careers
 	end
 
 	post '/contact' do
