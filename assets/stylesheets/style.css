@@ -661,7 +661,6 @@ small, .font_small {
   clear: both;
   display: block; }
   .footer p {
-    padding: 0;
     margin: 0;
     color: #fff;
     opacity: 0.7; }
@@ -671,28 +670,20 @@ small, .font_small {
     margin: 0;
     color: #fff;
     border-bottom: 2px solid #00B5E2;
-    padding-bottom: 2px; }
+    padding-bottom: 4px;
+    transition: all 0.3s ease-in-out; }
+  .footer a:hover {
+    opacity: 1; }
   .footer .right {
-    float: right; }
-    .footer .right .js-to-top {
-      text-align: right;
-      float: right; }
+    float: right;
+    text-align: right; }
   @media (max-width: 960px) {
     .footer {
-      padding: 15px 0 13px 0; }
-      .footer p, .footer a {
-        margin: 10px 0;
-        display: inline;
-        width: intrinsic; }
-      .footer .right {
-        float: left; }
-        .footer .right .js-to-top {
-          text-align: right;
-          float: right; } }
+      padding: 15px 0 13px 0;
+      text-align: left; } }
   @media (max-width: 760px) {
-    .footer .js-to-top {
-      text-align: left !important;
-      float: left !important; } }
+    .footer .right {
+      text-align: left; } }
 
 form {
   padding-top: 10px; }
