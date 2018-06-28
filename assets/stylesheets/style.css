@@ -947,7 +947,10 @@ a {
     background-size: 100% 100%;
     background-position: 0 0;
     float: right;
-    margin-left: 10px; }
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out; }
+  .link-btn-one:hover:after {
+    width: 25px; }
 
 .link-messenger {
   background: #448AFF;

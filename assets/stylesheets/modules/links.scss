@@ -22,18 +22,25 @@ a {
 	border: 0;
   transition: all 0.3s ease-in-out;
 
-	&:after {
-		content: "";
-		display: block;
-		width: 17px;
-		height: 17px;
-		background-image: url('/images/arrow-black.svg');
-		margin-top: 2px;
-		background-size: 100% 100%;
-		background-position: 0 0;
-		float: right;
-		margin-left: 10px;
-	}
+  &:after {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-image: url('/images/arrow-black.svg');
+    margin-top: 2px;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    float: right;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover{
+    &:after {
+      width: 25px;
+    }
+  }
 }
 
 .link-messenger {
@@ -49,7 +56,7 @@ a {
     margin-top: -3px;
     margin-left: 20px;
     width: 30px;
-		height: 30px;
+    height: 30px;
     background-image: url('/images/messenger_icon.svg');
   }
 
@@ -70,16 +77,16 @@ a {
 }
 
 .link-exit {
-	width: 25px;
-	height: 25px;
-	background-image: url('/images/exit.svg');
-	margin-top: 2px;
-	background-size: 100% 100%;
-	background-position: 0 0;
-	display: block;
-	float: right;
-	margin-top: 100px;
-	z-index: 100;
+ width: 25px;
+ height: 25px;
+ background-image: url('/images/exit.svg');
+ margin-top: 2px;
+ background-size: 100% 100%;
+ background-position: 0 0;
+ display: block;
+ float: right;
+ margin-top: 100px;
+ z-index: 100;
 }
 
 .link-scroll {
@@ -98,16 +105,16 @@ a {
   overflow: visible;
 
   &:after {
-  content: "";
-  display: inline-block;
-  padding-top: -10px;
-  margin-left: 10px;
-  vertical-align: -3px;
-  width: 41px;
-  height: 20px;
-  background-image: url("/images/arrow-down.svg");
-  background-size: 100% 90%;
-  background-position: 0 2px;
-  background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    padding-top: -10px;
+    margin-left: 10px;
+    vertical-align: -3px;
+    width: 41px;
+    height: 20px;
+    background-image: url("/images/arrow-down.svg");
+    background-size: 100% 90%;
+    background-position: 0 2px;
+    background-repeat: no-repeat;
   }
 }
