@@ -24,7 +24,7 @@ jQuery.fn.extend({
 // Lazy Load The Image
 
 $(document).on('click', '.menu a', function(event){
-    event.preventDefault();
+    //event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top -55

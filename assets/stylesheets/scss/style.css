@@ -777,6 +777,14 @@ form {
   background: #fff;
   height: 50px;
   transition: all 0.3s ease-in-out; }
+  .header .social-media-logos a {
+    width: 33.3%; }
+  .header .social-media-logos a img {
+    max-width: 25px;
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    top: 0; }
   .header.nav-up {
     top: -120px; }
   .header .logo img {
@@ -793,7 +801,8 @@ form {
       margin-left: 10px; }
 
 .menu {
-  margin-top: 8px; }
+  margin-top: 8px;
+  margin-right: 45px; }
   .menu ul li {
     margin-right: 25px; }
   .menu a {
@@ -802,8 +811,6 @@ form {
     font-family: gotham-bold, sans-serif;
     position: relative;
     text-decoration: none; }
-    .menu a img {
-      width: 25px; }
   .menu a:before {
     content: "";
     position: absolute;
@@ -870,36 +877,35 @@ form {
   .menu {
     display: none;
     background: #FFD100;
-    margin-top: -40px;
+    margin-top: -39px;
     width: 100%;
     margin-right: 0; }
     .menu ul {
       margin: 32px 25px; }
     .menu ul li {
       margin-bottom: 7px; }
-    .menu ul .menu-logo {
-      width: 10px; }
     .menu ul li a {
-      font-size: 1.3em; }
+      font-size: 1.3em;
+      border-bottom: 2px solid #2A2A2A; }
     .menu ul li:last-child {
       margin-bottom: 35px; }
 
   .menu.active {
-    display: block;
-    padding-top: 30px; } }
+    display: block; } }
 @media (max-width: 960px) {
-  .menu ul {
-    text-align: left; }
-  .menu li {
-    width: 100%; }
+  .menu {
+    margin-top: -35px; }
+    .menu ul {
+      text-align: left; }
+    .menu li {
+      width: 100%; }
 
   width: 100%;
   .grid-container {
     width: 100%; }
 
   .menu.active {
-    display: block;
-    padding-top: 30px; }
+    display: block; }
 
   .link-exit {
     margin-top: -80px; }
