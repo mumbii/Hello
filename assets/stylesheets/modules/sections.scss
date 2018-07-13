@@ -209,7 +209,7 @@
 	@include mq("extra-small", "max-width") {
 
 		img {
-			margin-left: -700px;
+			//margin-left: -700px;
 		}
 
 		.col-4 {
@@ -490,7 +490,7 @@
 	.link-btn-one {
 		margin-top: 40px;
 		background: $colorTwo;
-		color: #fff;
+		color: $colorOne;
 
 		&:after {
 			background-image: url("/images/arrow-yellow.svg");
@@ -1056,7 +1056,7 @@
 	.link-btn-one {
 		margin-top: 40px;
 		background: $colorTwo;
-		color: #fff;
+		color: $colorThree;
 
 		&:after {
 			background-image: url('/images/arrow-blue.svg');

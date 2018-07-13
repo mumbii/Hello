@@ -845,9 +845,6 @@ form {
   background-image: url("/images/sv.svg"); }
 
 @media (max-width: 1130px) {
-  .grid-container {
-    width: 100%; }
-
   .logo img {
     width: 190px;
     margin-top: 2px;
@@ -1213,8 +1210,6 @@ a {
       .hero .header-swiper .swiper-wrapper .swiper-slide .bubble-holder .text-bubble.object {
         float: left; } }
   @media (max-width: 760px) {
-    .hero img {
-      margin-left: -700px; }
     .hero .col-4 {
       width: 100%;
       margin-top: 50px; }
@@ -1407,7 +1402,7 @@ a {
   .information .link-btn-one {
     margin-top: 40px;
     background: #2A2A2A;
-    color: #fff; }
+    color: #FFD100; }
     .information .link-btn-one:after {
       background-image: url("/images/arrow-yellow.svg"); }
   .information .link-btn-one:after {
@@ -1822,7 +1817,7 @@ a {
   .contact .link-btn-one {
     margin-top: 40px;
     background: #2A2A2A;
-    color: #fff; }
+    color: #00B5E2; }
     .contact .link-btn-one:after {
       background-image: url("/images/arrow-blue.svg"); }
   .contact .right-block {
