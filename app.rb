@@ -101,7 +101,7 @@ class HelloLamppostWebsite < Sinatra::Base
 	subject = params['subject']
 
 	message_params =  { from: email,
-		to:   'tiernan.mines@panstudio.co.uk',
+		to:   'tiernan@hlp.city',
 		subject: subject,
 		text:    message
 	}
