@@ -64,6 +64,10 @@ class HelloLamppostWebsite < Sinatra::Base
 		erb :index
 	end
 
+  get '/projects' do
+    erb :projects
+  end
+
 	get '/news' do
 		@page_title = I18n.t(:home_title)
 		erb :news
@@ -123,5 +127,4 @@ class HelloLamppostWebsite < Sinatra::Base
 		@page_title = "Hello Lamp Post Malmo"
 		erb :index
 	end
-
 end

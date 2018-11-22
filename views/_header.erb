@@ -1,4 +1,4 @@
-<header class="header">
+<header id="header">
 	<!-- <div class="grid-container"> -->
 		<a href="/" class="logo"><img src="/images/logo.svg"/></a>
 		<!-- <nav class="country-picker">
@@ -12,6 +12,7 @@
 			<ul>
 				<li><a href="#about">About</a></li>
 				<li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#usecases">Our Role</a></li>
 				<li><a href="#locations">Locations</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li class="menu-logo"><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank"><img src="/images/facebook.svg"></a></li>
@@ -22,3 +23,17 @@
 		</nav>
 	<!-- </div> -->
 </header>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-150px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>

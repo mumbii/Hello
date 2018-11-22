@@ -5,8 +5,8 @@
 
 .grid-container {
   position: relative;
-  display: block;
   margin: 0 auto;
+
   @include calc(width, "100% - 60px");
   max-width: 1400px;
 

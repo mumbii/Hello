@@ -4,7 +4,7 @@
 // =================================================================
 
 form {
-	padding-top: 10px;
+	padding-top: 40px;
 
 	.form-half {
 		width: calc(50% - 15px);
@@ -20,14 +20,13 @@ form {
 		width: 100%;
 		padding: 15px 15px;
 		margin: 20px 0;
-    	font-family: "Gotham-Medium", sans-serif;
+    font-family: "Gotham-Medium", sans-serif;
 		background: $colorTwo;
-		border: 2px solid $colorTwo;
-    	color: #fff;
+    color: #fff;
 		border: 0;
 		font-size: 0.9em;
 		box-sizing: border-box;
-		border-radius: 4px;
+		@include border-radius(8px);
 		-webkit-appearance: none;
    		-moz-appearance: none;
    		appearance: none;
@@ -49,7 +48,7 @@ form {
   }
 
 	label {
-		color: #fff;
+		color: $colorTwo;
 		font-family: "Gotham-Bold", sans-serif;
 		text-transform: uppercase;
 	}
@@ -60,15 +59,8 @@ form {
 	}
 
 	input[type="submit"] {
-		width: intrinsic;
-		padding: 15px 30px;
-		max-width: 150px;
-		background: $colorType;
-		cursor: pointer;
-		color: #fff;
-		float: right;
 		padding: 16px 20px 16px 20px;
-		@include border-radius(4px);
+		@include border-radius(8px);
 		background: $colorTwo;
 		color: #fff;
 		display: block;
@@ -77,6 +69,15 @@ form {
 		font-family: "Gotham-Bold", sans-serif;
 		font-size: 1em;
 		border: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: #fff;
+    float: right;
+
+    &:hover {
+      color: $colorThree;
+      transition: all 0.3s ease-in-out;
+    }
 
 		&:after {
 			content: "";
@@ -89,6 +90,7 @@ form {
 			background-position: 0 0;
 			float: right;
 			margin-left: 10px;
+      transition: all 0.3s ease-in-out;
 		}
 
 

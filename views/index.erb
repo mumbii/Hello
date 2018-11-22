@@ -1,194 +1,398 @@
+<header id="header">
+	<!-- <div class="grid-container"> -->
+		<a href="/" class="logo"><img src="/images/logo.svg"/></a>
+		<!-- <nav class="country-picker">
+			<ul>
+				<li><a class="sv" href="/sv/"></a></li>
+				<li><a class="en" href="/en/"></a></li>
+			</ul>
+		</nav> -->
+		<a class="hamburger"></a>
+		<nav class="menu">
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#usecases">Our Role</a></li>
+				<li><a href="#locations">Locations</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li class="menu-logo"><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank"><img src="/images/facebook.svg"></a></li>
+				<li class="menu-logo"><a href="https://www.instagram.com/hellolamppost_" target="_blank"><img src="/images/instagram.svg"></a></li>
+				<li class="menu-logo"><a href="https://www.twitter.com/hellolamppost_" target="_blank"><img src="/images/twitter.svg"></a></li>
+				<li class="menu-logo"><a href="https://www.linkedin.com/company/hello-lamp-post/" target="_blank"><img src="/images/linkedin.svg"></a></li>
+			</ul>
+		</nav>
+	<!-- </div> -->
+</header>
+
 <article class="homepage">
-	<% if flash.has?(:ok) %>
-	<section id="notification" class="notification">
-		<div class="grid-container">
-			<h3><%= flash[:ok] %></h3>
-			<div class="link-exit"></div>
-		</div>
-	</section>
+  <% if flash.has?(:ok) %>
+      <section id="notification" class="notification">
+		      <div class="grid-container">
+			       <h3><%= flash[:ok] %></h3>
+			       <div class="link-exit"></div>
+		      </div>
+      </section>
 	<% end %>
-	<section class="hero">
-		<div class="grid-container">
-			<div class="col-4">
-				<h2>The playful, city-wide system that lets you talk to street furniture.</h2>
-				<a class="link-btn-one js-contact">Bring it to your city</a>
-			</div>
-		</div>
-		<div class="header-swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide austin-lampost">
-					<img src="/images/header-image-1.jpg"/>
-					<div class="bubble-holder">
-						<div class="text-bubble">
-							<p>Hello Lamp Post #321</p>
-						</div>
-						<div class="text-bubble object">
-							<p>Good afternoon! Can you answer a question - what would be your super power and why?</p>
-						</div>
-						<div class="text-bubble">
-							<p>Photosynthesis, so that eating would be purely for pleasure!</p>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide"></div>
-				<div class="swiper-slide"></div>
-				<div class="swiper-slide"></div>
-			</div>
-			<!-- Add Pagination -->
-			<div class="swiper-pagination"></div>
-		</div>
-	</div>
-	<a class="js-scroll-down-button link-scroll">Find Out More</a>
-</section>
-<section id="about" class="information">
-	<img src="/images/bg-how-it-works.jpg">
-	<div class="right-block"></div>
-	<div class="grid-container">
-		<div class="col-6 right">
-			<h5>About</h5>
-			<h1>What is Hello Lamp Post?</h1>
-			<p>Hello Lamp Post is a playful platform, inviting people to strike up conversations with familiar street furniture using text messages or Facebook Messenger, bringing to light the hidden stories of their cities.</p>
-			<p>By using the thousands of pre-existing identifier codes that label items of street furniture across a whole city, people can have unique conversations with particular objects, including (but not limited to) lamp posts, post boxes, bollards, manholes, bins, or telegraph poles.</p>
-			<a class="link-btn-one js-learn-more">Show More</a>
-		</div>
-	</div>
-</section>
-<section class="how-to-play">
-	<div class="grid-container">
-		<div class="col-6">
-			<h1>More Information</h1>
-			<p>Hello Lamp Post is a flexible and scalable system that can easily travel from one location to another, offering people from all around the world the chance to have interesting, surprising and often funny conversations with the street furniture that they pass by every day.</p>
-			<p>Hello Lamp Post encourages people to look at the city with fresh eyes and engage with systems we often take for granted – a chance for us to slow down, reflect and see the city as a playground.</p>
-		</div>
-		<div class="col-6 pushed-column">
-			<p>From a hectic one-night event in Tokyo to a 10 week project in Austin, Hello Lamp Post is an adaptable system that can easily be taken around the world and placed in virtually any location.</p>
-			<p>Now having been installed in over 10 cities, Hello Lamp Post is ongoing, with installations scheduled for the rest of this year and beyond. Would you be interested in taking it to your city? <a class="js-contact">Please click here!</a></p>
-		</div>
-	</div>
-</section>
-<section id="how-it-works" class="process">
-	<div class="grid-container">
-		<div class="col-4">
-			<div class="process-item">
-				<div class="image-circle">
-					<img src="/images/process-1.svg">
-				</div>
-				<h4><%= I18n.t(:pick_an_object) %></h4>
-				<p><%= I18n.t(:pick_an_object_text) %></p>
-			</div>
-		</div>
-		<div class="col-4">
-			<div class="process-item">
-				<div class="image-circle">
-					<img src="/images/process-2.svg">
-				</div>
-				<h4><%= I18n.t(:say_hello) %></h4>
-				<p>Send a text in this format: “Hello” + Object Name + #Code e.g. “Hello Bin #B6291”.</p>
-			</div>
-		</div>
-		<div class="col-4">
-			<div class="process-item">
-				<div class="image-circle">
-					<img src="/images/process-3.svg">
-				</div>
-				<h4><%= I18n.t(:keep_talking) %></h4>
-				<p><%= I18n.t(:keep_talking_text) %></p>
-			</div>
-		</div>
-	</div>
-</section>
-<section id="locations" class="locations">
-	<div id='map'></div>
-	<div class="grid-container">
-		<div class="col-4">
-			<h1>Locations</h1>
-			<p>Since being created in 2013, Hello Lamp Post has traveled around the world and visited many cities as part of festivals, events or as a stand-alone project.</p>
-			<a class="link-btn-one js-contact">Get In Touch</a>
-		</div>
-	</div>
-</section>
-<section class="press">
-	<div class="grid-container">
-		<div class="row">
-			<h1>As Featured In:</h1>
-		</div>
-		<div class="row">
-			<div class="col-3">
-				<img src="/images/press/bbc-logo.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/guardian-logo.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/fox-logo.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/daily-logo.png">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-3">
-				<img src="/images/press/huffpost-logo.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/metro-logo.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/time-out.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/wired-logo.png">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-3">
-				<img src="/images/press/forbes.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/the-telegraph.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/fast-company.png">
-			</div>
-			<div class="col-3">
-				<img src="/images/press/5.png">
-			</div>
-		</div>
-	</div>
-</section>
-<section id="contact" class="contact">
-	<div class="grid-container">
-		<div class="col-4">
-			<h5>Contact</h5>
-			<h1>Get In Touch</h1>
-			<p>We are always happy to hear from you whether you’re looking for more info on the project or collaborating with us. Don't hesitate to drop us a message!</p>
-			<!-- <p>We're hiring! Click <a href="/careers">here</a> to view our openings and learn more about us.</p> -->
-			<a class="link-btn-one" href="mailto:contact@hlp.city?Subject=Hello%20Lamp%20Post%20Enquiry">Email Us</a>
-		</div>
-		<div class="col-6">
-			<form class="contact-form" action="/contact" method="post">
-				<fieldset>
-					<label for="name">Name:</label>
-					<input type="text" name="name" placeholder="Example Name">
-				</fieldset>
-				<fieldset>
-					<label for="email">Email Address:</label>
-					<input type="email" name="email" placeholder="Example@Domain.co.uk">
-				</fieldset>
-				<label for="subject">Subject:</label>
-				<select name="subject" form="subject-form">
-					<option selected value="I am interested in Hello Lamp Post for my city">I am interested in Hello Lamp Post for my city.</option>
-					<option value="I have a question about Hello Lamp Post">I have a general question about Hello Lamp Post.</option>
-					<option value="I am interested in collaborating with Hello Lamp Post">I am interested in collaborating with Hello Lamp Post.</option>
-					<option value="Other">Other.</option>
-				</select>
-				<label for="message">Your Message:</label>
-				<textarea name="message" cols='30' placeholder="Hello Lamp Post..." rows="10"></textarea><br>
-				<input type="submit" class="btn" value="Submit">
-				<!-- Google Captcha, needs back-end configuring -->
-				<!-- <div class="g-recaptcha" data-sitekey="6Le09lUUAAAAAO5j54Yj3oI6GTEgbpfiBJf7AbXp"></div> -->
-			</form>
-		</div>
-	</div>
-</section>
+
+
+<!--Top Section-->
+  <section class="hero">
+      <div class="grid-container">
+			     <div class="col-4">
+				         <h1>The playful, city-wide system that lets you talk to street objects.</h1>
+				             <a class="link-btn-one js-scroll-down-button js-contact" href="/projects">Deploy to your city</a> <!--I added js-scroll-down-button here-->
+           </div>
+		  </div>
+
+      <div class="header-swiper">
+			     <div class="swiper-wrapper">
+				         <div class="swiper-slide austin-lampost">
+					              <img src="/images/header-image-1.jpg" />
+
+					                   <div class="bubble-holder">
+						                        <div class="text-bubble">
+							                           <p>Hello Lamp Post #321</p>
+						                        </div>
+                          					<div class="text-bubble object">
+                          						   <p>Good afternoon! Can you answer a question - what would be your super power and why?</p>
+                          					</div>
+                        						<div class="text-bubble">
+                        							   <p>Photosynthesis, so that eating would be purely for pleasure!</p>
+                        						</div>
+					                  </div>
+				         </div>
+            				<div class="swiper-slide"></div>
+            				<div class="swiper-slide"></div>
+            				<div class="swiper-slide"></div>
+			    </div>
+    	<!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+
+      </div>
+	    <!--<a class="js-scroll-down-button link-scroll">What We Do</a>-->
+    </section>
+
+
+<!--About HLP-->
+    <section id="about" class="information">
+	       <img src="/images/bg-how-it-works.jpg">
+	           <div class="right-block"></div>
+	               <div class="grid-container">
+		                  <div class="col-6 right">
+                          <hr>
+			                     <h5>About</h5>
+			                     <h1>What is Hello Lamp Post?</h1>
+                      		 <p>We are a playful platform with a flexible and scalable system, inviting people to strike up conversations with familiar street objects using text messages or Facebook Messenger, encouraging people to look at the city with fresh eyes and see it as a playground. </p>
+                      		 <p>By using the thousands of pre-existing identifier codes that label items of street objects across a whole city, people can have interesting, surprising and often funny conversations with particular objects, including (but not limited to) lamp posts, post boxes, bollards, manholes, bins or telegraph poles. </p>
+                      		 <a href="#how-it-works"class="link-btn-one js-learn-more">How It Works</a>
+		                  </div>
+	               </div>
+    </section>
+
+
+<!--More Information
+    <section class="how-to-play">
+        <div class="grid-container">
+    		    <div class="col-6">
+    			       <h1>More Information</h1>
+    			       <p>Hello Lamp Post is a flexible and scalable system that can easily travel from one location to another, offering people from all around the world the chance to have interesting, surprising and often funny conversations with the street furniture that they pass by every day.</p>
+    			       <p>Hello Lamp Post encourages people to look at the city with fresh eyes and engage with systems we often take for granted – a chance for us to slow down, reflect and see the city as a playground.</p>
+    		    </div>
+    		    <div class="col-6 pushed-column">
+    			       <p>From a hectic one-night event in Tokyo to a 10 week project in Austin, Hello Lamp Post is an adaptable system that can easily be taken around the world and placed in virtually any location.</p>
+    			       <p>Now having been installed in over 10 cities, Hello Lamp Post is ongoing, with installations scheduled for the rest of this year and beyond. Would you be interested in taking it to your city? <a class="js-contact">Please click here!</a></p>
+    		    </div>
+       </div>
+    </section>-->
+
+
+<!--How it Works-->
+    <section id="how-it-works" class="process">
+        <div class="grid-container">
+          <hr>
+           <h5>How It Works</h5>
+    		    <div class="col-4">
+    			       <div class="process-item">
+    				           <div class="image-circle">
+    					                <img src="/images/process-1.svg">
+    				           </div>
+        				           <h4><%= I18n.t(:pick_an_object) %></h4>
+        				           <p>Look out for a street object.</p>
+    			       </div>
+    	      </div>
+
+    		    <div class="col-4">
+    			       <div class="process-item">
+    				           <div class="image-circle">
+    					                <img src="/images/process-2.svg">
+    				           </div>
+                    				<h4><%= I18n.t(:say_hello) %></h4>
+                    				<p>Send a text in this format: “Hello” + Object Name + #Code e.g. “Hello Bin #B6291”.</p>
+                 </div>
+    		    </div>
+
+        		<div class="col-4">
+        		    <div class="process-item">
+        				      <div class="image-circle">
+        					           <img src="/images/process-3.svg">
+        				      </div>
+                  				<h4><%= I18n.t(:keep_talking) %></h4>
+                  				<p><%= I18n.t(:keep_talking_text) %></p>
+            		</div>
+        	 </div>
+    	 </div>
+    </section>
+
+
+<!--Use cases -->
+    <section id="usecases" class="use-cases">
+        <div class="grid-container">
+          <hr>
+            <h5>Our Role in Cities</h5>
+              <div class="row">
+                <div class="column">
+                         <div class="image-circle">
+                                <img src="/images/icons/group.png">
+                         </div>
+                            <h4>Community Engagement</h4>
+                            <ul>
+                             <li>Enabling citizens to continuously engage on their priorities for their community</li>
+                             <li>Engagement and collaborative ideation around topics such as</li>
+                             <li>Promotion of local events and activities</li>
+                             <li>Sharing thoughts, opinions and planned initiatives with citizens</li>
+                            </ul>
+                </div>
+                <div class="column">
+                       <div class="image-circle">
+                          <img src="/images/icons/map.png">
+                       </div>
+                            <h4>Way-finding & Storytelling</h4>
+                              <ul>
+                                 <li>City way-finding and information resource</li>
+                                 <li>Engagement tool for specific ”campaigns”/initiatives</li>
+                                 <li>Gamification deployments</li>
+                              </ul>
+                </div>
+                <div class="column">
+                         <div class="image-circle">
+                                <img src="/images/icons/buildings.png">
+                         </div>
+                          <h4>Urban Design Engagement</h4>
+                          <ul>
+                            <li>Co-designing redevelopments and urban changes alongside citizens</li>
+                            <li>Gathering continuous input and feedback on planning applications</li>
+                            <li>Humanising cities</li>
+                            <li>Engagement on smart city initiatives</li>
+                          </ul>
+                </div>
+                <div class="column">
+                         <div class="image-circle">
+                                <img src="/images/icons/destination.png">
+                         </div>
+                            <h4>Culture & Tourism Engagement</h4>
+                            <ul>
+                             <li>Cultural Education and Research</li>
+                             <li>Way-finding and orientation around cultural points of interest</li>
+                             <li>History and stories behind landmarks</li>
+                             <li>Story sharing between visitors, citizens and tourists</li>
+                             <li>Connecting tourists and reconnecting citizens with the city</li>
+                            </ul>
+                </div>
+              </div><!--EO Row class-->
+
+               <a class="link-btn-one" href="/projects">Our Projects</a>
+        </div><!--grid container -->
+    </section>
+
+
+<!--New Press Section-->
+    <section class="press">
+              <div class="grid-container">
+                  <div class="slider">
+                    <div class="track">
+                      <div class="slide-img">
+                        <a href="https://www.huffingtonpost.co.uk/2014/12/02/urban-city-innovative-design-lamp-posts-talking-street-lights_n_6252628.html?utm_hp_ref=uk-hello-lamp-post" target="_blank">
+                          <img class="first" src="/images/press/huffpost-logo.png" alt="huffpost logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.forbes.com/sites/hesterlacey/2014/08/26/discover-the-playable-city-the-happy-face-of-the-urban-environment/#604107dd24f9" target="_blank">
+                          <img src="/images/press/forbes.png" alt="forbes logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.bbc.co.uk/news/av/uk-england-23337527/city-street-furniture-invites-texts" target="_blank">
+                          <img src="/images/press/bbc-logo.png" alt="bbc logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.timeout.com/london/blog/talking-lamp-posts-are-coming-to-the-olympic-park-110816" target="_blank">
+                          <img src="/images/press/time-out.png" alt="time-out logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="http://www.fox7austin.com/archive/art-project-lets-people-converse-with-street-furniture" target="_blank">
+                          <img src="/images/press/fox-logo.png" alt="fox logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.dailymail.co.uk/sciencetech/article-2345212/Meet-lamp-posts-bus-stops-mind-Company-uses-new-technology-make-city-centre-landmarks-come-alive-chat-people.html" target="_blank">
+                          <img src="/images/press/daily-logo.png" alt="daily logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.theguardian.com/technology/gamesblog/2013/jun/27/hello-lamp-post-playful-cities" target="_blank">
+                          <img src="/images/press/guardian-logo.png" alt="guardian logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.wired.com/2013/01/hello-lamp-post/" target="_blank">
+                          <img src="/images/press/wired-logo.png" alt="wired logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.telegraph.co.uk/culture/art/art-news/9821570/30000-for-texting-bollards.html" target="_blank">
+                          <img src="/images/press/the-telegraph.png" alt="the telegraph logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.fastcompany.com/3017191/internet-of-things-project-hello-lamppost-ends-with-a-cacophonous-conversation" target="_blank">
+                          <img src="/images/press/fast-company.png" alt="fast-company logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.huffingtonpost.co.uk/2014/12/02/urban-city-innovative-design-lamp-posts-talking-street-lights_n_6252628.html?utm_hp_ref=uk-hello-lamp-post" target="_blank">
+                          <img class="first" src="/images/press/huffpost-logo.png" alt="huffpost logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.forbes.com/sites/hesterlacey/2014/08/26/discover-the-playable-city-the-happy-face-of-the-urban-environment/#604107dd24f9" target="_blank">
+                          <img src="/images/press/forbes.png" alt="forbes logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.bbc.co.uk/news/av/uk-england-23337527/city-street-furniture-invites-texts" target="_blank">
+                          <img src="/images/press/bbc-logo.png" alt="bbc logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.timeout.com/london/blog/talking-lamp-posts-are-coming-to-the-olympic-park-110816" target="_blank">
+                          <img src="/images/press/time-out.png" alt="time-out logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="http://www.fox7austin.com/archive/art-project-lets-people-converse-with-street-furniture" target="_blank">
+                          <img src="/images/press/fox-logo.png" alt="fox logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.dailymail.co.uk/sciencetech/article-2345212/Meet-lamp-posts-bus-stops-mind-Company-uses-new-technology-make-city-centre-landmarks-come-alive-chat-people.html" target="_blank">
+                          <img src="/images/press/daily-logo.png" alt="daily logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.theguardian.com/technology/gamesblog/2013/jun/27/hello-lamp-post-playful-cities" target="_blank">
+                          <img src="/images/press/guardian-logo.png" alt="guardian logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.wired.com/2013/01/hello-lamp-post/" target="_blank">
+                          <img src="/images/press/wired-logo.png" alt="wired logo">
+                        </a>
+                      </div>
+                      <div class="slide-img">
+                        <a href="https://www.telegraph.co.uk/culture/art/art-news/9821570/30000-for-texting-bollards.html" target="_blank">
+                          <img src="/images/press/the-telegraph.png" alt="the telegraph logo">
+                        </a>
+                      </div>
+                    <div>
+                  </div>
+              </div>
+    </section>
+
+
+<!--LDN_LAB article-->
+    <section class="ldnlab">
+      <div class="grid-container">
+        <div class="col-4 right">
+          <img src="/images/press/ldn-lab-white.jpg" alt="LDN_LAB logo" />
+        </div>
+          <div class="col-6">
+             <hr>
+               <h5>Recently Featured On: </h5>
+               <p>Excited and proud to be apart of Facebook's incubator programme LDN_LAB: Deep Tech for Good cohort!</p>
+          </div>
+      </div>
+    </section>
+
+
+<!--Locations-->
+    <section id="locations" class="locations">
+        <div id='map'></div>
+            <div class="grid-container">
+    		        <div class="col-4">
+                    <hr>
+    			           <h5>Locations</h5>
+    			           <p>Street objects have been waking up in cities around the world, engaging residents, tourists and communities.</p>
+    			           <a href="#contact" class="link-btn-one js-contact">Get In Touch</a>
+    		        </div>
+    	     </div>
+    </section>
+
+
+<!--Contact-->
+    <section id="contact" class="contact">
+      <div class="arrow-right"></div>
+        <div class="grid-container">
+    		    <div class="col-4">
+              <hr>
+    			       <h5>Contact</h5>
+    			       <h1>Get In Touch</h1>
+    			       <p>We are always happy to hear from you whether you’re looking for more info or to collaborate with us. Don't hesitate to drop us a message!</p>
+    			       <!-- <p>We're hiring! Click <a href="/careers">here</a> to view our openings and learn more about us.</p> -->
+    			       <!--<a class="link-btn-one" href="mailto:contact@hlp.city?Subject=Hello%20Lamp%20Post%20Enquiry">Email Us</a>-->
+    		    </div>
+    		<div class="col-6">
+    		    <form class="contact-form" action="/contact" method="post">
+    				      <fieldset>
+    					           <label for="name">Name:</label>
+    					           <input type="text" name="name" placeholder="Example Name">
+    				      </fieldset>
+
+    				      <fieldset>
+    					           <label for="email">Email Address:</label>
+    					           <input type="email" name="email" placeholder="Example@Domain.co.uk">
+    				      </fieldset>
+
+    				             <label for="subject">Subject:</label>
+    				             <select name="subject" form="subject-form">
+                  					<option selected value="I am interested in Hello Lamp Post for my city">I am interested in Hello Lamp Post for my city.</option>
+                  					<option value="I have a question about Hello Lamp Post">I have a general question about Hello Lamp Post.</option>
+                  					<option value="I am interested in collaborating with Hello Lamp Post">I am interested in collaborating with Hello Lamp Post.</option>
+                  					<option value="Other">Other.</option>
+    				            </select>
+
+                				<label for="message">Your Message:</label>
+                				<textarea name="message" cols='30' placeholder="Hello Lamp Post..." rows="10"></textarea><br>
+                				<input type="submit" class="btn" value="Submit">
+    				<!-- Google Captcha, needs back-end configuring -->
+    				<!-- <div class="g-recaptcha" data-sitekey="6Le09lUUAAAAAO5j54Yj3oI6GTEgbpfiBJf7AbXp"></div> -->
+             </form>
+        </div>
+        </div>
+    </section>
 </article>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-150px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>

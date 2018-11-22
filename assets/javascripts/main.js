@@ -21,7 +21,7 @@ jQuery.fn.extend({
     }
 });
 
-// Lazy Load The Image
+//Burger menu button
 
 $(document).on('click', '.menu a', function(event){
     //event.preventDefault();
@@ -42,6 +42,7 @@ $("img.lazy").lazyload({
 	effect : "fadeIn"
 });
 
+//Back to Top button
 $( ".js-to-top" ).on( "click", function() {
 	$('html, body').animate({
     	scrollTop: $(".hero").offset().top -55
@@ -49,6 +50,7 @@ $( ".js-to-top" ).on( "click", function() {
 	return false;
 });
 
+//Goes to contact section
 $(document).on('click', '.js-contact', function(event){
   $('html, body').animate({
       scrollTop: $(".contact").offset().top -55
@@ -69,6 +71,8 @@ $(document).on('click', '.hamburger', function(event){
   $(".menu").toggleClass("active");
 });
 
+
+//Toggles section with more or less information
 $( ".js-learn-more" ).on( "click", function() {
 	$(this).toggleClass("active");
 	$(this).toggleText('Show More', 'Show Less');
@@ -79,3 +83,15 @@ $( ".js-learn-more" ).on( "click", function() {
 	}, 600);
 	return false;
 });
+
+
+
+//expanding projects
+  function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("slides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}

@@ -3,224 +3,216 @@
 // 	Header
 // =================================================================
 
-.header {
-	width: 100%;
-	position: fixed;
-	z-index: 100;
-	top: 0;
-	padding: 10px 0;
-	background: #fff;
-	height: 50px;
-	transition: all 0.3s ease-in-out;
+#header {
+  top: 0;
+  width: 100%;
+  height: 65px;
+  padding: 10px 0;
+  position: fixed;
+  transition: top 0.7s;
+  background: $colorWhite;
+  z-index: 100;
 
-	&.nav-up {
-		top: -120px;
-	}
+    .logo img {
+      width: 200px;
+    }
 
-	.logo img {
-		width: 200px;
-	}
+    nav {
+      float: right;
+      z-index: 20;
 
-	nav {
-		float: right;
-		z-index: 20;
+      ul {
+  			padding: 0;
+  			margin: 0;
 
-		ul {
-			padding: 0;
-			margin: 0;
-		}
+        li {
+    			list-style-type: none;
+    			float: left;
+    			margin-left: 20px;
+    		}
+  		}
+    }
+  .menu {
+    margin-top: 8px;
 
-		ul li {
-			list-style-type: none;
-			float: left;
-			margin-left: 10px;
-		}
-	}
-}
+    ul li  {
+  		margin-right: 20px;
+  	}
+    a {
+  		color: $colorTwo;
+  		font-size: .9em;
+  		font-family: gotham-medium, sans-serif;
+  		position: relative;
+  		text-decoration: none;
 
-.menu {
-	margin-top:8px;
-	//margin-right: 45px;
+  		img{
+  			width: 20px;
+  		}
+  	}
 
-	ul li  {
-		margin-right: 25px;
-	}
+    a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      border-radius: 1px;
+      background-color: $colorThree;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s;
+    }
 
-	a {
-		color: $colorTwo;
-		font-size: 1.1em;
-		font-family: gotham-bold, sans-serif;
-		position: relative;
-		text-decoration: none;
+    a:hover {
+      color: $colorTwo;
+    }
 
-		img{
-			width: 25px;
-		}
-	}
+    a:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+  .country-picker {
+    ul li a {
+      cursor: pointer;
+      width: 38px;
+      height: 38px;
+      display: block;
+      @include border-radius(100%);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 60px 50px;
+      border: 2px solid $colorTwo;
+    }
 
-	a:before {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		bottom: -2px;
-		left: 0;
-		border-radius: 1px;
-		background-color: $colorTwo;
-		visibility: hidden;
-		-webkit-transform: scaleX(0);
-		transform: scaleX(0);
-		-webkit-transition: all 0.2s ease-in-out 0s;
-		transition: all 0.2s ease-in-out 0s;
-	}
+    ul li a.en {
+      background-image: url('/images/flag-en.svg');
+    }
 
-	a:hover {
-		color: $colorTwo;
-	}
+    ul li a.sv {
+      background-image: url('/images/sv.svg');
+    }
+  }
 
-	a:hover:before {
-		visibility: visible;
-		-webkit-transform: scaleX(1);
-		transform: scaleX(1);
-	}
-}
+  @include mq("medium", "max-width") {
+  	.grid-container {
+  		//width: 100%;
+  	}
 
-.country-picker {
-	ul li a {
-		cursor: pointer;
-		width: 38px;
-		height: 38px;
-		display: block;
-		@include border-radius(100%);
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: 60px 50px;
-		border: 2px solid $colorTwo;
-	}
+  	.logo img {
+  		width: 190px;
+  		margin-top: 2px;
+  		margin-left: -10px;
+  		margin-left: 20px;
+  	}
 
-	ul li a.en {
-		background-image: url('/images/flag-en.svg');
-	}
+  	.hamburger {
+  		float: right;
+  		margin-right: 25px;
+  		width: 50px;
+  		height: 50px;
+  		background-image: url('/images/hamburger.svg');
+  		background-size: cover;
+  		background-position: 0 0;
+  		background-repeat: no-repeat;
+  		display: block;
 
-	ul li a.sv {
-		background-image: url('/images/sv.svg');
-	}
-}
+  		&.active {
+  			background-image: url('/images/cross.svg');
+  		}
+  	}
 
-@include mq("medium", "max-width") {
-	.grid-container {
-		//width: 100%;
-	}
+  	.menu {
+  		display: none;
+  		background: $colorOne;
+  		margin-top: -40px;
+  		width: 100%;
+  		margin-right: 0;
 
-	.logo img {
-		width: 190px;
-		margin-top: 2px;
-		margin-left: -10px;
-		margin-left: 20px;
-	}
+  		ul {
+  			margin: 32px 25px;
+  		}
 
-	.hamburger {
-		float: right;
-		margin-right: 25px;
-		width: 50px;
-		height: 50px;
-		background-image: url('/images/hamburger.svg');
-		background-size: cover;
-		background-position: 0 0;
-		background-repeat: no-repeat;
-		display: block;
+  		ul li {
+  			margin-bottom: 7px;
+  		}
 
-		&.active {
-			background-image: url('/images/cross.svg');
-		}
-	}
+  		ul .menu-logo{
+  			width: 10px;
+  		}
 
-	.menu {
-		display: none;
-		background: $colorOne;
-		margin-top: -40px;
-		width: 100%;
-		margin-right: 0;
+  		ul li a {
+  			font-size: 1.3em;
+  			//border-bottom: 2px solid $colorTwo;
+  		}
 
-		ul {
-			margin: 32px 25px;
-		}
+  		ul li:last-child {
+  			margin-bottom: 35px;
+  		}
+  	}
 
-		ul li {
-			margin-bottom: 7px;
-		}
+  	.menu.active {
+  		display: block;
+  		padding-top: 30px;
+  	}
+  }
 
-		ul .menu-logo{
-			width: 10px;
-		}
+  @include mq("small", "max-width") {
+  	.menu{
+  		//margin-top: -35px;
 
-		ul li a {
-			font-size: 1.3em;
-			//border-bottom: 2px solid $colorTwo;
-		}
+  		ul{
+  			text-align: left;
+  		}
 
-		ul li:last-child {
-			margin-bottom: 35px;
-		}
-	}
+  		li{
+  			width: 100%;
+  		}
+  	}
 
-	.menu.active {
-		display: block;
-		padding-top: 30px;
-	}
-}
+  	width: 100%;
 
-@include mq("small", "max-width") {
-	.menu{
-		//margin-top: -35px;
+  	.grid-container {
+  		width: 100%;
+  	}
 
-		ul{
-			text-align: left;
-		}
+  	.menu.active {
+  		display: block;
+  		padding-top: 30px;
+  	}
 
-		li{
-			width: 100%;
-		}
-	}
+  	.link-exit {
+  		margin-top: -80px;
+  	}
 
-	width: 100%;
+  	.col-3 {
+  		width: 100%;
+  	}
 
-	.grid-container {
-		width: 100%;
-	}
+  	.logo img {
+  		width: 190px;
+  		margin-top: 2px;
+  		margin-left: -10px;
+  		margin-left: 20px;
+  	}
 
-	.menu.active {
-		display: block;
-		padding-top: 30px;
-	}
+  	.col-3 img {
+  		display: block;
+  		margin: 25px auto;
+  		float: none;
+  	}
+  }
 
-	.link-exit {
-		margin-top: -80px;
-	}
+  @include mq("nano", "max-width") {
+  	.logo img {
+  	}
+  }
 
-	.col-3 {
-		width: 100%;
-	}
-
-	.logo img {
-		width: 190px;
-		margin-top: 2px;
-		margin-left: -10px;
-		margin-left: 20px;
-	}
-
-	.col-3 img {
-		display: block;
-		margin: 25px auto;
-		float: none;
-	}
-}
-
-@include mq("nano", "max-width") {
-	.logo img {
-	}
-}
-
-.en header .menu a {
-	letter-spacing: -1px;
+  #en header .menu a {
+  	//letter-spacing: -1px;
+  }
 }

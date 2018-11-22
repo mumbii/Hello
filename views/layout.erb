@@ -5,7 +5,7 @@
 	<meta name="viewport" content="initial-scale=1, user-scalable=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-	
+
 	<!-- Meta Tags -->
 	<title>Hello Lamp Post</title>
 	<meta name="author" content="Hello Lamp Post" />
@@ -23,12 +23,12 @@
 	<meta property="og:image" content="https://hello-lamp-post.herokuapp.com/images/og-image.png" />
 	<meta property="og:image:alt" content="http://www.hellolamppost.co.uk/images/og-image.png" />
 	<meta property="fb:app_id" content="205335633527044">
-	<meta property="og:type" content="website" />     
+	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary" />
 
 	<!-- Styles -->
-	
+
 	<link rel="stylesheet" href="/assets/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -48,11 +48,9 @@
 </head>
 <body class="mf-v4 <%= I18n.t(:country_code) %>">
 
-	<%= erb :_header %>
-
 	<%= yield %>
 
-	<%= erb :_footer %>
+  <%= erb :_footer %>
 
 </body>
 </html>

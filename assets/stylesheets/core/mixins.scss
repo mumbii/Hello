@@ -14,6 +14,9 @@ $breakpoints: (
   "extra-extra-large" 1800px
 );
 
+
+
+
 @mixin mq($size, $type: "min-width") {
   @each $breakpoint in $breakpoints {
     @if ($size == nth($breakpoint, 1)) {

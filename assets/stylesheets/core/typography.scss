@@ -29,7 +29,7 @@
 
 body {
 	font-family: $base-font-family;
-	font-size: 18px;
+	font-size: 1.1em;
 
 	@include mq("medium", "max-width") {
 		font-size: 18px;
@@ -63,7 +63,8 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  	 font-size: 1.9em
+  	 font-size: 3.5rem;
+     padding: 25px 0;
 }
 
 h2 {
@@ -80,16 +81,19 @@ h4 {
 }
 
 h5 {
-	font-size: 1em;
+
+  margin-bottom: 50px;
+  font-size: 2rem;
+  border: none;
+  color: $colorTwo;
 	display: block;
-	padding: 10px 15px;
-	border: 1px solid #fff;
-	color: #fff;
-	width: intrinsic;
-	max-width: 140px;
+	padding: 25px 0;
+	//border: 1px solid #fff;
+	//width: intrinsic;
+	//max-width: 140px;
 	opacity: 1;
-  	line-height: 1.4;	
-	border-radius: 2px;
+  line-height: 1.4;
+	//border-radius: 2px;
 }
 
 h5.underline {
@@ -100,6 +104,7 @@ p {
 	color: $colorType;
 	line-height: 1.5em;
 	padding: 0.4em 0 0.4em 0;
+  font-size: .9em;
 }
 
 .news-date {

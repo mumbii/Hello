@@ -22,7 +22,7 @@ en:
   previous: "previous"
 
   pick_an_object: "Pick an Object"
-  pick_an_object_text: "Look out for a street object with a code on it."
+  pick_an_object_text: "Look out for a street object."
 
   say_hello: "Say Hello"
   say_hello_text: "Send a text to +46 76 519 44 41 in this format: “Hello” + object type + #code e.g. “Hello Bin #B6291”."

@@ -10,16 +10,15 @@ a {
 
 .link-btn-one {
 	padding: 16px 20px 16px 20px;
-	@include border-radius(4px);
+	@include border-radius(8px);
 	background: $colorOne;
-	color: $colorType;
+	color: $colorTwo;
 	display: block;
 	width: intrinsic;
-	max-width: 200px;
-	color: $colorType;
+	max-width: 260px;
 	font-family: "Gotham-Bold", sans-serif;
 	font-size: 1em;
-	border: 0;
+	border: none;
   transition: all 0.3s ease-in-out;
 
   &:after {
@@ -33,12 +32,20 @@ a {
     background-position: 0 0;
     float: right;
     margin-left: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   &:hover{
+    background: $colorTwo;
+    color: $colorOne;
+
     &:after {
-      // width: 25px;
+      background-image: url('/images/arrow-yellow.svg');
+      margin-top: 2px;
+      background-size: 100% 100%;
+      background-position: 0 0;
+      float: right;
+      margin-left: 10px;
     }
   }
 }
@@ -90,18 +97,18 @@ a {
 }
 
 .link-scroll {
-  padding-bottom: 20px;
+  padding: 45px 0;
   text-align: center;
   font-family: "Gotham-bold", sans-serif;
   color: #fff;
   width: 100%;
-  height: 100px;
+  //height: 100px;
   z-index: 10;
   position: absolute;
   display: block;
   top: 80vh;
   left: 0;
-  font-size: 16px;
+  //font-size: 16px;
   overflow: visible;
 
   &:after {
