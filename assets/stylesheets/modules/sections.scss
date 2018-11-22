@@ -19,10 +19,11 @@ section {
   position: relative;
   clear: both;
   max-width: none;
-	height: calc(108vh - 70px);
+	height: auto;
+  padding: 4% 0;
 
   @include mq("medium", "max-width") {
-    height: calc(98vh - 70px);
+    height: auto;
   }
 }
 
@@ -58,14 +59,12 @@ section {
 
 .hero {
 	overflow: hidden;
-	background: $colorThree;
+  height: calc(840px - 70px);
 
 	.col-4 {
     width: 45%;
-    margin-top: 30vh;
+    margin-top: 20vh;
 		position: absolute;
-		top: 0;
-		left: 0;
 		z-index: 10;
 
     h1 {
@@ -260,6 +259,7 @@ section {
 
 
 .information {
+  padding: 0;
 	img {
 		width: 100%;
 		position: absolute;
@@ -273,10 +273,10 @@ section {
 		float: right;
     position: relative;
 		box-sizing: border-box;
-		padding: 5% 0 10% 5%;
+		padding: 4% 0 4% 3%;
 
     hr{
-      left: 10%;
+      left: 6%;
       width: 10%;
     }
 
@@ -331,7 +331,7 @@ section {
 		position: absolute;
 		right: 0;
 		background: $colorOne;
-		width: 40%;
+		width: 50%;
 		float: right;
 		height: 100%;
 	}
@@ -579,7 +579,7 @@ section {
       float: left;
       width: 24.5%;
       background-color: $colorWhite;
-      height: 36.5rem;
+      height: 36rem;
       margin: 0 auto;
       padding: 2%;
       margin: 3px;
@@ -598,7 +598,7 @@ section {
         text-align: left;
         width: 88%;
         margin: 0 auto;
-        font-size: 0.89em;
+        font-size: 0.84em;
         color: $colorType;
 
         li {
@@ -952,8 +952,7 @@ section {
 	.col-4 {
 		float: left;
 		box-sizing: border-box;
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding: 4% 0;
 	}
 
 	h5 {
@@ -1024,31 +1023,19 @@ section {
 
 
 .contact {
-	width: 100%;
-	clear: both;
-	display: block;
-	overflow: hidden;
-	position: relative;
+  padding: 6% 0;
+  height: calc(840px - 70px);
 	background-image: -webkit-linear-gradient(180deg, $colorOne 60%, $colorWhite 50%);
-	padding: 170px 0 60px 0;
 
-  .arrow-right {
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 34rem;
-    top: 20rem;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid $colorWhite;
-  }
 
   hr {
     width: 5%;
     left: 0;
     background-color: $colorTwo;
   }
-
+  .col-4 {
+    margin: 4% 0;
+  }
 	.col-6 {
 		box-sizing: border-box;
 		float: right;
