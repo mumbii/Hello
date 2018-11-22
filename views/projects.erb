@@ -32,8 +32,8 @@
         <div class="grid-container">
           <hr>
           <h5>Our Projects</h5>
-            <div class="row">
-              <a href="#Mesa"><button class="collapsible" onclick="openTab('Mesa');">
+            <div id="row" class="row">
+              <a href="#Mesa"><button class="collapsible active" onclick="openTab('Mesa');">
                   <div class="column">
                        <div class="image-circle">
                           <img src="/images/group.png">
@@ -337,4 +337,18 @@
     }
     prevScrollpos = currentScrollPos;
   }
+</script>
+
+<script>
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("row");
+  var btns = header.getElementsByClassName("collapsible");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
 </script>

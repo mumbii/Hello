@@ -1026,78 +1026,78 @@ section {
   height: calc(840px - 70px);
 	background-image: -webkit-linear-gradient(180deg, $colorOne 60%, $colorWhite 50%);
 
+  .arrow {
+    width: 43.4%;
+    height: 600px;
+    position: absolute;
+    margin-left: -60px;
 
-  hr {
-    width: 5%;
-    left: 0;
-    background-color: $colorTwo;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 30%;
+      right: 0%;
+      margin-right: -60px;
+      border-width: 30px;
+      border-style: solid;
+      border-color: transparent transparent transparent $colorWhite;
+    }
+    hr {
+      width: 5%;
+      left: 0;
+      background-color: $colorTwo;
+    }
+    .col-4 {
+      margin: 4% 0;
+      width: 60%;
+    }
+
+  	h5 {
+  		margin-bottom: 50px;
+  		color: $colorTwo;
+  	}
+
+  	h1 {
+  		line-height: 1.2;
+  		margin-bottom: 30px;
+  	}
+
+  	p {
+  		color: $colorTwo;
+  		opacity: 0.8;
+  	}
+
+  	p a {
+  		color: $colorTwo;
+  		border-bottom: 2px solid $colorTwo;
+  		font-family: gotham-medium, sans-serif;
+  	}
+
+  	.link-btn-one {
+  		margin-top: 40px;
+  		background: $colorTwo;
+  		color: $colorThree;
+
+  		&:after {
+  			background-image: url('/images/arrow-blue.svg');
+  		}
+  	}
   }
-  .col-4 {
-    margin: 4% 0;
-  }
-	.col-6 {
-		box-sizing: border-box;
-		float: right;
+  .col-6 {
+    box-sizing: border-box;
+    float: right;
     margin-right: 5px;
     @include calc(width, "55% - 28px");
-	}
-
-	h5 {
-		margin-bottom: 50px;
-		color: $colorTwo;
-	}
-
-	h1 {
-		line-height: 1.2;
-		margin-bottom: 30px;
-	}
-
-	p {
-		color: $colorTwo;
-		opacity: 0.8;
-	}
-
-	p a {
-		color: $colorTwo;
-		border-bottom: 2px solid $colorTwo;
-		font-family: gotham-medium, sans-serif;
-	}
-
-	.link-btn-one {
-		margin-top: 40px;
-		background: $colorTwo;
-		color: $colorThree;
-
-		&:after {
-			background-image: url('/images/arrow-blue.svg');
-		}
-	}
-
-	.right-block {
-		position: absolute;
-		right: 0;
-		background: $colorTwo;
-		width: 40%;
-		float: right;
-		height: 100vh;
-	}
+  }
 
   @include mq ("medium", "max-width") {
-    .arrow-right {
-      left: 21.9rem;
-    }
+
   }
 
 	@include mq("small", "max-width") {
   background-image: -webkit-linear-gradient(90deg, $colorOne 62%, $colorWhite 62%);
   padding: 60px 0 60px 0;
   height: calc(130vh - 70px);
-
-    .arrow-right {
-      left: 14rem;
-      top: 23.8rem;
-      transform: rotate(90deg);
-    }
 
     .col-4 {
       width: 100%;
@@ -1117,11 +1117,6 @@ section {
 
 		h1 {
 			margin-bottom: 10px;
-		}
-
-		.link-btn-one {
-			margin-top: 20px;
-			margin-bottom: 20px;
 		}
 
 	}
@@ -1149,11 +1144,6 @@ section {
 
 		h1 {
 			margin-bottom: 10px;
-		}
-
-		.link-btn-one {
-			margin-top: 20px;
-			margin-bottom: 20px;
 		}
 
 		fieldset {
@@ -1199,6 +1189,9 @@ section {
       &:hover {
         background-color: $colorThree;
       }
+      .active {
+        background-color: $colorThree;
+      }
 
       .column {
         width: 100%;
@@ -1208,7 +1201,7 @@ section {
 
         h4 {
           font-family: "Gotham-Bold", sans-serif;
-          font-size: 1rem;
+          font-size: .92rem;
           text-align: center;
           margin-bottom: 10px;
         }
@@ -1216,7 +1209,7 @@ section {
           text-align: left;
           width: 90%;
           margin: 0 auto;
-          font-size: 87.5%;
+          font-size: 87%;
           color: $colorType;
 
           li {
@@ -1485,7 +1478,7 @@ section {
         float: left;
         width: 50%;
         margin: 5% 0;
-        padding: 3% 6% 3% 0;
+        padding: 0 6% 3% 0;
       }
       .column:last-child {
         padding: 0;
