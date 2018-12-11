@@ -63,7 +63,7 @@ section {
 
 	.col-4 {
     width: 45%;
-    margin-top: 20vh;
+    margin-top: 25vh;
 		position: absolute;
 		z-index: 10;
 
@@ -186,20 +186,20 @@ section {
 	}
 
 	@include mq("small", "max-width") {
-  height: calc(111vh - 70px);
+  height: calc(120vh - 70px);
 
 		img {
       clip-path: none;
 			width: 1800px;
-			margin-left: -400px;
+			margin-left: -640px;
 		}
 
     .col-4 {
 			width: 100%;
-			margin-top: 30vh;
+			margin-top: 20vh;
 
 			h1 {
-				font-size: 3rem;
+				font-size: 3.2rem;
 			}
 		}
 
@@ -208,8 +208,8 @@ section {
 		}
 
 		.header-swiper .swiper-wrapper .swiper-slide .bubble-holder {
-			@include calc(width, "70%");
-			top: 67vh;
+			@include calc(width, "40%");
+			top: 60vh;
 		}
 
 		.header-swiper .swiper-wrapper .swiper-slide .bubble-holder .text-bubble.object {
@@ -218,21 +218,22 @@ section {
 	}
 
 	@include mq("extra-small", "max-width") {
-  height: calc(111vh - 70px);
+  height: calc(105vh - 70px);
 
 		img {
 			margin-left: -750px;
-      width: 1700px;
-      clip-path: none;
 		}
 
 		.col-4 {
 			width: 100%;
-			margin-top: 200px;
+			margin-top: 120px;
 
 			h1 {
 				font-size: 2.5rem;
 			}
+      .link-btn-one {
+        margin-top: 10px;
+      }
 		}
 
 		.link-scroll {
@@ -240,11 +241,7 @@ section {
 		}
 
 		.header-swiper .swiper-wrapper .swiper-slide .bubble-holder {
-			width: 100%;
-      top: 70vh;
-			right: auto;
-			box-sizing: border-box;
-			padding: 0 60px 0 30px;
+			display: none;
 		}
 
 		.text-bubble.object {
@@ -260,6 +257,7 @@ section {
 
 .information {
   padding: 0;
+
 	img {
 		width: 100%;
 		position: absolute;
@@ -339,20 +337,14 @@ section {
 	@include mq("medium", "max-width") {
   background: $colorOne;
 
-		.right-block {
-			display: none;
-		}
-
 		img {
 			display: none;
-			top: 0;
-			bottom: auto;
-			position: relative;
 		}
-
+    .right-block {
+      display: none;
+    }
 		.col-6 {
-			background: $colorOne;
-			padding: 80px 0;
+      padding: 15% 0;
 			width: 100%;
 
       h5 {
@@ -361,6 +353,7 @@ section {
 
       hr {
         left: 0;
+        width: 70px;
       }
 
       p {
@@ -370,14 +363,11 @@ section {
 	}
 
   @include mq("extra-small", "max-width") {
-    .col-6 {
-      padding: 60px 0;
-        h1 {
-          font-size: 2.5em;
-        }
-        p {
-          font-size: .94em;
-        }
+    h1 {
+      font-size: 2.5em;
+    }
+    p {
+      font-size: .94em;
     }
   }
 	@include mq("extra-large", "min-width") {
@@ -647,7 +637,7 @@ section {
         width: 70%;
     		position: absolute;
     		top: 20px;
-    		left: 25px;
+    		left: 20px;
       }
     }
 
@@ -707,8 +697,8 @@ section {
     }
 
     @include mq("extra-small", "max-width") {
-      padding: 80px 0;
-      background-image: -webkit-linear-gradient(70deg, $colorWhite 50%, $colorOne 50%);
+      background-image: none;
+      background-color: $colorOne;
 
       .row {
         padding: 0 0 6%;
@@ -718,15 +708,11 @@ section {
       .column {
         width: 100%;
         height: auto;
-        padding: 0;
+        padding: 10% 0;
         margin: 20px 0;
 
-        hr {
-          width: 10%;
-        }
-
         h4 {
-    			font-size: 1.2em;
+    			font-size: 1.5em;
         }
 
         ul {
@@ -736,9 +722,7 @@ section {
         }
 
         li{
-          margin-top: 3%;
-          width: 60%;
-          text-align: centre;
+          width: 75%;
           margin: 0 auto;
         }
       }
@@ -749,10 +733,6 @@ section {
 
       .image-circle {
         width: 140px;
-
-        img {
-          width: 100%;
-        }
       }
     }
 }

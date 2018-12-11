@@ -1,31 +1,28 @@
-<header id="header">
-	<!-- <div class="grid-container"> -->
-		<a href="/" class="logo"><img src="/images/logo.svg"/></a>
-		<!-- <nav class="country-picker">
-			<ul>
-				<li><a class="sv" href="/sv/"></a></li>
-				<li><a class="en" href="/en/"></a></li>
-			</ul>
-		</nav> -->
-		<a class="hamburger"></a>
-		<nav class="menu">
-			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#how-it-works">How It Works</a></li>
+<header id="header"> <!--top navbar container-->
+  <a href="/" class="logo">
+    <img src="images/logo.svg"/>
+  </a>
+
+  <a class="burger"></a> <!--burger menu for mobile and tablet-->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#usecases">Our Role</a></li>
 				<li><a href="#locations">Locations</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li class="menu-logo"><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank"><img src="/images/facebook.svg"></a></li>
+        <!--social media icons-->
+        <li class="menu-logo"><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank"><img src="/images/facebook.svg"></a></li>
 				<li class="menu-logo"><a href="https://www.instagram.com/hellolamppost_" target="_blank"><img src="/images/instagram.svg"></a></li>
 				<li class="menu-logo"><a href="https://www.twitter.com/hellolamppost_" target="_blank"><img src="/images/twitter.svg"></a></li>
 				<li class="menu-logo"><a href="https://www.linkedin.com/company/hello-lamp-post/" target="_blank"><img src="/images/linkedin.svg"></a></li>
-			</ul>
-		</nav>
-	<!-- </div> -->
+      </ul>
+    </nav>
 </header>
 
+
 <article class="homepage">
-  <% if flash.has?(:ok) %>
+  <% if flash.has?(:ok) %> <!--form sent successfully msg-->
       <section id="notification" class="notification">
 		      <div class="grid-container">
 			       <h3><%= flash[:ok] %></h3>
@@ -34,7 +31,7 @@
       </section>
 	<% end %>
 
-
+<!--Landing Page-->
 <!--Top Section-->
   <section class="hero">
       <div class="grid-container">

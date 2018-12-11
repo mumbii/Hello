@@ -7,11 +7,11 @@
   top: 0;
   width: 100%;
   height: 65px;
+  z-index: 100;
+  position: relative;
   padding: 10px 0;
-  position: fixed;
   transition: top 0.7s;
   background: $colorWhite;
-  z-index: 100;
 
     .logo img {
       width: 200px;
@@ -19,200 +19,128 @@
 
     nav {
       float: right;
-      z-index: 20;
 
       ul {
-  			padding: 0;
-  			margin: 0;
-
         li {
-    			list-style-type: none;
-    			float: left;
-    			margin-left: 20px;
-    		}
-  		}
-    }
-  .menu {
-    margin-top: 8px;
+          float: left;
+          margin-right: 20px;
+          list-style-type: none;
 
-    ul li  {
-  		margin-right: 20px;
-  	}
-    a {
-  		color: $colorTwo;
-  		font-size: .9em;
-  		font-family: gotham-medium, sans-serif;
-  		position: relative;
-  		text-decoration: none;
+          a {
+            color: $colorTwo;
+            text-decoration: none;
 
-  		img{
-  			width: 20px;
-  		}
-  	}
+            img {
+              width: 20px;
+            }
+          }
 
-    a:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -2px;
-      left: 0;
-      border-radius: 1px;
-      background-color: $colorThree;
-      visibility: hidden;
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      -webkit-transition: all 0.2s ease-in-out 0s;
-      transition: all 0.2s ease-in-out 0s;
-    }
+          a: before {
+            left: 0;
+            width: 100%;
+            height: 2px;
+            content: "";
+            bottom: -2px;
+            border-radius: 1px;
+            position: absolute;
+            visibility: hidden;
+            transform: scaleX(0);
+            -webkit-transform: scaleX(0);
+            transition: all 0.2s ease-in-out 0s;
+            -webkit-transition: all 0.2s ease-in-out 0s;
+          }
 
-    a:hover {
-      color: $colorTwo;
+          a:hover {
+            color: $colorTwo;
+          }
+
+          a:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+            -webkit-transform: scaleX(1);
+          }
+        }
+      }
     }
 
-    a:hover:before {
-      visibility: visible;
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
+    @include mq("medium", "max-width") {
+      .logo img {
+        width: 190px;
+        margin-top: 2px;
+        margin-left: 20px;
+        margin-left: -10px; /*not sure why this is repeated*/
+      }
+      .burger {
+        width: 50px;
+        height: 50px;
+        float: right;
+        display: block;
+        margin-right: 25px;
+        background-size: cover;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-image: url('/images/hamburger.svg');
+
+        &.active {
+          background-image: url('/images/cross.svg');
+        }
+      }
+
+      nav {
+        width: 100%;
+        display: none;
+        margin-right: 0;
+        margin-top: -40px;
+        background: $colorOne;
+
+        ul {
+          margin: 32px 25px;
+        }
+
+        ul li {
+          margin-bottom: 7px;
+        }
+
+        ul .menu-logo {
+          width: 10px;
+        }
+
+        ul li a {
+          font-size: 1.3em;
+        }
+
+        ul li:last-child {
+          margin-bottom: 35px;
+        }
+
+        nav.active {
+          display: block;
+          padding-top: 30px;
+        }
+      }
     }
-  }
-  .country-picker {
-    ul li a {
-      cursor: pointer;
-      width: 38px;
-      height: 38px;
-      display: block;
-      @include border-radius(100%);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 60px 50px;
-      border: 2px solid $colorTwo;
+
+    @include mq("small", "max-width") {
+      .logo img {
+        width: 190px;
+        margin-top: 2px;
+        margin-left: -10px;
+        margin-left: 20px;
+      }
+      nav {
+        width: 100%;
+
+        ul {
+          text-align: left;
+
+          li {
+            width: 100%;
+          }
+        }
+        nav.active {
+          display: block;
+          padding-top: 30px;
+        }
+      }
     }
-
-    ul li a.en {
-      background-image: url('/images/flag-en.svg');
-    }
-
-    ul li a.sv {
-      background-image: url('/images/sv.svg');
-    }
-  }
-
-  @include mq("medium", "max-width") {
-  	.grid-container {
-  		//width: 100%;
-  	}
-
-  	.logo img {
-  		width: 190px;
-  		margin-top: 2px;
-  		margin-left: -10px;
-  		margin-left: 20px;
-  	}
-
-  	.hamburger {
-  		float: right;
-  		margin-right: 25px;
-  		width: 50px;
-  		height: 50px;
-  		background-image: url('/images/hamburger.svg');
-  		background-size: cover;
-  		background-position: 0 0;
-  		background-repeat: no-repeat;
-  		display: block;
-
-  		&.active {
-  			background-image: url('/images/cross.svg');
-  		}
-  	}
-
-  	.menu {
-  		display: none;
-  		background: $colorOne;
-  		margin-top: -40px;
-  		width: 100%;
-  		margin-right: 0;
-
-  		ul {
-  			margin: 32px 25px;
-  		}
-
-  		ul li {
-  			margin-bottom: 7px;
-  		}
-
-  		ul .menu-logo{
-  			width: 10px;
-  		}
-
-  		ul li a {
-  			font-size: 1.3em;
-  			//border-bottom: 2px solid $colorTwo;
-  		}
-
-  		ul li:last-child {
-  			margin-bottom: 35px;
-  		}
-  	}
-
-  	.menu.active {
-  		display: block;
-  		padding-top: 30px;
-  	}
-  }
-
-  @include mq("small", "max-width") {
-  	.menu{
-  		//margin-top: -35px;
-
-  		ul{
-  			text-align: left;
-  		}
-
-  		li{
-  			width: 100%;
-  		}
-  	}
-
-  	width: 100%;
-
-  	.grid-container {
-  		width: 100%;
-  	}
-
-  	.menu.active {
-  		display: block;
-  		padding-top: 30px;
-  	}
-
-  	.link-exit {
-  		margin-top: -80px;
-  	}
-
-  	.col-3 {
-  		width: 100%;
-  	}
-
-  	.logo img {
-  		width: 190px;
-  		margin-top: 2px;
-  		margin-left: -10px;
-  		margin-left: 20px;
-  	}
-
-  	.col-3 img {
-  		display: block;
-  		margin: 25px auto;
-  		float: none;
-  	}
-  }
-
-  @include mq("nano", "max-width") {
-  	.logo img {
-  	}
-  }
-
-  #en header .menu a {
-  	//letter-spacing: -1px;
-  }
 }

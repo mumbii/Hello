@@ -96,7 +96,7 @@ class HelloLamppostWebsite < Sinatra::Base
 	post '/contact' do
 
 	# First, instantiate the Mailgun Client with your API key
-	mg_client = Mailgun::Client.new 'key-dee4e566f732ad64442a493985063a2e'
+	mg_client = Mailgun::Client.new '60168adaff4815e797169e91ce09e372-b3780ee5-d391c98d'
 
 	# Define your message parameters
 
@@ -110,7 +110,7 @@ class HelloLamppostWebsite < Sinatra::Base
 		text:    message
 	}
 		# Send your message through the client
-		mg_client.send_message 'sandbox1078ce278f404e358edd42b8db68c285.mailgun.org', message_params
+		mg_client.send_message 'sandboxcec896625936441ca87d65750809aa89.mailgun.org', message_params
 
 		flash[:ok] = "Your Message Has Been Sent!"
 		erb :index
