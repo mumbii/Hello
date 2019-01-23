@@ -1,355 +1,227 @@
-<header id="header">
-	<!-- <div class="grid-container"> -->
-		<a href="/" class="logo"><img src="/images/logo.svg"/></a>
-		<!-- <nav class="country-picker">
-			<ul>
-				<li><a class="sv" href="/sv/"></a></li>
-				<li><a class="en" href="/en/"></a></li>
-			</ul>
-		</nav> -->
-		<a class="hamburger"></a>
-		<nav class="menu">
-			<ul>
-				<li><a href="/#about">About</a></li>
-				<li><a href="/#how-it-works">How It Works</a></li>
-        <li><a href="/#usecases">Our Role</a></li>
-				<li><a href="/#locations">Locations</a></li>
-				<li><a href="/#contact">Contact</a></li>
-				<li class="menu-logo"><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank"><img src="/images/facebook.svg"></a></li>
-				<li class="menu-logo"><a href="https://www.instagram.com/hellolamppost_" target="_blank"><img src="/images/instagram.svg"></a></li>
-				<li class="menu-logo"><a href="https://www.twitter.com/hellolamppost_" target="_blank"><img src="/images/twitter.svg"></a></li>
-				<li class="menu-logo"><a href="https://www.linkedin.com/company/hello-lamp-post/" target="_blank"><img src="/images/linkedin.svg"></a></li>
-			</ul>
-		</nav>
-	<!-- </div> -->
-</header>
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+
+      <!--Burger menu for Mobile-->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a href="/" class="logo"><img src="/images/logo.svg"/></a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#use-cases">Our Role</a></li>
+        <li><a href="#location">Locations</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <!--social media icons-->
+        <li><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank" class="fa fa-facebook"></a></li>
+        <li><a href="https://www.instagram.com/hellolamppost_/" target="_blank" class="fa fa-instagram"></a></li>
+        <li><a href="https://twitter.com/hellolamppost_" target="_blank" class="fa fa-twitter"></a></li>
+        <li><a href="https://www.linkedin.com/company/hello-lamp-post/" target="_blank" class="fa fa-linkedin"></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
 
-<article class="homepage">
-  <!--Use cases-->
-    <section id="usecases" class="usecase">
-        <div class="grid-container">
-          <hr>
-          <h5>Our Projects</h5>
-            <div id="row" class="row">
-              <a href="#Sing"><button class="collapsible active" onclick="openTab('Sing');">
-                  <div class="column">
-                       <div class="image-circle">
-                          <img src="/images/group.png">
-                       </div>
-                       <h4>Community Engagement</h4>
-                          <ul>
-                            <li>Enabling citizens to continuously engage on their priorities for their community</li>
-                            <li>Engagement and collaborative ideation around topics</li>
-                            <li>Promotion of local events and activities</li>
-                            <li>Sharing thoughts, opinions and planned initiatives with citizens</li>
-                          </ul>
-                  </div>
-              </button></a>
-              <a href="#Brstl"><button class="collapsible" onclick="openTab('Brstl');">
-                <div class="column">
-                         <div class="image-circle">
-                            <img src="/images/map.png">
-                         </div>
-                              <h4>Way-finding & Storytelling</h4>
-                                <ul>
-                                   <li>City way-finding and information resource</li>
-                                   <li>Engagement tool for specific ”campaigns”/initiatives</li>
-                                   <li>Gamification deployments</li>
-                                </ul>
-                  </div>
-              </button></a>
-              <a href="#Mesa"><button class="collapsible" onclick="openTab('Mesa');">
-                  <div class="column">
-                           <div class="image-circle">
-                                  <img src="/images/buildings.png">
-                           </div>
-                            <h4>Urban Planning Engagement</h4>
-                            <ul>
-                              <li>Co-designing redevelopments and urban changes alongside citizens</li>
-                              <li>Gathering continuous input and feedback on planning applications</li>
-                              <li>Humanising cities</li>
-                              <li>Engagement on smart city initiatives</li>
-                            </ul>
-                  </div>
-              </button></a>
-              <a href="#Utrecht"><button class="collapsible" onclick="openTab('Utrecht');">
-                  <div class="column">
-                           <div class="image-circle">
-                                  <img src="/images/destination.png">
-                           </div>
-                              <h4>Culture & Tourism</h4>
-                              <ul>
-                               <li>Way-finding and orientation around cultural points of interest</li>
-                               <li>History and stories behind landmarks and culture</li>
-                               <li>Story sharing between visitors, citizens and tourists</li>
-                               <li>Connecting tourists and reconnecting citizens with the city</li>
-                              </ul>
-                  </div>
-              </button></a>
-          </div> <!--Row div-->
+<article class="projectspage">
+
+<!--Use Cases-->
+  <section id="usecase" class="usecase">
+    <div class="grid-container">
+      <hr>
+      <h2>Our Role in Cities</h2>
+      <div class="row text-center slideanim">
+        <div class="col-3">
+          <div class="image-circle">
+              <img src="/images/group.png"  alt="Avatar">
+          </div>
+          <h3>Community Engagement</h3>
+          <ul>
+             <li>Feedback loop between cities and citizens</li>
+             <li>Engagement and collaborative ideation of community priorities</li>
+             <li>Promotion of local events, activities and services</li>
+             <li>Empowering voices of local communities and individuals</li>
+          </ul>
         </div>
-    </section>
 
-<!--Info of projects -->
-    <section id="case">
-      <!--<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>-->
-      <div id="Mesa" class="slides">
-        <div class="btns">
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-        </div><!--buttons-->
-
-             <div class="leftcontent">
-               <div class="dot-container">
-                 <span class="dot" onclick="currentSlide(1)"></span>
-                 <span class="dot" onclick="currentSlide(2)"></span>
-                 <span class="dot" onclick="currentSlide(3)"></span>
-               </div><!--dots-->
-               <div class="grid-container">
-               <div class="head row">
-                 <div class="column">
-                   <h1>Mesa</h1>
-                   <h5>Client: <span>Mesa City government & Mesa Arts Centre</span></h5>
-                   <h5>Days: <span>30+</span></h5>
-                   <h5>Outcome: <span>The project led to increase.</span></h5>
-                 </div>
-                </div><!--Eo row!-->
-                <div class="stats">
-                  <div class="column">
-                    <h1>7,035</h1>
-                    <p>No. of Messages Sent</p>
-                  </div>
-                  <div class="column">
-                    <h1>2,411</h1>
-                    <p>No. of Objects Awoken</p>
-                  </div>
-                  <div class="column">
-                    <h1>1,001</h1>
-                    <p>No. of People Played</p>
-                  </div>
-                </div><!--Eo stats-->
-                <div class="body row">
-                 <div class="column">
-                   <h5>Objective</h5>
-                   <p>Hello Mesa was a month long installation around the Arts Center and a number of local festivals, as a playful artistic installation.</p>
-                 </div>
-                 <div class="column">
-                   <h5>Themes & findings</h5>
-                   <p>The result was an extraordinary overlap between human play, communication, technology and inanimate objects and Hello Lamp Post celebrated their first launch in the city of Bristol, UK as the winning entry to Watershed’s Playable City award.</p>
-                 </div>
-               </div> <!--EO row-->
-               </div><!--EO grid-container-->
-             </div><!--EO leftcontent-->
-
-            <div class="rightcontent">
-              <img src="/images/hlp_bristol1.jpg"/>
-            </div><!--EO right content-->
-      </div><!--slides-->
-
-      <div id="Sing" class="slides">
-        <div class="btns">
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-            </div><!--buttons-->
-
-             <div class="leftcontent">
-               <div class="dot-container">
-                 <span class="dot" onclick="currentSlide(1)"></span>
-                 <span class="dot" onclick="currentSlide(2)"></span>
-                 <span class="dot" onclick="currentSlide(3)"></span>
-               </div><!--dots-->
-               <div class="grid-container">
-               <div class="head row">
-                 <div class="column">
-                   <h1>Singapore</h1>
-                   <h5>Client: <span>The Singapore government alongside Future Everything.</span></h5>
-                   <h5>Days: <span>8+</span></h5>
-                   <h5>Outcome: <span>The project led to increase.</span></h5>
-                 </div>
-                </div><!--Eo row!-->
-                <div class="stats">
-                  <div class="column">
-                    <h1>18,843</h1>
-                    <p>No. of Messages Sent</p>
-                  </div>
-                  <div class="column">
-                    <h1>405</h1>
-                    <p>No. of Objects Awoken</p>
-                  </div>
-                  <div class="column">
-                    <h1>3,813</h1>
-                    <p>No. of People Played</p>
-                  </div>
-                </div><!--Eo stats-->
-                <div class="body row">
-                 <div class="column">
-                   <h5>Objective</h5>
-                   <p>Helping solve communicating issues surrounding technology to the community. Hello Lamp Post Singapore was introduced during a week long festival of digital culture and part of SG50, the year long celebration that marked the 50th anniversary of the founding of Singapore.</p>
-                 </div>
-                 <div class="column">
-                   <h5>Themes & findings</h5>
-                   <p>High adoption rate, participants naturally empathising with objects and probing the edges of artificial intelligence. Overall, Hello Lamp Post allowed the Singapore government to gain an honest view on their residents’ opinions, knowledge and ideas for issues around technology.</p>
-                 </div>
-               </div> <!--EO row-->
-               </div><!--EO grid-container-->
-             </div><!--EO leftcontent-->
-
-            <div class="rightcontent">
-              <img src="/images/hlp_bristol1.jpg"/>
-            </div><!--EO right content-->
-      </div><!--slides-->
-
-      <div id="Brstl" class="slides">
-        <div class="btns">
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-            </div><!--buttons-->
-
-             <div class="leftcontent">
-               <div class="dot-container">
-                 <span class="dot" onclick="currentSlide(1)"></span>
-                 <span class="dot" onclick="currentSlide(2)"></span>
-                 <span class="dot" onclick="currentSlide(3)"></span>
-               </div><!--dots-->
-               <div class="grid-container">
-               <div class="head row">
-                 <div class="column">
-                   <h1>Bristol</h1>
-                   <h5>Client: <span>City of Bristol, UK, with the Watershed’s Playable City Competition.</span></h5>
-                   <h5>Days: <span>30+</span></h5>
-                   <h5>Outcome: <span>The project led to increase.</span></h5>
-                 </div>
-                </div><!--Eo row!-->
-                <div class="stats">
-                  <div class="column">
-                    <h1>29,771</h1>
-                    <p>No. of Messages Sent</p>
-                  </div>
-                  <div class="column">
-                    <h1>1,535</h1>
-                    <p>No. of Objects Awoken</p>
-                  </div>
-                  <div class="column">
-                    <h1>10,458</h1>
-                    <p>No. of People Played</p>
-                  </div>
-                </div><!--Eo stats-->
-                <div class="body row">
-                 <div class="column">
-                   <h5>Objective</h5>
-                   <p>For Bristol residents to rediscover the local environment, share memories of the city and uncover the stories that other people had left behind. The inspiration for Hello Lamp Post Bristol came about by combining two playful ideas: the city being thought of as a diary and so much of the city’s infrastructure being labelled with unique identifier codes. These were used to reference locations in a way that is more human, fun and playful.</p>
-                 </div>
-                 <div class="column">
-                   <h5>Themes & findings</h5>
-                   <p>The result was an extraordinary overlap between human play, communication, technology and inanimate objects and Hello Lamp Post celebrated their first launch in the city of Bristol, UK as the winning entry to Watershed’s Playable City award.</p>
-                 </div>
-               </div> <!--EO row-->
-               </div><!--EO grid-container-->
-             </div><!--EO leftcontent-->
-
-            <div class="rightcontent">
-              <img src="/images/hlp_bristol1.jpg"/>
-            </div><!--EO right content-->
-      </div><!--slides-->
-
-      <div id="Utrecht" class="slides">
-        <div class="btns">
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-            </div><!--buttons-->
-
-             <div class="leftcontent">
-               <div class="dot-container">
-                 <span class="dot" onclick="currentSlide(1)"></span>
-                 <span class="dot" onclick="currentSlide(2)"></span>
-                 <span class="dot" onclick="currentSlide(3)"></span>
-               </div><!--dots-->
-               <div class="grid-container">
-               <div class="head row">
-                 <div class="column">
-                   <h1>Utrecht</h1>
-                   <h5>Client: <span>Mesa City government & Mesa Arts Centre</span></h5>
-                   <h5>Days: <span>30+</span></h5>
-                   <h5>Outcome: <span>The project led to increase.</span></h5>
-                 </div>
-                </div><!--Eo row!-->
-                <div class="stats">
-                  <div class="column">
-                    <h1>7,035</h1>
-                    <p>No. of Messages Sent</p>
-                  </div>
-                  <div class="column">
-                    <h1>2,411</h1>
-                    <p>No. of Objects Awoken</p>
-                  </div>
-                  <div class="column">
-                    <h1>1,001</h1>
-                    <p>No. of People Played</p>
-                  </div>
-                </div><!--Eo stats-->
-                <div class="body row">
-                 <div class="column">
-                   <h5>Objective</h5>
-                   <p>Hello Mesa was a month long installation around the Arts Center and a number of local festivals, as a playful artistic installation.</p>
-                 </div>
-                 <div class="column">
-                   <h5>Themes & findings</h5>
-                   <p>The result was an extraordinary overlap between human play, communication, technology and inanimate objects and Hello Lamp Post celebrated their first launch in the city of Bristol, UK as the winning entry to Watershed’s Playable City award.</p>
-                 </div>
-               </div> <!--EO row-->
-               </div><!--EO grid-container-->
-             </div><!--EO leftcontent-->
-
-            <div class="rightcontent">
-              <img src="/images/hlp_bristol1.jpg"/>
-            </div><!--EO right content-->
-      </div><!--slides-->
-
-    </section>
-
-<!--Contact form-->
-    <section id="contact" class="contact">
-        <div class="grid-container">
-            <span class="arrow"></span>
-            <div class="col-4">
-              <hr>
-                 <h5>Contact</h5>
-                 <h1>Get In Touch</h1>
-                 <p>We are always happy to hear from you whether you’re looking for more info or to collaborate with us. Don't hesitate to drop us a message!</p>
-                 <!-- <p>We're hiring! Click <a href="/careers">here</a> to view our openings and learn more about us.</p> -->
-                 <!--<a class="link-btn-one" href="mailto:contact@hlp.city?Subject=Hello%20Lamp%20Post%20Enquiry">Email Us</a>-->
-            </div>
-            <div class="col-6">
-                <form class="contact-form" action="/contact" method="post">
-                      <fieldset>
-                             <label for="name">Name:</label>
-                             <input type="text" name="name" placeholder="Example Name">
-                      </fieldset>
-
-                      <fieldset>
-                             <label for="email">Email Address:</label>
-                             <input type="email" name="email" placeholder="Example@Domain.co.uk">
-                      </fieldset>
-
-                             <label for="subject">Subject:</label>
-                             <select name="subject" form="subject-form">
-                                <option selected value="I am interested in Hello Lamp Post for my city">I am interested in Hello Lamp Post for my city.</option>
-                                <option value="I have a question about Hello Lamp Post">I have a general question about Hello Lamp Post.</option>
-                                <option value="I am interested in collaborating with Hello Lamp Post">I am interested in collaborating with Hello Lamp Post.</option>
-                                <option value="Other">Other.</option>
-                            </select>
-
-                            <label for="message">Your Message:</label>
-                            <textarea name="message" cols='30' placeholder="Hello Lamp Post..." rows="10"></textarea><br>
-                            <input type="submit" class="btn" value="Submit">
-                <!-- Google Captcha, needs back-end configuring -->
-                <!-- <div class="g-recaptcha" data-sitekey="6Le09lUUAAAAAO5j54Yj3oI6GTEgbpfiBJf7AbXp"></div> -->
-                 </form>
-            </div>
+        <div class="col-3">
+          <div class="image-circle">
+            <img src="/images/map.png"  alt="Avatar">
+          </div>
+          <h3>Way-finding & Storytelling</h3>
+          <ul>
+             <li>Adding playful layers to urban spaces</li>
+             <li>Creation of interactive reference points</li>
+             <li>City way-finding and informative exploring</li>
+             <li>Engagement tool for specific campaigns and initiatives</li>
+          </ul>
         </div>
-    </section>
+
+        <div class="col-3">
+          <div class="image-circle">
+            <img src="/images/buildings.png"  alt="Avatar">
+          </div>
+          <h3>Urban Planning Engagement</h3>
+          <ul>
+            <li>Co-creation of urban planning and inclusive social spaces</li>
+            <li>Gathering continuous feedback on the planning process</li>
+            <li>Creating transparent and human-centric cities</li>
+            <li>Engagement and consultation around smart city initiatives</li>
+          </ul>
+        </div>
+
+        <div class="col-3">
+          <div class="image-circle">
+            <img src="/images/destination.png"  alt="Avatar">
+          </div>
+          <h3>Culture & Tourism</h3>
+          <ul>
+            <li>Story sharing between visitors, citizens and cultural hubs</li>
+            <li>Educate and strengthen cities cultural narratives</li>
+            <li>Encouring visitors to discover local stories and landmarks, while bringing them to life</li>
+            <li>Personalised and shareable experience of a cities past and future</li>
+          </ul>
+        </div>
+      </div><!--row-->
+    </div>
+  </section>
+
+<!--Our Projects-->
+  <section id="case">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="grid-container">
+          <div class="item active">
+            <div id="left" class="col-6">
+              <div class="row">
+                <h1>Mesa</h1>
+                <h3>Client: <span>Mesa Arts Center in partnership with City of Mesa.</span></h3>
+                <h3>Days: <span>30+</span></h3>
+                <h3>Outcome: <span>Consultation around the art centre, cultural installations and city infrastructure to better inform the cities strategic planning.</span></h3>
+              </div>
+
+              <div id="stats" class="row">
+                <div class="col-4">
+                  <h1>7,035</h1>
+                  <p>No. of Messages Sent</p>
+                </div>
+                <div class="col-4">
+                  <h1>2,411</h1>
+                  <p>No. of Objects Awoken</p>
+                </div>
+                <div class="col-4">
+                  <h1>1,001</h1>
+                  <p>No. of People Played</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <h4>Objective</h4>
+                  <p>Celebrate the arts and culture of the city of Mesa, and to promote creative opportunities whilst gaining the public’s insights and views to aid with the center’s strategic planning program.</p>
+                </div>
+                <div class="col-12">
+                  <h4>Themes & findings</h4>
+                  <p>Hello Mesa was a popular installation, receiving many interactions
+                     from citizens over the month of the installation. These interactions were not only high in quantity but most responses collected from participants were thought provoking, insightful and entertaining.
+                  </p>
+                </div>
+              </div>
+            </div><!--left side-->
+
+            <div id="right" class="col-6">
+              <img src="/images/hlp_mesa2.jpg" alt="boy talking to street object"/>
+            </div><!--right side-->
+          </div><!--item-->
+        </div><!--grid-container-->
+
+
+        <div class="item">
+          <img src="chicago.jpg" alt="Chicago" width="1200" height="700">
+          <div class="carousel-caption">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago - A night we won't forget.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="la.jpg" alt="Los Angeles" width="1200" height="700">
+          <div class="carousel-caption">
+            <h3>LA</h3>
+            <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
+  </section>
+
+  <!--Contact-->
+  <section id="contact" class="container-fluid">
+    <div class="grid-container">
+      <div class="col-3">
+        <hr>
+        <h2>Contact</h2>
+        <h1>Get In Touch</h1>
+        <p>We are always happy to hear from you whether you’re looking for more info or to collaborate with us. Don't hesitate to drop us a message!</p>
+        <!-- <p>We're hiring! Click <a href="/careers">here</a> to view our openings and learn more about us.</p> -->
+        <a class="link-btn-one" href="mailto:contact@hlp.city?Subject=Hello%20Lamp%20Post%20Enquiry">Email Us</a>
+      </div>
+      <div class="col-6">
+        <form class="contact-form" action="/contact" method="post">
+              <fieldset>
+                     <label for="name">Name:</label>
+                     <input type="text" name="name" placeholder="Example Name">
+              </fieldset>
+
+              <fieldset>
+                     <label for="email">Email Address:</label>
+                     <input type="email" name="email" placeholder="Example@Domain.co.uk">
+              </fieldset>
+
+                     <label for="subject">Subject:</label>
+                     <select name="subject" form="subject-form">
+                        <option selected value="I am interested in Hello Lamp Post for my city">I am interested in Hello Lamp Post for my city.</option>
+                        <option value="I have a question about Hello Lamp Post">I have a general question about Hello Lamp Post.</option>
+                        <option value="I am interested in collaborating with Hello Lamp Post">I am interested in collaborating with Hello Lamp Post.</option>
+                        <option value="Other">Other.</option>
+                    </select>
+
+                    <label for="message">Your Message:</label>
+                    <textarea name="message" cols='30' placeholder="Hello Lamp Post..." rows="10"></textarea><br>
+                    <input type="submit" class="btn" value="Submit">
+                    <!-- Google Captcha, needs back-end configuring -->
+                    <!-- <div class="g-recaptcha" data-sitekey="6Le09lUUAAAAAO5j54Yj3oI6GTEgbpfiBJf7AbXp"></div> -->
+        </form>
+      </div>
+    </div>
+  </section>
 </article>
 
 

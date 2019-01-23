@@ -8,10 +8,14 @@
   margin: 0 auto;
 
   @include calc(width, "100% - 60px");
-  max-width: 1400px;
+  max-width: 2560px;
 
   @include mq("nano", "max-width") {
     @include calc(width, "100% - 40px");
+  }
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+    @include calc(width, "100% - 130px");
   }
 }
 
