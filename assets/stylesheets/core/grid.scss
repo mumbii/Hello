@@ -3,6 +3,7 @@
 // 	Grid
 // =================================================================
 
+
 .grid-container {
   position: relative;
   margin: 0 auto;
@@ -19,7 +20,7 @@
   }
 }
 
-.grid-inner {
+/*.grid-inner {
   position: relative;
   display: block;
   margin: 0 auto;
@@ -186,4 +187,4 @@ $grid-spacing:2%;
     @include calc(width, "8.33% - 24px");
     float: left;
     display: block;
-}
+}*/

@@ -1,28 +1,34 @@
-<header id="header">
-	<!-- <div class="grid-container"> -->
-		<a href="/" class="logo"><img src="/images/logo.svg"/></a>
-		<!-- <nav class="country-picker">
-			<ul>
-				<li><a class="sv" href="/sv/"></a></li>
-				<li><a class="en" href="/en/"></a></li>
-			</ul>
-		</nav> -->
-		<a class="hamburger"></a>
-		<nav class="menu">
-			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#usecases">Our Role</a></li>
-				<li><a href="#locations">Locations</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li class="menu-logo"><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank"><img src="/images/facebook.svg"></a></li>
-				<li class="menu-logo"><a href="https://www.instagram.com/hellolamppost_" target="_blank"><img src="/images/instagram.svg"></a></li>
-				<li class="menu-logo"><a href="https://www.twitter.com/hellolamppost_" target="_blank"><img src="/images/twitter.svg"></a></li>
-				<li class="menu-logo"><a href="https://www.linkedin.com/company/hello-lamp-post/" target="_blank"><img src="/images/linkedin.svg"></a></li>
-			</ul>
-		</nav>
-	<!-- </div> -->
-</header>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <!--Burger menu for mobile-->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/"><img src="/images/logo.svg"/></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#process">How It Works</a></li>
+        <li><a href="/#use-cases">Our Partners</a></li>
+        <li><a href="/#location">Locations</a></li>
+        <li><a href="/#contact">Contact</a></li>
+
+        <!--Social media icons-->
+        <li><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank" class="fa fa-facebook"></a></li>
+        <li><a href="https://www.instagram.com/hellolamppost_/" target="_blank" class="fa fa-instagram"></a></li>
+        <li><a href="https://twitter.com/hellolamppost_" target="_blank" class="fa fa-twitter"></a></li>
+        <li><a href="https://www.linkedin.com/company/hello-lamp-post/" target="_blank" class="fa fa-linkedin"></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
 <script>
@@ -30,9 +36,9 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.top = "0";
+    document.getElementById("nav").style.top = "0";
   } else {
-    document.getElementById("header").style.top = "-150px";
+    document.getElementById("nav").style.top = "-150px";
   }
   prevScrollpos = currentScrollPos;
 }

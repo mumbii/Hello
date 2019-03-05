@@ -1,197 +1,187 @@
-<nav id="nav" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-
-      <!--Burger menu for Mobile-->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <a href="/" class="logo"><img src="/images/logo.svg"/></a>
-
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">About</a></li>
-        <li><a href="#process">How It Works</a></li>
-        <li><a href="#use-cases">Our Role</a></li>
-        <li><a href="#location">Locations</a></li>
-        <li><a href="#contact">Contact</a></li>
-
-        <!--social media icons-->
-        <li><a href="https://www.facebook.com/Hello-Lamp-Post-171475660169073/" target="_blank" class="fa fa-facebook"></a></li>
-        <li><a href="https://www.instagram.com/hellolamppost_/" target="_blank" class="fa fa-instagram"></a></li>
-        <li><a href="https://twitter.com/hellolamppost_" target="_blank" class="fa fa-twitter"></a></li>
-        <li><a href="https://www.linkedin.com/company/hello-lamp-post/" target="_blank" class="fa fa-linkedin"></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <!--Landing Page-->
+
 <section id="hero" class="container-fluid">
   <div class="grid-container">
     <div class="row">
-      <div class="col-4">
-        <h1>The playful, city-wide system that lets you talk to street objects.</h1>
-           <a href="/projects" class="link-btn-one" role="button">Deploy to your city</a>
-      </div>
-      <div class="col-8">
-        <div class="header-swiper">
-  			     <div class="swiper-wrapper">
-  				         <div class="swiper-slide austin-lampost">
-                      <img src="/images/header-image-1.jpg" />
-  					                   <div class="bubble-holder">
-  						                        <div class="text-bubble">
-  							                           <p>Hello Lamp Post #321</p>
-  						                        </div>
-                            					<div class="text-bubble object">
-                            						   <p>Good afternoon! Can you answer a question - what would be your super power and why?</p>
-                            					</div>
-                          						<div class="text-bubble">
-                          							   <p>Photosynthesis, so that eating would be purely for pleasure!</p>
-                          						</div>
-  					                  </div>
-  				         </div>
-              			<div class="swiper-slide"></div>
-              			<div class="swiper-slide"></div>
-              			<div class="swiper-slide"></div>
-  			    </div>
-      	<!-- Add Pagination -->
-  			    <div class="swiper-pagination"></div>
+      <div class="col-sm-12 col-md-6">
+        <div class="herotext">
+          <h1>The playful, system that brings citizens and their city closer together.</h1>
+          <a href="/projects" class="link-btn-one" role="button">Deploy to your city</a>
         </div>
       </div>
-    </div><!--row-->
-  </div><!--grid container-->
+    </div>
+  </div>
 </section>
 
-<!--About Hello Lamp Post-->
+
+<!--About HLP-->
 <section id="about" class="container-fluid">
-  <div class="col-4">
-    <!--<img src="/images/bg-how-it-works.jpg" alt="boy looking at lamp post">-->
-  </div>
-  <div class="col-6">
-      <div class="grid-container">
-        <hr>
-        <h2>About</h2>
-        <h1>What is Hello Lamp Post?</h1>
-        <p>We are a playful platform with a flexible and scalable system, inviting people to strike up conversations with familiar street objects using text messages or Facebook Messenger, encouraging people to look at the city with fresh eyes and see it as a playground. </p>
-        <p>By using the thousands of pre-existing identifier codes that label items of street objects across a whole city, people can have interesting, surprising and often funny conversations with particular objects, including (but not limited to) lamp posts, post boxes, bollards, manholes, bins or telegraph poles. </p>
-        <a href="#process" class="link-btn-one" role="button">How It Works</a>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="abouttext">
+          <hr>
+          <h2>About</h2>
+          <h1>What is Hello Lamp Post?</h1>
+          <p>We are a playful engagement platform inviting people to strike up interesting, surprising and often funny conversations with familiar street objects (e.g. lamp posts, bins, post boxes etc) using text messages or Facebook Messenger, encouraging people to look at the city with fresh eyes and see it as a playground. </p>
+          <!--<p>By using the thousands of pre-existing identifier codes that label items of street objects across a whole city, people can have interesting, surprising and often funny conversations with particular objects, including (but not limited to) lamp posts, post boxes, bollards, manholes, bins or telegraph poles. </p>-->
+          <a href="#process" class="link-btn-one" role="button">How It Works</a>
+        </div>
       </div>
+
+      <div class="col-sm-12 col-md-6">
+        <div class="bgphone">
+          <img src="/images/iPhone-XS-Convo.png" alt="">
+        </div>
+      </div>
+      <!--<div class="bgphone"></div>-->
     </div>
 </section>
+
+
+
+<div class="bg1"></div>
+
 
 
 <!--How it works-->
 <section id="process" class="container-fluid">
   <div class="grid-container">
     <hr>
-    <h2>How It Works</h2>
+    <h2>How it works</h2>
 
-    <div class="row text-center slideanim">
-      <div class="col-4">
+    <div class="row">
+      <div class="col-sm-4">
         <div class="process-item">
           <div class="image-circle">
             <img src="/images/process-1.svg" class="img-image-circle image-circle" height="200" width="200" alt="Avatar">
           </div>
-        <h3><%= I18n.t(:pick_an_object) %></h3>
-        <p>Look out for a street object.</p>
+          <h3><%= I18n.t(:pick_an_object) %></h3>
+          <p>Look out for a street object.</p>
         </div>
       </div>
 
-      <div class="col-4">
+      <div class="col-sm-4">
         <div class="process-item">
           <div class="image-circle">
             <img src="/images/process-2.svg" class="img-circle image-circle" height="200" width="200" alt="Avatar">
           </div>
-        <h3><%= I18n.t(:say_hello) %></h3>
-        <p>Send a text in this format: “Hello” + Object Name + #Code e.g. “Hello Bin #B6291”..</p>
+          <h3><%= I18n.t(:say_hello) %></h3>
+          <p>Send a text in this format: “Hello” + Object Name + #Code e.g. “Hello Bin #B6291”..</p>
         </div>
       </div>
 
-      <div class="col-4">
+      <div class="col-sm-4">
         <div class="process-item">
           <div class="image-circle">
             <img src="/images/process-3.svg" class="img-circle image-circle" height="200" width="200" alt="Avatar">
           </div>
-        <h3><%= I18n.t(:keep_talking) %></h3>
-        <p><%= I18n.t(:keep_talking_text) %></p>
+          <h3><%= I18n.t(:keep_talking) %></h3>
+          <p><%= I18n.t(:keep_talking_text) %></p>
         </div>
       </div>
-
-    </div><!--row-->
-  </div><!--grid-container-->
+    </div>
+  </div>
 </section>
 
 
-<!--Use Cases-->
+
+
+<div class="bg2"></div>
+
+
+
+
+<!--Use cases-->
 <section id="use-cases" class="container-fluid">
   <div class="grid-container">
     <hr>
-    <h2>Our Role in Cities</h2>
-    <div class="row text-center slideanim">
-      <div class="col-3">
-        <div class="image-circle">
-            <img src="/images/group.png"  alt="Avatar">
+    <h2>Our role in cities</h2>
+  </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/group.png" alt="icon">
+          </div>
+          <h3>Community Engagement</h3>
         </div>
-        <h3>Community Engagement</h3>
-        <ul>
-           <li>Feedback loop between cities and citizens</li>
-           <li>Engagement and collaborative ideation of community priorities</li>
-           <li>Promotion of local events, activities and services</li>
-           <li>Empowering voices of local communities and individuals</li>
-        </ul>
-      </div>
 
-      <div class="col-3">
-        <div class="image-circle">
-          <img src="/images/map.png"  alt="Avatar">
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/map.png"  alt="icon">
+          </div>
+          <h3>Way-finding & Storytelling</h3>
         </div>
-        <h3>Way-finding & Storytelling</h3>
-        <ul>
-           <li>Adding playful layers to urban spaces</li>
-           <li>Creation of interactive reference points</li>
-           <li>City way-finding and informative exploring</li>
-           <li>Engagement tool for specific campaigns and initiatives</li>
-        </ul>
-      </div>
 
-      <div class="col-3">
-        <div class="image-circle">
-          <img src="/images/buildings.png"  alt="Avatar">
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/buildings.png"  alt="icon">
+          </div>
+          <h3>Public Consultation</h3>
         </div>
-        <h3>Urban Planning Engagement</h3>
-        <ul>
-          <li>Co-creation of urban planning and inclusive social spaces</li>
-          <li>Gathering continuous feedback on the planning process</li>
-          <li>Creating transparent and human-centric cities</li>
-          <li>Engagement and consultation around smart city initiatives</li>
-        </ul>
-      </div>
 
-      <div class="col-3">
-        <div class="image-circle">
-          <img src="/images/destination.png"  alt="Avatar">
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/destination.png"  alt="icon">
+          </div>
+          <h3>Tourism & Cultural Storytelling</h3>
         </div>
-        <h3>Culture & Tourism</h3>
-        <ul>
-          <li>Story sharing between visitors, citizens and cultural hubs</li>
-          <li>Educate and strengthen cities cultural narratives</li>
-          <li>Encouring visitors to discover local stories and landmarks, while bringing them to life</li>
-          <li>Personalised and shareable experience of a cities past and future</li>
-        </ul>
       </div>
-    </div><!--row-->
     <a href="/projects" class="link-btn-one" role="button">Our Projects</a>
-  </div><!--grid-container-->
 </section>
 
 
+
+<!--Location-->
+<section id="location" class="container-fluid">
+  <div id="map"></div>
+    <div class="grid-container">
+      <div class="row">
+        <div class="locationtext col-sm-6 col-md-6 col-lg-4">
+          <hr>
+          <h5>Locations</h5>
+          <p>Street objects have been waking up in cities around the world, engaging residents, tourists and communities.</p>
+          <a href="#contact" class="link-btn-one js-contact">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+<!--LDN_LAB article-->
+<section id="feature">
+  <div class="col-sm-12 col-md-6 left">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="win col-12">
+          <hr>
+            <h2>Winner Of:</h2>
+            <p>Hello Lamp Post was the winner of the inaugural 2013 Playable City Award, launched by Watershed and a network of organisations exemplifying Bristol's strength in Creative Technologies.</p>
+        </div>
+        <div class="col-12 logo"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6 right">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="feat col-12">
+          <hr>
+            <h2>Recently Featured On:</h2>
+            <p>Excited and proud to be apart of Facebook's incubator programme LDN_LAB: Deep Tech for Good cohort!</p>
+        </div>
+        <div class="col-12 logo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 <!--Press Section-->
-<section id="press" class="col-12">
+<div id="press">
     <div class="slider">
       <div class="track">
         <div class="slide-img">
@@ -341,88 +331,49 @@
         </div>
       </div>
     </div>
-</section>
+</div>
 
 
-<!--LDN-LAB article-->
-<section id="ldnlab" class="container-fluid">
-  <div class="grid-container">
-    <div class="col-3">
-      <hr>
-      <h2>Recently Featured On:</h2>
-      <p>Excited and proud to be apart of Facebook's incubator programme LDN_LAB: Deep Tech for Good cohort!</p>
-    </div>
-    <div class="col-6">
-      <img src="/images/press/ldn-lab-white.jpg" alt="LDN_LAB logo" />
-    </div>
-  </div>
-</section>
-
-
-<!--Locations-->
-<section id="location" class="container-fluid locations">
-  <div id="map"></div>
-  <div class="grid-container">
-    <div class="col-4">
-      <hr>
-        <h5>Locations</h5>
-        <p>Street objects have been waking up in cities around the world, engaging residents, tourists and communities.</p>
-        <a href="#contact" class="link-btn-one js-contact">Get In Touch</a>
-    </div>
- </div>
-</section>
-
-
-<!--Contact-->
-<section id="contact" class="container-fluid">
-  <div class="grid-container">
-    <div class="col-3">
-      <hr>
-      <h2>Contact</h2>
-      <h1>Get In Touch</h1>
-      <p>We are always happy to hear from you whether you’re looking for more info or to collaborate with us. Don't hesitate to drop us a message!</p>
-      <!-- <p>We're hiring! Click <a href="/careers">here</a> to view our openings and learn more about us.</p> -->
-      <a class="link-btn-one" href="mailto:contact@hlp.city?Subject=Hello%20Lamp%20Post%20Enquiry">Email Us</a>
-    </div>
-    <div class="col-6">
-      <form class="contact-form" action="/contact" method="post">
-            <fieldset>
-                   <label for="name">Name:</label>
-                   <input type="text" name="name" placeholder="Example Name">
-            </fieldset>
-
-            <fieldset>
-                   <label for="email">Email Address:</label>
-                   <input type="email" name="email" placeholder="Example@Domain.co.uk">
-            </fieldset>
-
-                   <label for="subject">Subject:</label>
-                   <select name="subject" form="subject-form">
-                      <option selected value="I am interested in Hello Lamp Post for my city">I am interested in Hello Lamp Post for my city.</option>
-                      <option value="I have a question about Hello Lamp Post">I have a general question about Hello Lamp Post.</option>
-                      <option value="I am interested in collaborating with Hello Lamp Post">I am interested in collaborating with Hello Lamp Post.</option>
-                      <option value="Other">Other.</option>
-                  </select>
-
-                  <label for="message">Your Message:</label>
-                  <textarea name="message" cols='30' placeholder="Hello Lamp Post..." rows="10"></textarea><br>
-                  <input type="submit" class="btn" value="Submit">
-                  <!-- Google Captcha, needs back-end configuring -->
-                  <!-- <div class="g-recaptcha" data-sitekey="6Le09lUUAAAAAO5j54Yj3oI6GTEgbpfiBJf7AbXp"></div> -->
-      </form>
-    </div>
-  </div>
-</section>
-
-<script>
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("nav").style.top = "0";
-  } else {
-    document.getElementById("nav").style.top = "-150px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+<script type="text/javascript">
+  window.sr = ScrollReveal();
+  sr.reveal('.herotext', {
+    duration: 2000,
+    origin: 'left',
+    distance: '300px'
+  });
+  sr.reveal('.abouttext', {
+    duration: 3000,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.bgphone', {
+    duration: 2000,
+    origin: 'bottom',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.process-item', {
+    duration: 1000,
+    origin: top,
+    viewFactor: 0.2
+  });
+  sr.reveal('.locationtext', {
+    duration: 1500,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.left', {
+    duration: 2000,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.right', {
+    duration: 2000,
+    origin: 'right',
+    distance: '300px',
+    viewFactor: 0.2
+  });
 </script>

@@ -6,15 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
+
 <!--Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 	<!-- Meta Tags -->
 	<title>Hello Lamp Post</title>
 	<meta name="author" content="Hello Lamp Post" />
-	<meta name="description" content="The playful, city-wide system that lets you talk to street furniture." />
+	<meta name="description" content="The playful, system that brings citizens and their city closer together." />
 	<meta name="keywords"  content="city, playful, SMS, Facebook Messenger, interactive, fun, street furniture, text" />
 
 	<!-- Icons -->
@@ -24,7 +25,7 @@
 
 	<!-- Sharing -->
 	<meta property="og:title" content="Hello Lamp Post" />
-	<meta property="og:description" content="The playful, city-wide system that lets you talk to street furniture." />
+	<meta property="og:description" content="The playful, system that brings citizens and their city closer together." />
 	<meta property="og:url" content="http://www.hellolamppost.co.uk/" />
 	<meta property="og:image" content="https://hello-lamp-post.herokuapp.com/images/og-image.png" />
 	<meta property="og:image:alt" content="http://www.hellolamppost.co.uk/images/og-image.png" />
@@ -35,6 +36,10 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/style.css">
+
+  <!-- Scroll Reveal-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109707231-1"></script>
@@ -55,9 +60,19 @@
 
 <body class="mf-v4 <%= I18n.t(:country_code) %>">
 
+  <%= erb :_header %>
+
 	<%= yield %>
 
+  <%= erb :_contact %>
   <%= erb :_footer %>
 
+
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -95,3 +95,72 @@ $( ".js-learn-more" ).on( "click", function() {
   }
   document.getElementById(tabName).style.display = "block";
 }
+
+
+//Expand to see more Projects 
+function myFunction() {
+  var expand = document.getElementById("expand");
+  var more = document.getElementById("more");
+  var btnText = document.getElementById("Btn");
+
+  if (expand.style.display === "none") {
+    expand.style.display = "inline";
+    btnText.innerHTML = "More Projects";
+    more.style.display = "none";
+  }
+  else {
+    expand.style.display = "none";
+    btnText.innerHTML = "Less Projects";
+    more.style.display = "inline";
+  }
+}
+
+
+//Scroll reveal
+  window.sr = ScrollReveal();
+  sr.reveal('.herotext', {
+    duration: 2000,
+    origin: 'left',
+    distance: '300px'
+  });
+  sr.reveal('.abouttext', {
+    duration: 3000,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.bgphone', {
+    duration: 2000,
+    origin: 'bottom',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.process-item', {
+    duration: 1000,
+    origin: top,
+    viewFactor: 0.2
+  });
+  sr.reveal('.locationtext', {
+    duration: 1500,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.left', {
+    duration: 2000,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.right', {
+    duration: 2000,
+    origin: 'right',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.contact', {
+    duration: 2000,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });

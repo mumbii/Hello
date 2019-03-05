@@ -9,6 +9,7 @@ a {
 }
 
 .link-btn-one {
+  margin-top: 40px;
 	padding: 16px 20px 16px 20px;
 	@include border-radius(8px);
 	background: $colorOne;
