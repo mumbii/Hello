@@ -196,6 +196,12 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/images/bg-how-it-works.jpg");
+
+  /*Mobile Phone to Tablets Media Query*/
+  @include mq("medium", "max-width") {
+    height: 500px;
+    background-attachment: inherit;
+  }
 }
 
 
@@ -206,6 +212,12 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/images/header-image-1.jpg");
+
+  /*Mobile Phone to Tablets Media Query*/
+  @include mq("medium", "max-width") {
+    height: 500px; 
+    background-attachment: inherit;
+  }
 }
 
 
@@ -790,7 +802,7 @@ section {
       }
 
       .malmo {
-        background-image: linear-gradient(rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5)), url("/images/malmo.jpg");
+        background-image: linear-gradient(rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5)), url("/images/hlp_malmo.JPG");
       }
       .mesa {
         background-image: linear-gradient(rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5)), url("/images/hlp_mesa2.jpg");
