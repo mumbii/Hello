@@ -90,37 +90,81 @@ section {
 }
 
 
-#hero {
+header {
+  position: relative;
+  padding: 15% 0;
+  background-color: $colorTwo;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/bg.gif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  .herotext {
-    z-index: 1;
-    margin-top: 20%;
-    color: $colorWhite;
+  .overlay {
     position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .col-sm-12 {
+    position: relative;
+    z-index: 2;
+
+    .herotext {
+      z-index: 1;
+      margin-top: 20%;
+      color: $colorWhite;
+      position: absolute;
 
 
-    h1 {
-      line-height: 1.2;
-      font-size: 250%;
-    }
+      h1 {
+        line-height: 1.2;
+        font-size: 250%;
+      }
 
-    .link-btn-one {
-      margin-top: 30px;
-    }
+      .link-btn-one {
+        margin-top: 30px;
+      }
 
-    a {
-      text-decoration: none;
+      a {
+        text-decoration: none;
+      }
     }
   }
 
+/*Mobile*/
+@include mq("extra-small", "max-width") {
+  background: url("/images/hlp-austin.jpg") no-repeat center center;
+  background-size: cover;
+
+  video {
+    display: none;
+  }
+}
 
   /*Tablet Media Query*/
   @include mq("extra-small", "min-width") {
+    padding: 8% 0;
+
     .herotext {
       margin-top: 15%;
     }
@@ -215,7 +259,7 @@ section {
 
   /*Mobile Phone to Tablets Media Query*/
   @include mq("medium", "max-width") {
-    height: 500px; 
+    height: 500px;
     background-attachment: inherit;
   }
 }

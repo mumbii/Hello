@@ -3,6 +3,55 @@
 // 	Sections
 // =================================================================
 
+#hero {
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .herotext {
+    z-index: 1;
+    margin-top: 20%;
+    color: $colorWhite;
+    position: absolute;
+
+
+    h1 {
+      line-height: 1.2;
+      font-size: 250%;
+    }
+
+    .link-btn-one {
+      margin-top: 30px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+
+  /*Tablet Media Query*/
+  @include mq("extra-small", "min-width") {
+    .herotext {
+      margin-top: 15%;
+    }
+  }
+
+  /*Laptop Media Query*/
+  @include mq("large", "min-width") {
+    .herotext {
+      h1 {
+        font-size: 350%;
+      }
+    }
+  }
+}
+
+
+
+
 hr {
   width: 70px;
   left: 0;
