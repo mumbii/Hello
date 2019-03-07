@@ -138,7 +138,7 @@ header {
 
       h1 {
         line-height: 1.2;
-        font-size: 250%;
+        font-size: 300%;
       }
 
       .link-btn-one {
@@ -174,7 +174,7 @@ header {
   @include mq("large", "min-width") {
     .herotext {
       h1 {
-        font-size: 350% !important; 
+        font-size: 350% !important;
       }
     }
   }
