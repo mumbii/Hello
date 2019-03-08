@@ -734,3 +734,394 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 </script>
+
+
+
+
+
+<!--Landing Page-->
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="/images/landingpage.mp4" type="video/mp4">
+  </video>
+
+  <div class="grid-container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="d-flex">
+          <div class="herotext">
+            <h1>The playful, city wide system that lets you talk to street furniture.</h1>
+            <a href="/projects" class="link-btn-one" role="button">Deploy to your city</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!--About HLP-->
+<section id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="abouttext">
+          <hr>
+          <h2>About</h2>
+          <h1>What is Hello Lamp Post?</h1>
+          <p>We are a playful engagement platform inviting people to strike up interesting, surprising and often funny conversations with familiar street objects (e.g. lamp posts, bins, post boxes etc) using text messages or Facebook Messenger, encouraging people to look at the city with fresh eyes and see it as a playground. </p>
+          <!--<p>By using the thousands of pre-existing identifier codes that label items of street objects across a whole city, people can have interesting, surprising and often funny conversations with particular objects, including (but not limited to) lamp posts, post boxes, bollards, manholes, bins or telegraph poles. </p>-->
+          <a href="#process" class="link-btn-one" role="button">How It Works</a>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6">
+        <div class="bgphone">
+          <img src="/images/iPhone-XS-Convo.png" alt="">
+        </div>
+      </div>
+      <!--<div class="bgphone"></div>-->
+    </div>
+</section>
+
+
+
+<div class="bg1"></div>
+
+
+
+<!--How it works-->
+<section id="process" class="container-fluid">
+  <div class="grid-container">
+    <hr>
+    <h2>How it works</h2>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="process-item">
+          <div class="image-circle">
+            <img src="/images/process-1.svg" class="img-image-circle image-circle" height="200" width="200" alt="Avatar">
+          </div>
+          <h3><%= I18n.t(:pick_an_object) %></h3>
+          <p>Look out for a street object.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="process-item">
+          <div class="image-circle">
+            <img src="/images/process-2.svg" class="img-circle image-circle" height="200" width="200" alt="Avatar">
+          </div>
+          <h3><%= I18n.t(:say_hello) %></h3>
+          <p>Send a text in this format: “Hello” + Object Name + #Code e.g. “Hello Bin #B6291”..</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="process-item">
+          <div class="image-circle">
+            <img src="/images/process-3.svg" class="img-circle image-circle" height="200" width="200" alt="Avatar">
+          </div>
+          <h3><%= I18n.t(:keep_talking) %></h3>
+          <p><%= I18n.t(:keep_talking_text) %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="bg2"></div>
+
+
+
+
+<!--Use cases-->
+<section id="use-cases" class="container-fluid">
+  <div class="grid-container">
+    <hr>
+    <h2>Our role in cities</h2>
+  </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/group.png" alt="icon">
+          </div>
+          <h3>Community Engagement</h3>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/map.png"  alt="icon">
+          </div>
+          <h3>Way-finding & Storytelling</h3>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/buildings.png"  alt="icon">
+          </div>
+          <h3>Public Consultation</h3>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="image-circle">
+            <img src="/images/destination.png"  alt="icon">
+          </div>
+          <h3>Tourism & Cultural Storytelling</h3>
+        </div>
+      </div>
+    <a href="/projects" class="link-btn-one" role="button">Our Projects</a>
+</section>
+
+
+
+<!--Location-->
+<section id="location" class="container-fluid">
+  <div id="map"></div>
+    <div class="grid-container">
+      <div class="row">
+        <div class="locationtext col-sm-6 col-md-6 col-lg-4">
+          <hr>
+          <h5>Locations</h5>
+          <p>Street objects have been waking up in cities around the world, engaging residents, tourists and communities.</p>
+          <a href="#contact" class="link-btn-one js-contact">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+<!--LDN_LAB article-->
+<section id="feature">
+  <div class="col-sm-12 col-md-6 left">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="win col-12">
+          <hr>
+            <h2>Winner Of:</h2>
+            <p>Hello Lamp Post was the winner of the inaugural 2013 Playable City Award, launched by Watershed and a network of organisations exemplifying Bristol's strength in Creative Technologies.</p>
+        </div>
+        <div class="col-12 logo"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6 right">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="feat col-12">
+          <hr>
+            <h2>Recently Featured On:</h2>
+            <p>Excited and proud to be apart of Facebook's incubator programme LDN_LAB: Deep Tech for Good cohort!</p>
+        </div>
+        <div class="col-12 logo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--Press Section-->
+<div id="press">
+    <div class="slider">
+      <div class="track">
+        <div class="slide-img">
+          <a href="https://www.huffingtonpost.co.uk/2014/12/02/urban-city-innovative-design-lamp-posts-talking-street-lights_n_6252628.html?utm_hp_ref=uk-hello-lamp-post" target="_blank">
+            <img class="first" src="/images/press/huffpost-logo.png" alt="huffpost logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.forbes.com/sites/hesterlacey/2014/08/26/discover-the-playable-city-the-happy-face-of-the-urban-environment/#604107dd24f9" target="_blank">
+            <img src="/images/press/forbes.png" alt="forbes logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.bbc.co.uk/news/av/uk-england-23337527/city-street-furniture-invites-texts" target="_blank">
+            <img src="/images/press/bbc-logo.png" alt="bbc logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.timeout.com/london/blog/talking-lamp-posts-are-coming-to-the-olympic-park-110816" target="_blank">
+            <img src="/images/press/time-out.png" alt="time-out logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="http://www.fox7austin.com/archive/art-project-lets-people-converse-with-street-furniture" target="_blank">
+            <img src="/images/press/fox-logo.png" alt="fox logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.dailymail.co.uk/sciencetech/article-2345212/Meet-lamp-posts-bus-stops-mind-Company-uses-new-technology-make-city-centre-landmarks-come-alive-chat-people.html" target="_blank">
+            <img src="/images/press/daily-logo.png" alt="daily logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.theguardian.com/technology/gamesblog/2013/jun/27/hello-lamp-post-playful-cities" target="_blank">
+            <img src="/images/press/guardian-logo.png" alt="guardian logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.wired.com/2013/01/hello-lamp-post/" target="_blank">
+            <img src="/images/press/wired-logo.png" alt="wired logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.telegraph.co.uk/culture/art/art-news/9821570/30000-for-texting-bollards.html" target="_blank">
+            <img src="/images/press/the-telegraph.png" alt="the telegraph logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.fastcompany.com/3017191/internet-of-things-project-hello-lamppost-ends-with-a-cacophonous-conversation" target="_blank">
+            <img src="/images/press/fast-company.png" alt="fast-company logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.huffingtonpost.co.uk/2014/12/02/urban-city-innovative-design-lamp-posts-talking-street-lights_n_6252628.html?utm_hp_ref=uk-hello-lamp-post" target="_blank">
+            <img class="first" src="/images/press/huffpost-logo.png" alt="huffpost logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.forbes.com/sites/hesterlacey/2014/08/26/discover-the-playable-city-the-happy-face-of-the-urban-environment/#604107dd24f9" target="_blank">
+            <img src="/images/press/forbes.png" alt="forbes logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.bbc.co.uk/news/av/uk-england-23337527/city-street-furniture-invites-texts" target="_blank">
+            <img src="/images/press/bbc-logo.png" alt="bbc logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.timeout.com/london/blog/talking-lamp-posts-are-coming-to-the-olympic-park-110816" target="_blank">
+            <img src="/images/press/time-out.png" alt="time-out logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="http://www.fox7austin.com/archive/art-project-lets-people-converse-with-street-furniture" target="_blank">
+            <img src="/images/press/fox-logo.png" alt="fox logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.dailymail.co.uk/sciencetech/article-2345212/Meet-lamp-posts-bus-stops-mind-Company-uses-new-technology-make-city-centre-landmarks-come-alive-chat-people.html" target="_blank">
+            <img src="/images/press/daily-logo.png" alt="daily logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.theguardian.com/technology/gamesblog/2013/jun/27/hello-lamp-post-playful-cities" target="_blank">
+            <img src="/images/press/guardian-logo.png" alt="guardian logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.wired.com/2013/01/hello-lamp-post/" target="_blank">
+            <img src="/images/press/wired-logo.png" alt="wired logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.telegraph.co.uk/culture/art/art-news/9821570/30000-for-texting-bollards.html" target="_blank">
+            <img src="/images/press/the-telegraph.png" alt="the telegraph logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.fastcompany.com/3017191/internet-of-things-project-hello-lamppost-ends-with-a-cacophonous-conversation" target="_blank">
+            <img src="/images/press/fast-company.png" alt="fast-company logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.huffingtonpost.co.uk/2014/12/02/urban-city-innovative-design-lamp-posts-talking-street-lights_n_6252628.html?utm_hp_ref=uk-hello-lamp-post" target="_blank">
+            <img class="first" src="/images/press/huffpost-logo.png" alt="huffpost logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.forbes.com/sites/hesterlacey/2014/08/26/discover-the-playable-city-the-happy-face-of-the-urban-environment/#604107dd24f9" target="_blank">
+            <img src="/images/press/forbes.png" alt="forbes logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.bbc.co.uk/news/av/uk-england-23337527/city-street-furniture-invites-texts" target="_blank">
+            <img src="/images/press/bbc-logo.png" alt="bbc logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.timeout.com/london/blog/talking-lamp-posts-are-coming-to-the-olympic-park-110816" target="_blank">
+            <img src="/images/press/time-out.png" alt="time-out logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="http://www.fox7austin.com/archive/art-project-lets-people-converse-with-street-furniture" target="_blank">
+            <img src="/images/press/fox-logo.png" alt="fox logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.dailymail.co.uk/sciencetech/article-2345212/Meet-lamp-posts-bus-stops-mind-Company-uses-new-technology-make-city-centre-landmarks-come-alive-chat-people.html" target="_blank">
+            <img src="/images/press/daily-logo.png" alt="daily logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.theguardian.com/technology/gamesblog/2013/jun/27/hello-lamp-post-playful-cities" target="_blank">
+            <img src="/images/press/guardian-logo.png" alt="guardian logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.wired.com/2013/01/hello-lamp-post/" target="_blank">
+            <img src="/images/press/wired-logo.png" alt="wired logo">
+          </a>
+        </div>
+        <div class="slide-img">
+          <a href="https://www.telegraph.co.uk/culture/art/art-news/9821570/30000-for-texting-bollards.html" target="_blank">
+            <img src="/images/press/the-telegraph.png" alt="the telegraph logo">
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+  window.sr = ScrollReveal();
+  sr.reveal('.herotext', {
+    duration: 2000,
+    origin: 'left',
+    distance: '300px'
+  });
+  sr.reveal('.abouttext', {
+    duration: 3000,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.bgphone', {
+    duration: 2000,
+    origin: 'bottom',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.process-item', {
+    duration: 1000,
+    origin: top,
+    viewFactor: 0.2
+  });
+  sr.reveal('.locationtext', {
+    duration: 1500,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.left', {
+    duration: 2000,
+    origin: 'left',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+  sr.reveal('.right', {
+    duration: 2000,
+    origin: 'right',
+    distance: '300px',
+    viewFactor: 0.2
+  });
+</script>
