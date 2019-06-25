@@ -139,13 +139,18 @@ section {
       }
     }
   }
+
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+    font-size: 30px;
+  }
 }
 
 
 /*Landing Page*/
 header {
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   padding: 15% 0;
   overflow: hidden;
   min-height: 25rem;
@@ -231,17 +236,19 @@ header {
       }
     }
   }
+
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+    .herotext {
+      h1 {
+        font-size: 650% !important;
+      }
+    }
+  }
 }
 
 
 #about {
-  //padding: 0;
-  /*background-size: 35%;
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-image: url("/images/iPhone-XS-Convo.png");
-  background-color: $colorWhite;*/
-
   .abouttext {
     padding: 0 6%;
 
@@ -270,6 +277,12 @@ header {
     img {
       width: 75%;
       margin: 0 13%;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -10%);
     }
   }
 
@@ -278,8 +291,12 @@ header {
   @include mq("small", "max-width") {
     .bgphone {
       img {
+        top: 0;
+        left: 0;
         //width: 50%;
+        transform: none;
         margin-top: 10%;
+        position: relative;
       }
     }
   }
@@ -366,6 +383,19 @@ header {
       display: none;
     }
   }
+
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+    height: auto;
+
+    .row {
+      .col-sm-4 {
+        .process-item {
+           width: 500px;
+        }
+      }
+    }
+  }
 }
 
 
@@ -432,6 +462,19 @@ header {
       width: 23%;
       padding: 4% 0;
       margin: .9%;
+    }
+  }
+
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+    height: auto;
+
+    .col-sm-3 {
+      height: auto;
+
+      h3 {
+        font-size: 150%;
+      }
     }
   }
 }
@@ -788,6 +831,19 @@ header {
         margin: .9%;
       }
     }
+
+    /*Desktop Media Query*/
+    @include mq("extra-extra-large", "min-width") {
+      height: auto;
+
+      .col-sm-3 {
+        height: auto;
+
+        h3 {
+          font-size: 150%;
+        }
+      }
+    }
   }
 
   #case {
@@ -943,6 +999,31 @@ header {
         }
       }
     }
+
+    /*Desktop Media Query*/
+    @include mq("extra-extra-large", "min-width") {
+    .btn {
+      .link-btn-one {
+        font-size: 1.6em;
+      }
+    }
+
+      .col-sm-6 {
+        .text {
+          h1 {
+            font-size: 5.5rem !important;
+          }
+        }
+      }
+
+     .stats {
+        .col-sm-4 {
+          h1 {
+            font-size: 5rem !important;
+          }
+        }
+     }
+    }
   }
 
   #testimonials {
@@ -984,6 +1065,22 @@ header {
 
       .carousel-indicators {
         bottom: -50px;
+      }
+    }
+
+    /*Desktop Media Query*/
+    @include mq("extra-extra-large", "min-width") {
+      #myCarousel {
+        .carousel-inner {
+          .item {
+            p {
+              font-size: 2.2rem;
+            }
+            .customer {
+              font-size: 1.8rem;
+            }
+          }
+        }
       }
     }
   }

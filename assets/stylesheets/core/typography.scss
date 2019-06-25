@@ -69,12 +69,22 @@ a {
 }
 
 h1 {
-  	 font-size: 3.5rem;
-     padding: 25px 0;
+  font-size: 3.5rem;
+  padding: 25px 0;
+
+  /*Desktop Media Query*/
+     @include mq("extra-extra-large", "min-width") {
+      font-size: 5.5rem;
+  }
 }
 
 h2 {
 	font-size: 1.44em;
+
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+   font-size: 2.44em;
+  }
 }
 
 h3 {
@@ -84,6 +94,11 @@ h3 {
 h4 {
 	font-size: 1em;
 	font-family: "Gotham", sans-serif;
+
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+   font-size: 2em;
+  }
 }
 
 h5 {
@@ -100,6 +115,11 @@ h5 {
 	opacity: 1;
   line-height: 1.4;
 	//border-radius: 2px;
+
+  /*Desktop Media Query*/
+  @include mq("extra-extra-large", "min-width") {
+   font-size: 2.44em;
+  }
 }
 
 h5.underline {
@@ -111,6 +131,11 @@ p {
 	line-height: 1.5em;
 	padding: 0.4em 0 0.4em 0;
   font-size: .9em;
+
+  /*Desktop Media Query*/
+     @include mq("extra-extra-large", "min-width") {
+      font-size: 1.5rem;
+  }
 }
 
 .news-date {
