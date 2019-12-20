@@ -19,7 +19,7 @@ GEM
     netrc (0.11.0)
     power_assert (0.2.2)
     puma (3.3.0)
-    rack (1.6.11)
+    rack (1.6.12)
     rack-flash3 (1.0.5)
       rack
     rack-protection (1.5.3)
